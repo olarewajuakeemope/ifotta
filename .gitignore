@@ -61,4 +61,4 @@ typings/
 .env
 
 # sass
-src/**/*.css
+src/resources/**/*.css
