@@ -6,6 +6,10 @@ import React, { Component } from 'react';
  * @extends {Component}
  */
 class ErrorPage extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {};
+  }
   /**
    * @returns {Object} Jsx
    * @memberOf ErrorPage

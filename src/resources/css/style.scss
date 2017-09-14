@@ -2,27 +2,51 @@ $medium-screen-size: 850px;
 $small-screen-size: 600px;
 
 body {
-  .banner-grid {
-    text-align: center;
-    padding-top: 5em;
-    width: 100%;
-    height: 450;
-    overflow-y: auto;
-  }
   .buttons {
     margin: 1em;
   }
+
+  /**** Grid Components ****/
+  .banner-grid {
+    padding-top: 5em;
+    height: 450;
+  }
   .footer-grid {
     padding: 5em 0 10em 0;
-    width: 100%;
-    text-align: center;
-    overflow-y: auto;
   }
   .grid-list {
     text-align: center;
     width: 100%;
     overflow-y: auto;
   }
+  .service-grid {
+    padding: 5em 0 15em 0;
+    background-color: #0277BD;
+  }
+  .service-small-grid-screen {
+    display: none;
+    @media screen and (max-width: $small-screen-size) {
+      display: block !important;
+    }
+  }
+  .service-large-grid-screen {
+    @media screen and (max-width: $small-screen-size) {
+      display: none !important;
+    }
+  }
+
+  /**** Form Components ****/
+  .form-header {
+    text-align: left;
+    width: 100%;
+    overflow-y: auto;
+    padding-left: 5em;
+  }
+  .hire-dialog-title {
+    background-color: #0277BD;
+  }
+
+  /******************/
   .logo {
     width: 20em;
   }
@@ -40,13 +64,6 @@ body {
     @media screen and (max-width: $small-screen-size) {
       padding: 2em;
     }
-  }
-  .service-grid {
-    text-align: center;
-    padding: 5em 0 15em 0;
-    width: 100%;
-    overflow-y: auto;
-    background-color: #0277BD;
   }
   .service-images {
     width: 100%;
