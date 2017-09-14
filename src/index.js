@@ -8,6 +8,8 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import routes from './routes';
 import registerServiceWorker from './registerServiceWorker';
 
+import './resources/css/style.css';
+
 ReactDOM.render(
   <MuiThemeProvider >
     <Router history={browserHistory} routes={routes} />

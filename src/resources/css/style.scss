@@ -1,0 +1,62 @@
+$medium-screen-size: 850px;
+$small-screen-size: 600px;
+
+body {
+  .banner-grid {
+    text-align: center;
+    padding-top: 5em;
+    width: 100%;
+    height: 450;
+    overflow-y: auto;
+  }
+  .buttons {
+    margin: 1em;
+  }
+  .footer-grid {
+    padding: 5em 0 10em 0;
+    width: 100%;
+    text-align: center;
+    overflow-y: auto;
+  }
+  .grid-list {
+    text-align: center;
+    width: 100%;
+    overflow-y: auto;
+  }
+  .logo {
+    width: 20em;
+  }
+  .root {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+   }
+  .service-details {
+    padding: 8em;
+    height: 500px;
+    @media screen and (max-width: $medium-screen-size) {
+      padding: 4em;
+    }
+    @media screen and (max-width: $small-screen-size) {
+      padding: 2em;
+    }
+  }
+  .service-grid {
+    text-align: center;
+    padding: 5em 0 15em 0;
+    width: 100%;
+    overflow-y: auto;
+    background-color: #0277BD;
+  }
+  .service-images {
+    width: 100%;
+    height: 100%;
+  }
+  .service-item {
+    height: 500px;
+  }
+  .white-link {
+    text-decoration: none;
+    color: white;
+  }
+}

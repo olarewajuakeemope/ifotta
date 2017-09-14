@@ -11,29 +11,6 @@ import Header from '../Header/';
 import logo from '../../resources/images/logo.png';
 
 const styles = {
-  title: {
-    textDecoration: 'none',
-    color: 'white',
-  },
-  root: {
-    display: 'flex',
-    flexWrap: 'wrap',
-    justifyContent: 'space-around',
-  },
-  gridList: {
-    textAlign: 'center',
-    paddingTop: '5em',
-    width: '100%',
-    height: 450,
-    overflowY: 'auto',
-  },
-  secondGridList: {
-    textAlign: 'center',
-    padding: '5em 0 15em 0',
-    width: '100%',
-    overflowY: 'auto',
-    backgroundColor: '#0277BD',
-  },
   firstPapers: {
     height: 300,
     width: 300,
@@ -46,15 +23,9 @@ const styles = {
     textAlign: 'center',
     display: 'inline-block',
   },
-  logo: {
-    width: '20em',
-  },
   iconStyles: {
     width: 40,
     height: 40,
-  },
-  buttons: {
-    margin: 12,
   },
 };
 const tilesData = [
@@ -81,50 +52,50 @@ const Home = () => (
     <Paper
       zDepth={1}
       children={ // eslint-disable-line
-        <div style={styles.root}>
+        <div className="root">
           <GridList
             cols={3}
             cellHeight={200}
             padding={1}
-            style={styles.gridList}
+            className="banner-grid"
           >
             <GridTile
               cols={3}
               rows={1}
             >
-              <span ><img style={styles.logo} src={logo} alt="site logo" /></span>
+              <span ><img className="logo" src={logo} alt="site logo" /></span>
             </GridTile>
             <GridTile
               cols={3}
               rows={1}
             >
               <Link
-                style={styles.title}
+                className="white-link"
                 to="/about"
               >
-                <RaisedButton style={styles.buttons} label="Hire A Developer" primary />
+                <RaisedButton className="buttons" label="Hire A Developer" primary />
               </Link>
               <Link
-                style={styles.title}
+                className="white-link"
                 to="/about"
               >
-                <RaisedButton style={styles.buttons} label="Become A Developer" primary />
+                <RaisedButton className="buttons" label="Become A Developer" primary />
               </Link>
               <Link
-                style={styles.title}
+                className="white-link"
                 to="/about"
               >
-                <RaisedButton style={styles.buttons} label="Ifotta Academy" primary />
+                <RaisedButton className="buttons" label="Ifotta Academy" primary />
               </Link>
             </GridTile>
           </GridList>
         </div>
       }
     />
-    <div style={styles.root}>
+    <div className="root">
       <GridList
         cols={3}
-        style={styles.secondGridList}
+        className="service-grid"
       >
         <GridTile
           cols={3}
@@ -154,33 +125,32 @@ const Home = () => (
         </GridTile>
       </GridList>
     </div>
-    <div>
+    <div className="root">
       <GridList
         cols={2}
         cellHeight={500}
         style={{ padding: 0, margin: 0, width: '100%', backgroundColor: '#0277BD' }}
       >
         <GridTile
-          cols={1}
           style={{ height: 'auto', padding: 0, margin: 0, textAlign: 'center' }}
         >
           <Paper
-            style={{ height: 500, width: '100%', textAlign: 'center', display: 'inline-block' }}
+            style={{ textAlign: 'center', display: 'inline-block' }}
             zDepth={1}
             children={
-              <img style={{ height: '100%', width: '100%' }} src="http://www.officelovin.com/wp-content/uploads/2014/09/huge-bk-office-6.jpg" />
-            }
+              <div className="service-item">
+              <img className="service-images" src="http://www.officelovin.com/wp-content/uploads/2014/09/huge-bk-office-6.jpg" />
+            </div>}
           />
         </GridTile>
         <GridTile
-          cols={1}
           style={{ height: 'auto', padding: 0, margin: 0, textAlign: 'center' }}
         >
           <Paper
-            style={{ color: '#999999', height: 500, width: '100%', padding: '8em', textAlign: 'center', display: 'inline-block' }}
+            style={{ color: '#999999', textAlign: 'center', display: 'inline-block' }}
             zDepth={1}
             children={
-              <div>
+              <div className="service-details">
                 <p><ContentSend style={{ height: 50, width: 50 }} color={lightBlue800} /></p>
                 <h5 style={{ marginBottom: 30, color: '#1565C0' }}>Our Developers</h5>
                 <p style={{ color: '#0277BD' }}>Created forth two. Behold appear first, kind all i saying fowl man itself moved which every open shall moved subdue appear. Saying life wherein stars. Give dry, own, male had that us third lesser over deep. May every bring in it Whose. Female earth heaven won't behold female.</p>
@@ -190,14 +160,13 @@ const Home = () => (
         </GridTile>
 
         <GridTile
-          cols={1}
           style={{ height: 'auto', padding: 0, margin: 0, textAlign: 'center' }}
         >
           <Paper
-            style={{ color: '#999999', height: 500, width: '100%', backgroundColor: '#0277BD', padding: '8em', textAlign: 'center', display: 'inline-block' }}
+            style={{ color: '#999999', backgroundColor: '#0277BD', textAlign: 'center', display: 'inline-block' }}
             zDepth={1}
             children={
-              <div>
+              <div className="service-details">
                 <p><ActionGrade style={{ height: 50, width: 50 }} color={white} /></p>
                 <h5 style={{ marginBottom: 30, color: '#ffffff' }}>Become A Developers</h5>
                 <p style={{ color: '#ffffff' }}>Created forth two. Behold appear first, kind all i saying fowl man itself moved which every open shall moved subdue appear. Saying life wherein stars. Give dry, own, male had that us third lesser over deep. May every bring in it Whose. Female earth heaven won't behold female.</p>
@@ -206,38 +175,37 @@ const Home = () => (
           />
         </GridTile>
         <GridTile
-          cols={1}
           style={{ height: 'auto', padding: 0, margin: 0, textAlign: 'center' }}
         >
           <Paper
-            style={{ height: 500, width: '100%', textAlign: 'center', display: 'inline-block' }}
+            style={{ textAlign: 'center', display: 'inline-block' }}
             zDepth={1}
             children={
-              <img style={{ height: '100%', width: '100%' }} src="https://media.licdn.com/mpr/mpr/AAEAAQAAAAAAAAmBAAAAJDkwYTNmNmNlLTMyYzUtNDI2NC1iYjAyLTc1MTE3ZDg2YjBiNA.jpg" />
-            }
+              <div className="service-item">
+              <img className="service-images" src="https://media.licdn.com/mpr/mpr/AAEAAQAAAAAAAAmBAAAAJDkwYTNmNmNlLTMyYzUtNDI2NC1iYjAyLTc1MTE3ZDg2YjBiNA.jpg" />
+            </div>}
           />
         </GridTile>
         <GridTile
-          cols={1}
           style={{ height: 'auto', padding: 0, margin: 0, textAlign: 'center' }}
         >
           <Paper
-            style={{ height: 500, width: '100%', textAlign: 'center', display: 'inline-block' }}
+            style={{ textAlign: 'center', display: 'inline-block' }}
             zDepth={1}
             children={
-              <img style={{ height: '100%', width: '100%' }} src="https://girltwenty20.files.wordpress.com/2014/07/office3.jpg" />
-            }
+              <div className="service-item">
+              <img className="service-images" src="https://girltwenty20.files.wordpress.com/2014/07/office3.jpg" />
+            </div>}
           />
         </GridTile>
         <GridTile
-          cols={1}
           style={{ height: 'auto', padding: 0, margin: 0, textAlign: 'center' }}
         >
           <Paper
-            style={{ color: '#999999', height: 500, width: '100%', padding: '8em', textAlign: 'center', display: 'inline-block' }}
+            style={{ color: '#999999', textAlign: 'center', display: 'inline-block' }}
             zDepth={1}
             children={
-              <div>
+              <div className="service-details">
                 <p><ContentInbox style={{ height: 50, width: 50 }} color={lightBlue800} /></p>
                 <h5 style={{ marginBottom: 30, color: '#1565C0' }}>Ifotta Academy</h5>
                 <p style={{ color: '#0277BD' }}>Created forth two. Behold appear first, kind all i saying fowl man itself moved which every open shall moved subdue appear. Saying life wherein stars. Give dry, own, male had that us third lesser over deep. May every bring in it Whose. Female earth heaven won't behold female.</p>
@@ -246,83 +214,107 @@ const Home = () => (
           />
         </GridTile>
       </GridList>
-      <GridList
-        cols={1}
-        cellHeight={60}
-        style={{
-          padding: '5em 10em',
-          width: '100%',
-          overflowY: 'auto',
-          backgroundColor: '#FFC107',
-        }}
-      >
-        <GridTile >
-        <div>
-                <h5 style={{ marginBottom: 30, color: '#ffffff' }}>Let us know about your next project today&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <span style={{ textAlign: 'right' }}><Link
-                style={styles.title}
+      </div>
+      <div className="root">
+        <GridList
+          cellHeight={80}
+          cols={2}
+          style={{
+            padding: '5em 10em',
+            width: '100%',
+            overflowY: 'auto',
+            backgroundColor: '#FFC107',
+          }}
+        >
+          <GridTile
+            cols={2}
+            rows={1}
+            style={{ height: 'auto' }}
+          >
+            <div style={{ display: 'inline-block', float: 'left', color: '#ffffff' }}>
+              <h5>Let us know about your next project today</h5>
+            </div>
+            <div style={{ display: 'inline-block', float: 'right', textAlign: 'right' }}>
+              <span><Link
+                className="white-link"
                 to="/about"
               >
-                <RaisedButton style={styles.buttons} label="Hire A Developer" primary />
+                <RaisedButton label="Hire A Developer" primary />
               </Link></span>
-                </h5>
-              </div>
-        </GridTile>
-    </GridList>
-
-    <GridList
-        cols={4}
-        cellHeight={180}
-        style={{
-          padding: '5em 10em',
-          width: '100%',
-          overflowY: 'auto',
-          textAlign: 'left',
-        }}
-      >
-        <GridTile cols={1}>
-        <div>
-        <h6 style={{ marginBottom: 30, fontWeight: '500' }}>About Us</h6>
-        <p style={{ margin: 0, padding: 5 }}>item 1</p>
-        <p style={{ margin: 0, padding: 5 }}>item 2</p>
-        <p style={{ margin: 0, padding: 5 }}>item 3</p>
-        <p style={{ margin: 0, padding: 5 }}>item 4</p>
-        <p style={{ margin: 0, padding: 5 }}>item 5</p>
-              </div>
-        </GridTile>
-        <GridTile cols={1}>
-        <div>
-        <h6 style={{ marginBottom: 30, fontWeight: '500' }}>Developers</h6>
-        <p style={{ margin: 0, padding: 5 }}>item 1</p>
-        <p style={{ margin: 0, padding: 5 }}>item 2</p>
-        <p style={{ margin: 0, padding: 5 }}>item 3</p>
-        <p style={{ margin: 0, padding: 5 }}>item 4</p>
-        <p style={{ margin: 0, padding: 5 }}>item 5</p>
-              </div>
-        </GridTile>
-        <GridTile cols={1}>
-        <div>
-        <h6 style={{ marginBottom: 30, fontWeight: '500' }}>Apply</h6>
-        <p style={{ margin: 0, padding: 5 }}>item 1</p>
-        <p style={{ margin: 0, padding: 5 }}>item 2</p>
-        <p style={{ margin: 0, padding: 5 }}>item 3</p>
-        <p style={{ margin: 0, padding: 5 }}>item 4</p>
-        <p style={{ margin: 0, padding: 5 }}>item 5</p>
-              </div>
-        </GridTile>
-        <GridTile cols={1}>
-        <div>
-        <h6 style={{ marginBottom: 30, fontWeight: '500' }}>Contact</h6>
-        <p style={{ margin: 0, padding: 5 }}>item 1</p>
-        <p style={{ margin: 0, padding: 5 }}>item 2</p>
-        <p style={{ margin: 0, padding: 5 }}>item 3</p>
-        <p style={{ margin: 0, padding: 5 }}>item 4</p>
-        <p style={{ margin: 0, padding: 5 }}>item 5</p>
-              </div>
-        </GridTile>
-    </GridList>
+            </div>
+          </GridTile>
+        </GridList>
+      </div>
+      <div className="root">
+        <GridList
+          cols={4}
+          className="footer-grid"
+        >
+          <GridTile
+            cols={4}
+            rows={1}
+            style={{ height: 'auto' }}
+          >
+            <Paper
+              style={{ display: 'inline-block', marginLeft: 30, marginRight: 30, paddingLeft: '5em', width: 200 }}
+              zDepth={0}
+              children={
+                <div style={{ textAlign: 'left' }}>
+                  <h6 style={{ marginBottom: 30, fontWeight: '500' }}>About Us</h6>
+                  <p style={{ margin: 0, padding: 5 }}>item 1</p>
+                  <p style={{ margin: 0, padding: 5 }}>item 2</p>
+                  <p style={{ margin: 0, padding: 5 }}>item 3</p>
+                  <p style={{ margin: 0, padding: 5 }}>item 4</p>
+                  <p style={{ margin: 0, padding: 5 }}>item 5</p>
+                </div>
+              }
+            />
+            <Paper
+              style={{ display: 'inline-block', marginLeft: 30, marginRight: 30, paddingLeft: '5em', width: 200 }}
+              zDepth={0}
+              children={
+                <div style={{ textAlign: 'left' }}>
+                  <h6 style={{ marginBottom: 30, fontWeight: '500' }}>Our Developers</h6>
+                  <p style={{ margin: 0, padding: 5 }}>item 1</p>
+                  <p style={{ margin: 0, padding: 5 }}>item 2</p>
+                  <p style={{ margin: 0, padding: 5 }}>item 3</p>
+                  <p style={{ margin: 0, padding: 5 }}>item 4</p>
+                  <p style={{ margin: 0, padding: 5 }}>item 5</p>
+                </div>
+              }
+            />
+            <Paper
+              style={{ display: 'inline-block', marginLeft: 30, marginRight: 30, paddingLeft: '5em', width: 200 }}
+              zDepth={0}
+              children={
+                <div style={{ textAlign: 'left' }}>
+                  <h6 style={{ marginBottom: 30, fontWeight: '500' }}>Apply</h6>
+                  <p style={{ margin: 0, padding: 5 }}>item 1</p>
+                  <p style={{ margin: 0, padding: 5 }}>item 2</p>
+                  <p style={{ margin: 0, padding: 5 }}>item 3</p>
+                  <p style={{ margin: 0, padding: 5 }}>item 4</p>
+                  <p style={{ margin: 0, padding: 5 }}>item 5</p>
+                </div>
+              }
+            />
+            <Paper
+              style={{ display: 'inline-block', marginLeft: 30, marginRight: 30, paddingLeft: '5em', width: 200 }}
+              zDepth={0}
+              children={
+                <div style={{ textAlign: 'left' }}>
+                  <h6 style={{ marginBottom: 30, fontWeight: '500' }}>Contact</h6>
+                  <p style={{ margin: 0, padding: 5 }}>item 1</p>
+                  <p style={{ margin: 0, padding: 5 }}>item 2</p>
+                  <p style={{ margin: 0, padding: 5 }}>item 3</p>
+                  <p style={{ margin: 0, padding: 5 }}>item 4</p>
+                  <p style={{ margin: 0, padding: 5 }}>item 5</p>
+                </div>
+              }
+            />
+          </GridTile>
+        </GridList>
+      </div>
     </div>
-  </div>
 );
 
 export default Home;
