@@ -42,7 +42,7 @@ export default class AcademyModal extends Component {
   onChange(e) {
     this.setState({
       [e.target.name]: e.target.value,
-    });
+    }, () => console.log(this.state));
   }
 
   handleOpen = () => {
@@ -106,7 +106,7 @@ export default class AcademyModal extends Component {
    * @memberof AcademyModal
    */
   handleSelect = (event, index, value) => {
-    this.setState({ select: value });
+    this.setState({ select: value }, () => console.log(this.state));
   };
 
   render() {
@@ -144,6 +144,7 @@ export default class AcademyModal extends Component {
             floatingLabelText="Enter your name"
             name="fullname"
             id="fullname"
+            value={this.state.fullname}
             onChange={this.onChange}
           /><br />
           <TextField
@@ -151,6 +152,7 @@ export default class AcademyModal extends Component {
             floatingLabelText="Enter your email"
             name="email"
             id="email"
+            value={this.state.email}
             onChange={this.onChange}
           /><br />
           <SelectField
