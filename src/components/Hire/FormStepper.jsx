@@ -175,11 +175,11 @@ class FormStepper extends React.Component {
 
   handleSelectLocation = (event, index, value) => this.setState({
     ifotta: Object.assign(this.state.ifotta, { location: value }),
-  });
+  }, () => console.log(this.state.ifotta));
 
   handleSelectManager = (event, index, value) => this.setState({
     ifotta: Object.assign(this.state.ifotta, { manager: value }),
-  });
+  }, () => console.log(this.state.ifotta));
 
   renderContent() {
     const { finished, stepIndex } = this.state;
