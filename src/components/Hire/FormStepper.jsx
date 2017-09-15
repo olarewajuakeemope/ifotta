@@ -12,6 +12,7 @@ import TextField from 'material-ui/TextField';
 import SelectField from 'material-ui/SelectField';
 import Subheader from 'material-ui/Subheader';
 import MenuItem from 'material-ui/MenuItem';
+import dataValidators from '../../utils/dataValidators';
 
 /**
  * A contrived example using a transition between steps
@@ -21,7 +22,18 @@ class FormStepper extends React.Component {
     loading: false,
     finished: false,
     stepIndex: 0,
-    value: 0,
+    project: {
+      developerSkills: '',
+      fullname: '',
+      email: '',
+      projectSummary: '',
+      startDate: null,
+      endDate: null,
+    },
+    ifotta: {
+      manager: 0,
+      location: 0,
+    },
   };
 
   getStepContent(stepIndex) {
@@ -29,51 +41,72 @@ class FormStepper extends React.Component {
       case 0:
         return (
           <div>
-            <p>
             Tell us about your Project
-            </p>
-            <p>
-              <TextField
-                hintText="Your name"
-                floatingLabelText="Enter your name"
-              /><br />
-              <TextField
-                hintText="Your email"
-                floatingLabelText="Enter your email"
-              /><br />
-              <TextField
-                hintText="Project summary"
-                floatingLabelText="Enter your project detail here"
-                multiLine
-                rows={2}
-              /><br />
-              <Subheader style={{ textAlign: 'left', paddingLeft: 0, marginLeft: 0, marginTop: 10 }}>Project Period</Subheader>
-              <DatePicker hintText="Project Start Date" /><br />
-              <DatePicker hintText="Project end Date" /><br />
-            </p>
+            <br />
+            <TextField
+              name="fullname"
+              value={this.state.project.fullname}
+              onChange={this.handleTextInput}
+              hintText="Full name"
+              floatingLabelText="Enter your name"
+            /><br />
+            <TextField
+              name="email"
+              value={this.state.project.email}
+              onChange={this.handleTextInput}
+              hintText="Your email"
+              floatingLabelText="Enter your email"
+            /><br />
+            <TextField
+              name="projectSummary"
+              value={this.state.project.projectSummary}
+              onChange={this.handleTextInput}
+              hintText="Project summary"
+              floatingLabelText="Enter your project detail here"
+              multiLine
+              rows={2}
+            /><br />
+            <Subheader style={{ textAlign: 'left', paddingLeft: 0, marginLeft: 0, marginTop: 10 }}>Project Period</Subheader>
+            <DatePicker
+              name="startDate"
+              value={this.state.project.startDate}
+              onChange={this.handleStartDate}
+              hintText="Project Start Date"
+            /><br />
+            <DatePicker
+              name="endDate"
+              value={this.state.project.endDate}
+              onChange={this.handleEndDate}
+              hintText="Project end Date"
+            /><br />
           </div>
         );
       case 1:
         return (
           <div>
             <p>What developer skills do you need?</p>
-            <TextField style={{ marginTop: 0 }} floatingLabelText="Enter your skill requirements" />
+            <TextField
+              name="developerSkills"
+              value={this.state.project.developerSkills}
+              onChange={this.handleTextInput}
+              style={{ marginTop: 0 }}
+              floatingLabelText="Enter your skill requirements"
+            />
 
           </div>
         );
       case 2:
         return (
           <div>
-            <p>
             How do you want to Collaborate with Us?
-            </p>
+            <br />
             <SelectField
               floatingLabelText="Should we manage your project?"
-              floatingLabelStyle={{ fontSize: 15 }}
-              value={this.state.value}
-              onChange={this.handleChange}
+              value={this.state.ifotta.manager}
+              onChange={this.handleSelectManager}
               autoWidth
             >
+              <MenuItem value={0} primaryText="Should we manage your project?" disabled />
               <MenuItem value={1} primaryText="Yes" />
               <MenuItem value={2} primaryText="No" />
             </SelectField>
@@ -81,11 +114,11 @@ class FormStepper extends React.Component {
 
             <SelectField
               floatingLabelText="Where would our developer work from?"
-              floatingLabelStyle={{ fontSize: 15 }}
-              value={this.state.value}
-              onChange={this.handleChange}
+              value={this.state.ifotta.location}
+              onChange={this.handleSelectLocation}
               autoWidth
             >
+              <MenuItem value={0} primaryText="Where would our developer work from?" disabled />
               <MenuItem value={1} primaryText="Remotely from Ifotta" />
               <MenuItem value={2} primaryText="Locally with you" />
               <MenuItem value={3} primaryText="Both" />
@@ -125,8 +158,28 @@ class FormStepper extends React.Component {
     }
   };
 
+  handleTextInput = (event) => {
+    const { name, value } = event.target;
+    this.setState({
+      ifotta: Object.assign(this.state.project, { [name]: value }),
+    });
+  };
 
-  handleChange = (event, index, value) => this.setState({ value });
+  handleStartDate = (event, date) => this.setState({
+    ifotta: Object.assign(this.state.project, { startDate: date }),
+  });
+
+  handleEndDate = (event, date) => this.setState({
+    ifotta: Object.assign(this.state.project, { endDate: date }),
+  });
+
+  handleSelectLocation = (event, index, value) => this.setState({
+    ifotta: Object.assign(this.state.ifotta, { location: value }),
+  });
+
+  handleSelectManager = (event, index, value) => this.setState({
+    ifotta: Object.assign(this.state.ifotta, { manager: value }),
+  });
 
   renderContent() {
     const { finished, stepIndex } = this.state;

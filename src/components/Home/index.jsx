@@ -98,6 +98,7 @@ const Home = () => (
             <Paper
               style={styles.firstPapers}
               zDepth={1}
+              key={tile.img}
               children={
                 <div>
                   <h5 style={{ marginBottom: 30, color: '#555555' }}>{tile.author}</h5>
