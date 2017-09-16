@@ -162,24 +162,24 @@ class FormStepper extends React.Component {
     const { name, value } = event.target;
     this.setState({
       ifotta: Object.assign(this.state.project, { [name]: value }),
-    }, () => console.log(this.state.project));
+    });
   };
 
   handleStartDate = (event, date) => this.setState({
     ifotta: Object.assign(this.state.project, { startDate: date }),
-  }, () => console.log(this.state.project));
+  });
 
   handleEndDate = (event, date) => this.setState({
     ifotta: Object.assign(this.state.project, { endDate: date }),
-  }, () => console.log(this.state.project));
+  });
 
   handleSelectLocation = (event, index, value) => this.setState({
     ifotta: Object.assign(this.state.ifotta, { location: value }),
-  }, () => console.log(this.state.ifotta));
+  });
 
   handleSelectManager = (event, index, value) => this.setState({
     ifotta: Object.assign(this.state.ifotta, { manager: value }),
-  }, () => console.log(this.state.ifotta));
+  });
 
   renderContent() {
     const { finished, stepIndex } = this.state;

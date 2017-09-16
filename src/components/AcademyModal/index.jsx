@@ -42,7 +42,7 @@ export default class AcademyModal extends Component {
   onChange(e) {
     this.setState({
       [e.target.name]: e.target.value,
-    }, () => console.log(this.state));
+    });
   }
 
   handleOpen = () => {
@@ -83,7 +83,6 @@ export default class AcademyModal extends Component {
     // const { signUpAction } = this.props;
     const { errors, isValid } = this.validateData();
     if (isValid) {
-      console.log('passing');
     //   signUpAction(this.state).then(
     //   () => {
     //     this.props.history.push('/documents');
@@ -95,7 +94,7 @@ export default class AcademyModal extends Component {
     //   });
     } else {
       this.setState({ errors }, () => {
-        console.log('failing with errors: ', this.state.errors);
+        // console.log('failing with errors: ', this.state.errors);
       });
     }
   }
@@ -106,7 +105,7 @@ export default class AcademyModal extends Component {
    * @memberof AcademyModal
    */
   handleSelect = (event, index, value) => {
-    this.setState({ select: value }, () => console.log(this.state));
+    this.setState({ select: value });
   };
 
   render() {
