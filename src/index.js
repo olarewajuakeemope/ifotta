@@ -8,6 +8,7 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import routes from './routes';
 import registerServiceWorker from './registerServiceWorker';
 
+import './resources/css/ifotta-style.css';
 import './resources/css/style.css';
 import './resources/css/dashicons.min.css';
 import './resources/css/front.css';

@@ -36,14 +36,15 @@ body {
   }
 
   /**** Form Components ****/
-  .form-header {
+  .dialog-form-body {
     text-align: left;
     width: 100%;
     overflow-y: auto;
-    padding-left: 5em;
+    padding: 5em;
   }
   .hire-dialog-title {
     background-color: #0277BD;
+    text-align: center;
   }
 
   /******************/

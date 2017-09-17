@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import Dialog from 'material-ui/Dialog';
 import FlatButton from 'material-ui/FlatButton';
-import RaisedButton from 'material-ui/RaisedButton';
 import FormStepper from './FormStepper';
 
 /**
@@ -37,11 +36,12 @@ export default class Hire extends Component {
 
     return (
       <span>
-        <RaisedButton className="buttons" onClick={this.handleOpen} label="Hire A Developer" primary />
+        <span><button className="btn btn-primary custom-button red-btn" onClick={this.handleOpen}>Hire A Developer</button></span>
         <Dialog
           title="Hire Developer Form"
           titleClassName="hire-dialog-title"
           titleStyle={{ color: 'white' }}
+          className="dialog-form-body"
           actions={actions}
           modal={false}
           open={this.state.open}

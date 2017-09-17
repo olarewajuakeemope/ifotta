@@ -39,7 +39,9 @@ export default class AdModal extends React.Component {
     return (
       <span>
         <Dialog
-          title="Scrollable Dialog"
+          title="Get your Ifotta shirt"
+          titleClassName="hire-dialog-title"
+          titleStyle={{ color: 'white' }}
           actions={actions}
           modal={false}
           open={this.state.open}

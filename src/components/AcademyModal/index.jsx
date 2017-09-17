@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import Dialog from 'material-ui/Dialog';
 import FlatButton from 'material-ui/FlatButton';
-import RaisedButton from 'material-ui/RaisedButton';
 import TextField from 'material-ui/TextField';
 import SelectField from 'material-ui/SelectField';
 import MenuItem from 'material-ui/MenuItem';
@@ -125,11 +125,12 @@ export default class AcademyModal extends Component {
 
     return (
       <span>
-        <RaisedButton className="buttons" onClick={this.handleOpen} label="Ifotta Academy" primary />
+        <span><button onClick={this.handleOpen} className={`btn btn-primary custom-button ${this.props.color}`}>Ifotta Academy</button></span>
         <Dialog
-          title="AcademyModal Developer Form"
+          title="Ifotta Academy Form"
           titleClassName="hire-dialog-title"
           titleStyle={{ color: 'white' }}
+          className="dialog-form-body"
           actions={actions}
           modal={false}
           open={this.state.open}
@@ -174,3 +175,7 @@ export default class AcademyModal extends Component {
     );
   }
 }
+
+AcademyModal.propTypes = {
+  color: PropTypes.string.isRequired,
+};
