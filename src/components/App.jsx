@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import Header from './Header';
 import AdModal from './AdModal';
 
@@ -41,5 +42,9 @@ class App extends Component {
     );
   }
 }
+
+App.propTypes = {
+  children: PropTypes.node.isRequired,
+};
 
 export default App;

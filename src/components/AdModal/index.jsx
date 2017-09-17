@@ -40,8 +40,8 @@ export default class AdModal extends React.Component {
       <span>
         <Dialog
           title="Get your Ifotta shirt"
-          titleClassName="hire-dialog-title"
           titleStyle={{ color: 'white' }}
+          titleClassName="hire-dialog-title"
           actions={actions}
           modal={false}
           open={this.state.open}
