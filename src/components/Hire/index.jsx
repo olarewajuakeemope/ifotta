@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import Dialog from 'material-ui/Dialog';
 import FlatButton from 'material-ui/FlatButton';
 import FormStepper from './FormStepper';
@@ -36,7 +37,7 @@ export default class Hire extends Component {
 
     return (
       <span>
-        <span><button className="btn btn-primary custom-button red-btn" onClick={this.handleOpen}>Hire A Developer</button></span>
+        <span><button className={`btn btn-primary custom-button ${this.props.color}`} onClick={this.handleOpen}>Hire A Developer</button></span>
         <Dialog
           title="Hire Developer Form"
           titleClassName="hire-dialog-title"
@@ -54,3 +55,7 @@ export default class Hire extends Component {
     );
   }
 }
+
+Hire.propTypes = {
+  color: PropTypes.string.isRequired,
+};

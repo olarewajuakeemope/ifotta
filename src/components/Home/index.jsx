@@ -13,10 +13,9 @@ import unknown4 from '../../resources/css/Unknown-4.png';
 import unknown5 from '../../resources/css/Unknown-5.png';
 import unknown6 from '../../resources/css/Unknown-6.png';
 import unknown7 from '../../resources/css/Unknown-7.png';
-import team1 from '../../resources/css/images/team1.png';
-import team2 from '../../resources/css/images/team2.png';
-import team3 from '../../resources/css/images/team3.png';
-import team4 from '../../resources/css/images/team4.png';
+
+import waterfrontImage from '../../resources/images/ifotta-waterfront.jpg';
+
 import testimonial1 from '../../resources/css/images/testimonial1.jpg';
 import testimonial2 from '../../resources/css/images/testimonial2.jpg';
 import testimonial3 from '../../resources/css/images/testimonial3.jpg';
@@ -40,9 +39,9 @@ const Home = () => (
                   <img width="500" height="32" src={logo} className="custom-logo" alt="Ifotta logo" itemProp="logo" />
                 </div>
                 <div className="buttons">
-                  <Hire />
-                  <a href="https://ifotta.workable.com" target="_blank" rel="noopener noreferrer" className="btn btn-primary custom-button green-btn">Apply as a Developer</a>
-                  <AcademyModal color="blue-btn" />
+                  <Hire color="yellow-btn" />
+                  <a href="https://ifotta.workable.com" target="_blank" rel="noopener noreferrer" className="btn btn-primary custom-button blue-btn">Apply as a Developer</a>
+                  <AcademyModal color="yellow-btn" />
                 </div>
                 <div className="clear" />
               </div>
@@ -55,14 +54,51 @@ const Home = () => (
               <h2 className="dark-text">OUR SERVICES</h2><div className="section-legend">What makes ifotta standout among other outsourcing companies.</div>
             </div>
             <div className="row">
-              <span id="ctup-ads-widget-3" className=""><div className="col-lg-3 col-sm-3 focus-box" data-scrollreveal="enter left after 0.15s over 1s" data-sr-init="true" data-sr-complete="true"><Link to="/about" className="service-icon"><span className="sr-only">Hire Developers</span><i className="pixeden" style={{ background: `url(${hireLogo}) no-repeat center`, width: '100%', height: '100%' }} /></Link><h3 className="red-border-bottom">HIRE DEVELOPERS</h3><p>Build a front page for your WooCommerce store in a matter of minutes. The neat and clean presentation will help your sales and make your store accessible to everyone.
-              </p></div></span><span id="ctup-ads-widget-4" className=""><div className="col-lg-3 col-sm-3 focus-box" data-scrollreveal="enter left after 0.15s over 1s" data-sr-init="true" data-sr-complete="true"><Link to="/about" className="service-icon"><span className="sr-only">Become a Developer</span><i className="pixeden" style={{ background: `url(${applyLogo}) no-repeat center`, width: '100%', height: '100%' }} /></Link><h3 className="red-border-bottom">BECOME A DEVELOPER</h3><p>Showcase your team, products, clients, about info, testimonials, latest posts from the blog, contact form, additional calls to action. Everything translation ready.
-              </p></div></span><span id="ctup-ads-widget-5" className=""><div className="col-lg-3 col-sm-3 focus-box" data-scrollreveal="enter left after 0.15s over 1s" data-sr-init="true" data-sr-complete="true"><Link to="/about" className="service-icon"><span className="sr-only">Ifotta Academy</span><i className="pixeden" style={{ background: `url(${academyLogo}) no-repeat center`, width: '100%', height: '100%' }} /></Link><h3 className="red-border-bottom">IFOTTA ACADEMY</h3><p>Get new content blocks: pricing table, Google Maps, and more. Change the sections order, display each block exactly where you need it, customize the blocks with whatever colors you wish.</p></div></span>
+              <span id="ctup-ads-widget-3" className="">
+                <div className="col-lg-3 col-sm-3 focus-box" data-scrollreveal="enter left after 0.15s over 1s" data-sr-init="true" data-sr-complete="true">
+                  <Link to="/about" className="service-icon">
+                    <span className="sr-only">
+                      Hire Developers
+                    </span>
+                    <i className="pixeden" style={{ background: `url(${hireLogo}) no-repeat center`, width: '100%', height: '100%' }} />
+                  </Link>
+                  <h3 className="blue-border-bottom">
+                    HIRE DEVELOPERS
+                  </h3>
+                  <p>Build a front page for your WooCommerce store in a matter of minutes. The neat and clean presentation will help your sales and make your store accessible to everyone.</p>
+                </div>
+              </span>
+              <span id="ctup-ads-widget-4" className="">
+                <div className="col-lg-3 col-sm-3 focus-box" data-scrollreveal="enter left after 0.15s over 1s" data-sr-init="true" data-sr-complete="true">
+                  <Link to="/about" className="service-icon">
+                    <span className="sr-only">
+                      Become a Developer
+                    </span>
+                    <i className="pixeden" style={{ background: `url(${applyLogo}) no-repeat center`, width: '100%', height: '100%' }} />
+                  </Link>
+                  <h3 className="white-border-bottom">
+                    BECOME A DEVELOPER
+                  </h3>
+                  <p>Showcase your team, products, clients, about info, testimonials, latest posts from the blog, contact form, additional calls to action. Everything translation ready.</p>
+                </div>
+              </span>
+              <span id="ctup-ads-widget-5" className="">
+                <div className="col-lg-3 col-sm-3 focus-box" data-scrollreveal="enter left after 0.15s over 1s" data-sr-init="true" data-sr-complete="true">
+                  <Link to="/about" className="service-icon">
+                    <span className="sr-only">Ifotta Academy</span>
+                    <i className="pixeden" style={{ background: `url(${academyLogo}) no-repeat center`, width: '100%', height: '100%' }} />
+                  </Link>
+                  <h3 className="blue-border-bottom">
+                    IFOTTA ACADEMY
+                  </h3>
+                  <p>Get new content blocks: pricing table, Google Maps, and more. Change the sections order, display each block exactly where you need it, customize the blocks with whatever colors you wish.</p>
+                </div>
+              </span>
             </div>
           </div>
         </section>
 
-        <section className="separator-one" id="ribbon_bottom">
+        <section className="separator-one" id="ribbon_bottom" style={{ background: `linear-gradient( rgba(0, 255, 0, 0.45),rgba(0, 255, 0, 0.45) ), url(${waterfrontImage})`, backgroundPosition: 'center top', backgroundSize: 'cover', backgroundRepeat: 'repeat', backgroundAttachment: 'fixed' }}>
           <div className="color-overlay">
             <h3 className="container text" data-scrollreveal="enter left after 0s over 1s" data-sr-init="true" data-sr-complete="true">Build your coding skills and get yourself ready for the labour in a matter of weeks.</h3>
             <div data-scrollreveal="enter right after 0s over 1s" data-sr-init="true" data-sr-complete="true">
@@ -174,184 +210,6 @@ const Home = () => (
             </div>
           </div>
         </section>
-        <section className="our-team" id="team">
-          <div className="container">
-            <div className="section-header">
-              <h2 className="dark-text">OUR TEAM</h2>
-              <div className="section-legend">We prove that we have real developers working for you, with the highly trained programmers and designers.</div>
-            </div>
-            <div className="row" data-scrollreveal="enter left after 0s over 0.1s" data-sr-init="true" data-sr-complete="true">
-              <span id="zerif_team-widget-1" className="">
-                <div className="col-lg-3 col-sm-3 team-box">
-                  <div className="team-member">
-                    <figure className="profile-pic">
-                      <img src={team1} alt="" />
-                    </figure>
-                    <div className="member-details">
-                      <h3 className="dark-text red-border-bottom">ASHLEY SIMMONS</h3>
-                      <div className="position">Project Manager</div>
-                    </div>
-                    <div className="social-icons">
-                      <ul>
-                        <li>
-                          <a href="https://google.com" target="_blank" rel="noopener noreferrer">
-                            <span className="sr-only">Facebook link</span>
-                            <i className="fa fa-facebook" />
-                          </a>
-                        </li>
-                        <li>
-                          <a href="https://google.com" target="_blank" rel="noopener noreferrer">
-                            <span className="sr-only">Twitter link</span>
-                            <i className="fa fa-twitter" />
-                          </a>
-                        </li>
-                        <li>
-                          <a href="https://google.com" target="_blank" rel="noopener noreferrer">
-                            <span className="sr-only">Behance link</span>
-                            <i className="fa fa-behance" />
-                          </a>
-                        </li>
-                        <li>
-                          <a href="https://google.com" target="_blank" rel="noopener noreferrer">
-                            <span className="sr-only">Dribble link</span>
-                            <i className="fa fa-dribbble" />
-                          </a>
-                        </li>
-                      </ul>
-                    </div>
-                    <div className="details">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc dapibus, eros at accumsan auctor, felis eros condimentum quam, non porttitor est urna vel neque</div>
-                  </div>
-                </div>
-              </span>
-              <span id="zerif_team-widget-3" className="">
-                <div className="col-lg-3 col-sm-3 team-box">
-                  <div className="team-member">
-                    <figure className="profile-pic">
-                      <img src={team2} alt="" />
-                    </figure>
-                    <div className="member-details">
-                      <h3 className="dark-text red-border-bottom">TIMOTHY SPRAY</h3>
-                      <div className="position">Art Director</div>
-                    </div>
-                    <div className="social-icons">
-                      <ul>
-                        <li>
-                          <a href="https://google.com" target="_blank" rel="noopener noreferrer">
-                            <span className="sr-only">Facebook link</span>
-                            <i className="fa fa-facebook" />
-                          </a>
-                        </li>
-                        <li>
-                          <a href="https://google.com" target="_blank" rel="noopener noreferrer">
-                            <span className="sr-only">Twitter link</span>
-                            <i className="fa fa-twitter" />
-                          </a>
-                        </li>
-                        <li>
-                          <a href="https://google.com" target="_blank" rel="noopener noreferrer">
-                            <span className="sr-only">Dribble link</span>
-                            <i className="fa fa-dribbble" />
-                          </a>
-                        </li>
-                        <li>
-                          <a href="https://google.com" target="_blank" rel="noopener noreferrer">
-                            <span className="sr-only">Linkedin link</span>
-                            <i className="fa fa-linkedin" />
-                          </a>
-                        </li>
-                      </ul>
-                    </div>
-                    <div className="details">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc dapibus, eros at accumsan auctor, felis eros condimentum quam, non porttitor est urna vel neque</div>
-                  </div>
-                </div>
-              </span>
-              <span id="zerif_team-widget-4" className="">
-                <div className="col-lg-3 col-sm-3 team-box">
-                  <div className="team-member">
-                    <figure className="profile-pic">
-                      <img src={team3} alt="" />
-                    </figure>
-                    <div className="member-details">
-                      <h3 className="dark-text red-border-bottom">TONYA GARCIA</h3>
-                      <div className="position">Account Manager</div>
-                    </div>
-                    <div className="social-icons">
-                      <ul>
-                        <li>
-                          <a href="https://google.com" target="_blank" rel="noopener noreferrer">
-                            <span className="sr-only">Facebook link</span>
-                            <i className="fa fa-facebook" />
-                          </a>
-                        </li>
-                        <li>
-                          <a href="https://google.com" target="_blank" rel="noopener noreferrer">
-                            <span className="sr-only">Behance link</span>
-                            <i className="fa fa-behance" />
-                          </a>
-                        </li>
-                        <li>
-                          <a href="https://google.com" target="_blank" rel="noopener noreferrer">
-                            <span className="sr-only">Dribble link</span>
-                            <i className="fa fa-dribbble" />
-                          </a>
-                        </li>
-                        <li>
-                          <a href="https://google.com" target="_blank" rel="noopener noreferrer">
-                            <span className="sr-only">Linkedin link</span>
-                            <i className="fa fa-linkedin" />
-                          </a>
-                        </li>
-                      </ul>
-                    </div>
-                    <div className="details">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc dapibus, eros at accumsan auctor, felis eros condimentum quam, non porttitor est urna vel neque</div>
-                  </div>
-                </div>
-              </span>
-              <span id="zerif_team-widget-5" className="">
-                <div className="col-lg-3 col-sm-3 team-box">
-                  <div className="team-member">
-                    <figure className="profile-pic">
-                      <img src={team4} alt="" />
-                    </figure>
-                    <div className="member-details">
-                      <h3 className="dark-text red-border-bottom">JASON LANE</h3>
-                      <div className="position">Business Development</div>
-                    </div>
-                    <div className="social-icons">
-                      <ul>
-                        <li>
-                          <a href="https://google.com" target="_blank" rel="noopener noreferrer">
-                            <span className="sr-only">Twitter link</span>
-                            <i className="fa fa-twitter" />
-                          </a>
-                        </li>
-                        <li>
-                          <a href="https://google.com" target="_blank" rel="noopener noreferrer">
-                            <span className="sr-only">Behance link</span>
-                            <i className="fa fa-behance" />
-                          </a>
-                        </li>
-                        <li>
-                          <a href="https://google.com" target="_blank" rel="noopener noreferrer">
-                            <span className="sr-only">Dribble link</span>
-                            <i className="fa fa-dribbble" />
-                          </a>
-                        </li>
-                        <li>
-                          <a href="https://google.com" target="_blank" rel="noopener noreferrer">
-                            <span className="sr-only">Linkedin link</span>
-                            <i className="fa fa-linkedin" />
-                          </a>
-                        </li>
-                      </ul>
-                    </div>
-                    <div className="details">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc dapibus, eros at accumsan auctor, felis eros condimentum quam, non porttitor est urna vel neque</div>
-                  </div>
-                </div>
-              </span>
-            </div>
-          </div>
-        </section>
         <section className="testimonial" id="testimonials">
           <div className="container">
             <div className="section-header">
@@ -415,7 +273,7 @@ const Home = () => (
                 <h3 className="white-text">What are you waiting for? Get in touch Now</h3>
               </div>
               <div className="col-md-3" data-scrollreveal="enter right after 0s over 1s" data-sr-init="true" data-sr-complete="true">
-                <Hire />
+                <Hire color="red-btn" />
               </div>
             </div>
           </div>
@@ -432,7 +290,7 @@ const Home = () => (
       </div>
       <footer id="footer" itemScope="itemscope" itemType="http://schema.org/WPFooter">
         <div className="container">
-          <div className="col-md-3 company-details"><div className="icon-top red-text"><img src={footer1} alt="" /></div><div className="zerif-footer-address">Nigeria Lagos - Adress - Waterfront plaza Victoria Island.</div></div><div className="col-md-3 company-details"><div className="icon-top green-text"><img src={footer2} alt="" /></div><div className="zerif-footer-email">support@ifotta.com</div></div><div className="col-md-3 company-details"><div className="icon-top blue-text"><img src={footer3} alt="" /></div><div className="zerif-footer-phone">0 332 548 987</div></div><div className="col-md-3 copyright"><ul className="social"><li id="facebook"><a target="_blank" rel="noopener noreferrer" href="https://google.com"><span className="sr-only">Facebook link</span> <i className="fa fa-facebook" /></a></li><li id="twitter"><a target="_blank" rel="noopener noreferrer" href="https://google.com"><span className="sr-only">Twitter link</span> <i className="fa fa-twitter" /></a></li><li id="linkedin"><a target="_blank" rel="noopener noreferrer" href="https://google.com"><span className="sr-only">Linkedin link</span> <i className="fa fa-linkedin" /></a></li><li id="behance"><a target="_blank" rel="noopener noreferrer" href="https://google.com"><span className="sr-only">Behance link</span> <i className="fa fa-behance" /></a></li><li id="dribbble"><a target="_blank" rel="noopener noreferrer" href="https://google.com"><span className="sr-only">Dribble link</span> <i className="fa fa-dribbble" /></a></li><li id="instagram"><a target="_blank" rel="noopener noreferrer" href="https://google.com"><span className="sr-only">Instagram link</span> <i className="fa fa-instagram" /></a></li></ul><p id="zerif-copyright">©Ifotta</p><div className="zerif-copyright-box">developed by <a className="zerif-copyright" href="https://google.com/" target="_blank" rel="noopener noreferrer"> Ifotta</a></div></div>
+          <div className="col-md-3 company-details"><div className="icon-top red-text"><img src={footer1} alt="" /></div><div className="zerif-footer-address">270 Ozumba Mbadiwe Street Victoria Island Lagos Nigeria.</div></div><div className="col-md-3 company-details"><div className="icon-top green-text"><img src={footer2} alt="" /></div><div className="zerif-footer-email">support@ifotta.com</div></div><div className="col-md-3 company-details"><div className="icon-top blue-text"><img src={footer3} alt="" /></div><div className="zerif-footer-phone">0 332 548 987</div></div><div className="col-md-3 copyright"><ul className="social"><li id="facebook"><a target="_blank" rel="noopener noreferrer" href="https://google.com"><span className="sr-only">Facebook link</span> <i className="fa fa-facebook" /></a></li><li id="twitter"><a target="_blank" rel="noopener noreferrer" href="https://google.com"><span className="sr-only">Twitter link</span> <i className="fa fa-twitter" /></a></li><li id="linkedin"><a target="_blank" rel="noopener noreferrer" href="https://google.com"><span className="sr-only">Linkedin link</span> <i className="fa fa-linkedin" /></a></li><li id="behance"><a target="_blank" rel="noopener noreferrer" href="https://google.com"><span className="sr-only">Behance link</span> <i className="fa fa-behance" /></a></li><li id="dribbble"><a target="_blank" rel="noopener noreferrer" href="https://google.com"><span className="sr-only">Dribble link</span> <i className="fa fa-dribbble" /></a></li><li id="instagram"><a target="_blank" rel="noopener noreferrer" href="https://google.com"><span className="sr-only">Instagram link</span> <i className="fa fa-instagram" /></a></li></ul><p id="zerif-copyright">©Ifotta</p><div className="zerif-copyright-box">developed by <a className="zerif-copyright" href="https://google.com/" target="_blank" rel="noopener noreferrer"> Ifotta</a></div></div>
         </div>
       </footer>
     </div>
