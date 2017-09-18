@@ -118,6 +118,98 @@ class dataValidators {
       isValid: isEmpty(errors),
     };
   }
+  contactInput(data) {
+    this.errors = {};
+    if (/^[a-zA-Z ]*$/.test(data.fullname) === false) {
+      this.errors.fullname = 'Your name can only be letters';
+    }
+
+    if (data.email === undefined || Validator.isEmpty(data.email)) {
+      this.errors.email = 'Email is required';
+    } else if (!Validator.isEmail(data.email)) {
+      this.errors.email = 'Email must be valid';
+    }
+
+    if (data.subject === undefined || Validator.isEmpty(data.subject)) {
+      this.errors.subject = 'Subject is required';
+    }
+
+    if (data.message === undefined || Validator.isEmpty(data.message)) {
+      this.errors.message = 'Message is required';
+    }
+
+    if (data.fullname === undefined || Validator.isEmpty(data.fullname)) {
+      this.errors.fullname = 'Fullname is required';
+    }
+
+    const errors = this.errors;
+    return {
+      errors,
+      isValid: isEmpty(errors),
+    };
+  }
+  hireFormInput1(data) {
+    this.errors = {};
+    if (/^[a-zA-Z ]*$/.test(data.fullname) === false) {
+      this.errors.fullname = 'Your name can only be letters';
+    }
+
+    if (data.email === undefined || Validator.isEmpty(data.email)) {
+      this.errors.email = 'Email is required';
+    } else if (!Validator.isEmail(data.email)) {
+      this.errors.email = 'Email must be valid';
+    }
+
+    if (data.projectSummary === undefined || Validator.isEmpty(data.projectSummary)) {
+      this.errors.projectSummary = 'Please tell us what your poject is about';
+    }
+
+    if (data.fullname === undefined || Validator.isEmpty(data.fullname)) {
+      this.errors.fullname = 'Fullname is required';
+    }
+
+    if (!data.startDate) {
+      this.errors.startDate = 'Project start date is required';
+    }
+
+    if (!data.endDate) {
+      this.errors.endDate = 'Project end date is required';
+    }
+
+    const errors = this.errors;
+    return {
+      errors,
+      isValid: isEmpty(errors),
+    };
+  }
+
+  hireFormInput2(data) {
+    this.errors = {};
+    if (data.developerSkills === undefined || Validator.isEmpty(data.developerSkills)) {
+      this.errors.developerSkills = 'Please enter developer skills needed';
+    }
+    const errors = this.errors;
+    return {
+      errors,
+      isValid: isEmpty(errors),
+    };
+  }
+
+  hireFormInput3(data) {
+    this.errors = {};
+    if (data.manager === 0) {
+      this.errors.manager = 'Please select an option here';
+    }
+
+    if (data.location === 0) {
+      this.errors.location = 'Please select an option here';
+    }
+    const errors = this.errors;
+    return {
+      errors,
+      isValid: isEmpty(errors),
+    };
+  }
 }
 
 export default new dataValidators();

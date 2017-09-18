@@ -29,7 +29,7 @@ class App extends Component {
     this.addEvent(document, 'mouseout', (e) => {
       e = e || window.event;
       const from = e.relatedTarget || e.toElement;
-      if (!from || from.nodeName == 'HTML') {
+      if (!from || from.nodeName === 'HTML') {
         this.setState({ showModal: true });
       }
     });

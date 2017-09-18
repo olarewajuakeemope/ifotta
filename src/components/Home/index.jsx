@@ -1,12 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router';
-import { GridList, GridTile } from 'material-ui/GridList';
-import Paper from 'material-ui/Paper';
-import ContentInbox from 'material-ui/svg-icons/content/inbox';
-import ActionGrade from 'material-ui/svg-icons/action/grade';
-import ContentSend from 'material-ui/svg-icons/content/send';
-import RaisedButton from 'material-ui/RaisedButton';
-import { white, lightBlue800 } from 'material-ui/styles/colors';
+import ContactForm from './ContactForm';
 import Hire from '../Hire';
 import AcademyModal from '../AcademyModal';
 import logo from '../../resources/images/logo.png';
@@ -36,42 +30,6 @@ import post5 from '../../resources/css/dribble_app_icon_uvla2m.png';
 import footer1 from '../../resources/css/map25-redish.png';
 import footer2 from '../../resources/css/envelope4-green.png';
 import footer3 from '../../resources/css/telephone65-blue.png';
-
-const styles = {
-  firstPapers: {
-    height: 300,
-    width: 300,
-    marginTop: 20,
-    marginBottom: 20,
-    marginLeft: 70,
-    marginRight: 70,
-    padding: 20,
-    color: '#999999',
-    textAlign: 'center',
-    display: 'inline-block',
-  },
-  iconStyles: {
-    width: 40,
-    height: 40,
-  },
-};
-const tilesData = [
-  {
-    img: 'images/grid-list/honey-823614_640.jpg',
-    title: 'Created forth two. Behold appear first, kind all i saying fowl man itself moved which every open shall moved subdue appear. Saying life wherein stars. Give dry, own, male had that us third lesser over deep. May every bring in it Whose. Female earth heaven won\'t behold female.',
-    author: 'Our Developers',
-  },
-  {
-    img: 'images/grid-list/vegetables-790022_640.jpg',
-    title: 'Created forth two. Behold appear first, kind all i saying fowl man itself moved which every open shall moved subdue appear. Saying life wherein stars. Give dry, own, male had that us third lesser over deep. May every bring in it Whose. Female earth heaven won\'t behold female.',
-    author: 'Code With Us',
-  },
-  {
-    img: 'images/grid-list/water-plant-821293_640.jpg',
-    title: 'Created forth two. Behold appear first, kind all i saying fowl man itself moved which every open shall moved subdue appear. Saying life wherein stars. Give dry, own, male had that us third lesser over deep. May every bring in it Whose. Female earth heaven won\'t behold female.',
-    author: 'ifotta Academy',
-  },
-];
 
 const Home = () => (
   <div id="mobilebgfix">
@@ -477,7 +435,7 @@ const Home = () => (
             <div className="clear" />
             <div id="carousel-homepage-latestnews" className="carousel slide" data-ride="carousel">
               <div className="carousel-inner" role="listbox">
-                <div className="item active" role="option" style={{ height: '396px' }}>
+                <div className="item active" role="option" aria-selected style={{ height: '396px' }}>
                   <div className="col-sm-3 latestnews-box">
                     <div className="latestnews-img">
                       <a className="latestnews-img-a" href="https://google.com/" title="Google.com vs Youtube.com">
@@ -566,36 +524,7 @@ const Home = () => (
               <h2 className="white-text">Get in touch </h2>
               <div className="white-text section-legend">Big and mobile-optimized contact form integrated. All fields are customizablee. </div>
             </div>
-            <div className="row">
-              <div className="pirate_forms_wrap">
-                <form method="post" encType="application/x-www-form-urlencoded" action="/" className="pirate_forms  form_honeypot-on pirate_forms_from_widget-on wordpress-nonce-on pirate-forms-contact-name-on pirate-forms-contact-email-on pirate-forms-contact-subject-on pirate-forms-contact-message-on pirate-forms-contact-submit-on contact-referrer-on">
-                  <div className="pirate_forms_three_inputs_wrap">
-                    <div className="col-lg-4 col-sm-4 form_field_wrap">
-                      <input type="text" id="pirate-forms-contact-name" name="pirate-forms-contact-name" className="form-control input" placeholder="Your Name" required="" oninvalid="this.setCustomValidity(&#39;Enter your name&#39;)" onChange="this.setCustomValidity(&#39;&#39;)" value="" />
-                    </div>
-                    <div className="col-lg-4 col-sm-4 form_field_wrap">
-                      <input type="email" id="pirate-forms-contact-email" name="pirate-forms-contact-email" className="form-control input" placeholder="Your Email" required="" oninvalid="this.setCustomValidity(&#39;Enter a valid email&#39;)" onChange="this.setCustomValidity(&#39;&#39;)" value="" />
-                    </div>
-                    <div className="col-lg-4 col-sm-4 form_field_wrap">
-                      <input type="text" id="pirate-forms-contact-subject" name="pirate-forms-contact-subject" className="form-control input" placeholder="Subject" required="" oninvalid="this.setCustomValidity(&#39;Please enter a subject&#39;)" onChange="this.setCustomValidity(&#39;&#39;)" value="" />
-                    </div>
-                  </div>
-                  <div className="col-lg-12 col-sm-12 form_field_wrap">
-                    <textarea rows="5" cols="30" id="pirate-forms-contact-message" name="pirate-forms-contact-message" className="form-control input" placeholder="Your message" required="" oninvalid="this.setCustomValidity(&#39;Enter your question or comment&#39;)" onChange="this.setCustomValidity(&#39;&#39;)" />
-                  </div>
-                  <div className="col-xs-12 col-sm-6 col-lg-6 form_field_wrap contact_submit_wrap">
-                    <button type="submit" id="pirate-forms-contact-submit" name="pirate-forms-contact-submit" className="btn btn-primary custom-button red-btn pirate-forms-submit-button" placeholder="">Send Message</button>
-                  </div>
-                  <div className="form_field_wrap hidden" style={{ display: 'none' }}>
-                    <input type="text" id="form_honeypot" name="honeypot" className="" placeholder="" value="" />
-                  </div>
-                  <input type="hidden" id="pirate_forms_from_widget" name="pirate_forms_from_widget" className="" placeholder="" value="0" />
-                  <input type="hidden" id="wordpress-nonce" name="wordpress-nonce" className="" placeholder="" value="c87681a1a3" />
-                  <input type="hidden" id="contact-referrer" name="contact-referrer" className="" placeholder="" value="https://google.com" />
-                </form>
-                <div className="pirate_forms_clearfix" />
-              </div>
-            </div>
+            <ContactForm />
           </div>
         </section>
       </div>

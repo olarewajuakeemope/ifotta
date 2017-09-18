@@ -22,6 +22,7 @@ class FormStepper extends React.Component {
     loading: false,
     finished: false,
     stepIndex: 0,
+    errors: {},
     project: {
       developerSkills: '',
       fullname: '',
@@ -37,6 +38,9 @@ class FormStepper extends React.Component {
   };
 
   getStepContent(stepIndex) {
+    const { errors } = this.state;
+    const startDateError = errors.startDate ? <p className="error text-danger">{errors.startDate}</p> : '';
+    const endDateError = errors.endDate ? <p className="error text-danger">{errors.endDate}</p> : '';
     switch (stepIndex) {
       case 0:
         return (
@@ -47,6 +51,7 @@ class FormStepper extends React.Component {
               name="fullname"
               value={this.state.project.fullname}
               onChange={this.handleTextInput}
+              errorText={errors.fullname}
               hintText="Full name"
               floatingLabelText="Enter your name"
             /><br />
@@ -54,6 +59,7 @@ class FormStepper extends React.Component {
               name="email"
               value={this.state.project.email}
               onChange={this.handleTextInput}
+              errorText={errors.email}
               hintText="Your email"
               floatingLabelText="Enter your email"
             /><br />
@@ -61,18 +67,21 @@ class FormStepper extends React.Component {
               name="projectSummary"
               value={this.state.project.projectSummary}
               onChange={this.handleTextInput}
+              errorText={errors.projectSummary}
               hintText="Project summary"
               floatingLabelText="Enter your project detail here"
               multiLine
               rows={2}
             /><br />
             <Subheader style={{ textAlign: 'left', paddingLeft: 0, marginLeft: 0, marginTop: 10 }}>Project Period</Subheader>
+            {startDateError}
             <DatePicker
               name="startDate"
               value={this.state.project.startDate}
               onChange={this.handleStartDate}
               hintText="Project Start Date"
             /><br />
+            {endDateError}
             <DatePicker
               name="endDate"
               value={this.state.project.endDate}
@@ -89,6 +98,7 @@ class FormStepper extends React.Component {
               name="developerSkills"
               value={this.state.project.developerSkills}
               onChange={this.handleTextInput}
+              errorText={errors.developerSkills}
               style={{ marginTop: 0 }}
               floatingLabelText="Enter your skill requirements"
             />
@@ -104,6 +114,7 @@ class FormStepper extends React.Component {
               floatingLabelText="Should we manage your project?"
               value={this.state.ifotta.manager}
               onChange={this.handleSelectManager}
+              errorText={errors.manager}
               autoWidth
             >
               <MenuItem value={0} primaryText="Should we manage your project?" disabled />
@@ -116,6 +127,7 @@ class FormStepper extends React.Component {
               floatingLabelText="Where would our developer work from?"
               value={this.state.ifotta.location}
               onChange={this.handleSelectLocation}
+              errorText={errors.location}
               autoWidth
             >
               <MenuItem value={0} primaryText="Where would our developer work from?" disabled />
@@ -130,6 +142,35 @@ class FormStepper extends React.Component {
         return 'Please fill the hire developer form';
     }
   }
+  /**
+   * Validates useer's data before making
+   * post request
+   * @method validateData
+   * @returns {boolean} -
+   * @memberOf SignupForm
+   */
+  validateData() {
+    const { stepIndex } = this.state;
+    let validateResult = {
+      errors: null,
+      isValid: true,
+    };
+    if (stepIndex === 0) {
+      const { errors, isValid } = dataValidators.hireFormInput1(this.state.project);
+      validateResult = { errors, isValid };
+    } else if (stepIndex === 1) {
+      const { errors, isValid } = dataValidators.hireFormInput2(this.state.project);
+      validateResult = { errors, isValid };
+    } else {
+      const { errors, isValid } = dataValidators.hireFormInput3(this.state.ifotta);
+      validateResult = { errors, isValid };
+    }
+    const { errors, isValid } = validateResult;
+    if (!isValid) {
+      this.setState({ errors });
+    }
+    return { errors, isValid };
+  }
 
   dummyAsync = (cb) => {
     this.setState({ loading: true }, () => {
@@ -138,13 +179,23 @@ class FormStepper extends React.Component {
   };
 
   handleNext = () => {
-    const { stepIndex } = this.state;
-    if (!this.state.loading) {
-      this.dummyAsync(() => this.setState({
-        loading: false,
-        stepIndex: stepIndex + 1,
-        finished: stepIndex >= 2,
-      }));
+    this.setState({
+      errors: {},
+    });
+    const { errors, isValid } = this.validateData();
+    if (isValid) {
+      const { stepIndex } = this.state;
+      if (!this.state.loading) {
+        this.dummyAsync(() => this.setState({
+          loading: false,
+          stepIndex: stepIndex + 1,
+          finished: stepIndex >= 2,
+        }));
+      }
+    } else {
+      this.setState({ errors }, () => {
+        // console.log('failing with errors: ', this.state.errors);
+      });
     }
   };
 
@@ -161,16 +212,16 @@ class FormStepper extends React.Component {
   handleTextInput = (event) => {
     const { name, value } = event.target;
     this.setState({
-      ifotta: Object.assign(this.state.project, { [name]: value }),
+      project: Object.assign(this.state.project, { [name]: value }),
     });
   };
 
   handleStartDate = (event, date) => this.setState({
-    ifotta: Object.assign(this.state.project, { startDate: date }),
+    project: Object.assign(this.state.project, { startDate: date }),
   });
 
   handleEndDate = (event, date) => this.setState({
-    ifotta: Object.assign(this.state.project, { endDate: date }),
+    project: Object.assign(this.state.project, { endDate: date }),
   });
 
   handleSelectLocation = (event, index, value) => this.setState({
@@ -190,7 +241,7 @@ class FormStepper extends React.Component {
         <div style={contentStyle}>
           <p>
             <a
-              href="#"
+              href="/"
               onClick={(event) => {
                 event.preventDefault();
                 this.setState({ stepIndex: 0, finished: false });

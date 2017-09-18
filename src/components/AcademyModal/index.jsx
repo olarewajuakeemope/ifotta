@@ -109,6 +109,7 @@ export default class AcademyModal extends Component {
   };
 
   render() {
+    const { errors } = this.state;
     const actions = [
       <FlatButton
         label="Cancel"
@@ -144,6 +145,7 @@ export default class AcademyModal extends Component {
             floatingLabelText="Enter your name"
             name="fullname"
             id="fullname"
+            errorText={errors.fullname}
             value={this.state.fullname}
             onChange={this.onChange}
           /><br />
@@ -152,6 +154,7 @@ export default class AcademyModal extends Component {
             floatingLabelText="Enter your email"
             name="email"
             id="email"
+            errorText={errors.email}
             value={this.state.email}
             onChange={this.onChange}
           /><br />
@@ -159,6 +162,7 @@ export default class AcademyModal extends Component {
             floatingLabelText="Select a training session"
             floatingLabelStyle={{ fontSize: 15 }}
             id="select"
+            errorText={errors.select}
             value={this.state.select}
             onChange={this.handleSelect}
             autoWidth

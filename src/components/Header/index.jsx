@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router';
-import AppBar from 'material-ui/AppBar';
-import FlatButton from 'material-ui/FlatButton';
 import logo from '../../resources/images/logo.png';
 
 /**
@@ -19,18 +17,6 @@ class Header extends Component {
    * @memberOf Header
    */
   render() {
-    const styles = {
-      title: {
-        textDecoration: 'none',
-        color: 'initial',
-      },
-      appBar: {
-        backgroundColor: 'white',
-      },
-      logo: {
-        width: '5em',
-      },
-    };
     return (
   <header id="home" className="header" itemScope="itemscope" itemType="http://schema.org/WPHeader" style={{ minHeight: '76px' }}>
 
