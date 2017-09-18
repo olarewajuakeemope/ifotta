@@ -1,4 +1,6 @@
 import React from 'react';
+import swal from 'sweetalert';
+import PropTypes from 'prop-types';
 import {
   Step,
   Stepper,
@@ -12,6 +14,7 @@ import TextField from 'material-ui/TextField';
 import SelectField from 'material-ui/SelectField';
 import Subheader from 'material-ui/Subheader';
 import MenuItem from 'material-ui/MenuItem';
+import { hireSignup } from '../../actions/userActions';
 import dataValidators from '../../utils/dataValidators';
 
 /**
@@ -192,10 +195,19 @@ class FormStepper extends React.Component {
           finished: stepIndex >= 2,
         }));
       }
+      if (stepIndex >= 2) {
+        hireSignup(this.state)
+          .then(() => {
+            swal({
+              title: 'Thank You!',
+              text: 'Your developer request will be reviewed!',
+              icon: 'success',
+            });
+            this.props.handleClose();
+          });
+      }
     } else {
-      this.setState({ errors }, () => {
-        // console.log('failing with errors: ', this.state.errors);
-      });
+      this.setState({ errors });
     }
   };
 
@@ -297,5 +309,9 @@ class FormStepper extends React.Component {
     );
   }
 }
+
+FormStepper.propTypes = {
+  handleClose: PropTypes.func.isRequired,
+};
 
 export default FormStepper;

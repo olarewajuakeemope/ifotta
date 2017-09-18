@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import swal from 'sweetalert';
+import { contact } from '../../actions/userActions';
 import dataValidators from '../../utils/dataValidators';
 
 /**
@@ -66,22 +68,18 @@ export default class ContactForm extends Component {
     this.setState({
       errors: {},
     });
-    // const { signUpAction } = this.props;
     const { errors, isValid } = this.validateData();
     if (isValid) {
-    //   signUpAction(this.state).then(
-    //   () => {
-    //     this.props.history.push('/documents');
-    //   },
-    //   ({ response }) => {
-    //     this.setState({
-    //       errors: response.data,
-    //     });
-    //   });
+      contact(this.state)
+        .then(() => {
+          swal({
+            title: 'Thank You!',
+            text: 'Your message has been delivered!',
+            icon: 'success',
+          });
+        });
     } else {
-      this.setState({ errors }, () => {
-        // console.log('failing with errors: ', this.state.errors);
-      });
+      this.setState({ errors });
     }
   }
 

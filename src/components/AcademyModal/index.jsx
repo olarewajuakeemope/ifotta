@@ -1,16 +1,18 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import swal from 'sweetalert';
 import Dialog from 'material-ui/Dialog';
 import FlatButton from 'material-ui/FlatButton';
 import TextField from 'material-ui/TextField';
 import SelectField from 'material-ui/SelectField';
 import MenuItem from 'material-ui/MenuItem';
+import { academySignup } from '../../actions/userActions';
 import dataValidators from '../../utils/dataValidators';
 
 /**
  * Dialog content can be scrollable.
  */
-export default class AcademyModal extends Component {
+class AcademyModal extends Component {
   /**
    * Creates an instance of SignupForm.
    * @param {any} props
@@ -80,22 +82,19 @@ export default class AcademyModal extends Component {
     this.setState({
       errors: {},
     });
-    // const { signUpAction } = this.props;
     const { errors, isValid } = this.validateData();
     if (isValid) {
-    //   signUpAction(this.state).then(
-    //   () => {
-    //     this.props.history.push('/documents');
-    //   },
-    //   ({ response }) => {
-    //     this.setState({
-    //       errors: response.data,
-    //     });
-    //   });
+      academySignup(this.state)
+        .then(() => {
+          this.handleClose();
+          swal({
+            title: 'Thank You!',
+            text: 'You have successfully signed Up!',
+            icon: 'success',
+          });
+        });
     } else {
-      this.setState({ errors }, () => {
-        // console.log('failing with errors: ', this.state.errors);
-      });
+      this.setState({ errors });
     }
   }
   /**
@@ -168,10 +167,10 @@ export default class AcademyModal extends Component {
             autoWidth
           >
             <MenuItem value={0} primaryText="Select a training session" disabled />
-            <MenuItem value={1} primaryText="Front-End Development training" />
-            <MenuItem value={2} primaryText="Back-End Development training" />
-            <MenuItem value={3} primaryText="Full Stack" />
-            <MenuItem value={3} primaryText="Individual Courses" />
+            <MenuItem value="Front-End Development training" primaryText="Front-End Development training" />
+            <MenuItem value="Back-End Development training" primaryText="Back-End Development training" />
+            <MenuItem value="Full Stack" primaryText="Full Stack" />
+            <MenuItem value="Individual Courses" primaryText="Individual Courses" />
           </SelectField>
           <br />
         </Dialog>
@@ -183,3 +182,5 @@ export default class AcademyModal extends Component {
 AcademyModal.propTypes = {
   color: PropTypes.string.isRequired,
 };
+
+export default AcademyModal;

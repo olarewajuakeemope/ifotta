@@ -48,7 +48,7 @@ export default class Hire extends Component {
           onRequestClose={this.handleClose}
           autoScrollBodyContent
         >
-          <FormStepper />
+          <FormStepper handleClose={this.handleClose} />
         </Dialog>
       </span>
     );

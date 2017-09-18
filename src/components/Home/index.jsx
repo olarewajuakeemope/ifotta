@@ -21,12 +21,6 @@ import testimonial1 from '../../resources/css/images/testimonial1.jpg';
 import testimonial2 from '../../resources/css/images/testimonial2.jpg';
 import testimonial3 from '../../resources/css/images/testimonial3.jpg';
 
-import post1 from '../../resources/css/1j5JfNg-250x250.jpg';
-import post2 from '../../resources/css/contact_xmtyd2.jpg';
-import post3 from '../../resources/css/ToolShed_drib_big-e1406196790312_skjsre.jpg';
-import post4 from '../../resources/css/chapter4-800_einxp5.png';
-import post5 from '../../resources/css/dribble_app_icon_uvla2m.png';
-
 import footer1 from '../../resources/css/map25-redish.png';
 import footer2 from '../../resources/css/envelope4-green.png';
 import footer3 from '../../resources/css/telephone65-blue.png';
