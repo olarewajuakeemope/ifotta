@@ -8,7 +8,7 @@ import axios from 'axios';
  */
 export function academySignup(user) {
   console.log(user);
-  return axios.get('/api/academy/signup');
+  return axios.get('https://boiling-atoll-12170.herokuapp.com/api/academy/signup');
 }
 /**
  * Async Function to handle contact request
@@ -18,7 +18,7 @@ export function academySignup(user) {
  */
 export function contact(user) {
   console.log(user);
-  return axios.get('/api/contact');
+  return axios.get('https://boiling-atoll-12170.herokuapp.com/api/contact');
 }
 /**
  * Async Function to handle contact request
@@ -28,5 +28,5 @@ export function contact(user) {
  */
 export function hireSignup(user) {
   console.log(user);
-  return axios.get('/api/hire/signup');
+  return axios.get('https://boiling-atoll-12170.herokuapp.com/api/hire/signup');
 }
