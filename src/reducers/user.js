@@ -8,7 +8,7 @@ import initialState from './initialState';
  * @param {Object} action
  * @returns {Object} state
  */
-export default function userReducer(state = initialState.manageUsers, action) {
+export default function userReducer(state = initialState.user, action) {
   switch (action.type) {
     case types.SIGNUP_USER:
       return Object.assign({}, ...state, { users: action.user });
