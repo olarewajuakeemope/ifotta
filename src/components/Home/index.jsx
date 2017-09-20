@@ -55,7 +55,7 @@ const Home = () => (
             </div>
             <div className="row">
               <span id="ctup-ads-widget-3" className="">
-                <div className="col-lg-3 col-sm-3 focus-box" data-scrollreveal="enter left after 0.15s over 1s" data-sr-init="true" data-sr-complete="true">
+                <div className="col-lg-3 col-sm-3 focus-box service-container">
                   <Link to="/about" className="service-icon">
                     <span className="sr-only">
                       Hire Developers
@@ -69,7 +69,7 @@ const Home = () => (
                 </div>
               </span>
               <span id="ctup-ads-widget-4" className="">
-                <div className="col-lg-3 col-sm-3 focus-box" data-scrollreveal="enter left after 0.15s over 1s" data-sr-init="true" data-sr-complete="true">
+                <div className="col-lg-3 col-sm-3 focus-box service-container">
                   <Link to="/about" className="service-icon">
                     <span className="sr-only">
                       Become a Developer
@@ -83,7 +83,7 @@ const Home = () => (
                 </div>
               </span>
               <span id="ctup-ads-widget-5" className="">
-                <div className="col-lg-3 col-sm-3 focus-box" data-scrollreveal="enter left after 0.15s over 1s" data-sr-init="true" data-sr-complete="true">
+                <div className="col-lg-3 col-sm-3 focus-box service-container">
                   <Link to="/about" className="service-icon">
                     <span className="sr-only">Ifotta Academy</span>
                     <i className="pixeden" style={{ background: `url(${academyLogo}) no-repeat center`, width: '100%', height: '100%' }} />
@@ -100,8 +100,8 @@ const Home = () => (
 
         <section className="separator-one" id="ribbon_bottom" style={{ background: `linear-gradient( rgba(0, 255, 0, 0.45),rgba(0, 255, 0, 0.45) ), url(${waterfrontImage})`, backgroundPosition: 'center top', backgroundSize: 'cover', backgroundRepeat: 'repeat', backgroundAttachment: 'fixed' }}>
           <div className="color-overlay">
-            <h3 className="container text" data-scrollreveal="enter left after 0s over 1s" data-sr-init="true" data-sr-complete="true">Build your coding skills and get yourself ready for the labour in a matter of weeks.</h3>
-            <div data-scrollreveal="enter right after 0s over 1s" data-sr-init="true" data-sr-complete="true">
+            <h3 className="container text hire-call-to-action-text">Build your coding skills and get yourself ready for the labour in a matter of weeks.</h3>
+            <div className="hire-call-to-action-button-container">
               <AcademyModal color="green-btn" />
             </div>
           </div>
@@ -114,16 +114,16 @@ const Home = () => (
             </div>
             <div className="row">
               <div className="col-lg-4 col-md-4 column zerif-rtl-big-title">
-                <div className="big-intro" data-scrollreveal="enter left after 0s over 1s" data-sr-init="true" data-sr-complete="true">Everything ifotta app is responsive and mobile-friendly.</div>
+                <div className="big-intro about-big-intro">Everything ifotta app is responsive and mobile-friendly.</div>
               </div>
-              <div className="col-lg-4 col-md-4 column zerif_about_us_center text_and_skills" data-scrollreveal="enter bottom after 0s over 1s" data-sr-init="true" data-sr-complete="true">
+              <div className="col-lg-4 col-md-4 column zerif_about_us_center text_and_skills">
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec massa enim. Aliquam viverra at est ullamcorper sollicitudin. Proin a leo sit amet nunc malesuada imperdiet pharetra ut eros.<br />
                   <br />Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec massa enim. Aliquam viverra at est ullamcorper sollicitudin. Proin a leo sit amet nunc malesuada imperdiet pharetra ut eros. <br />
                   <br />Mauris vel nunc at ipsum fermentum pellentesque quis ut massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Maecenas non adipiscing massa. Sed ut fringilla sapien. Cras sollicitudin, lectus sed tincidunt cursus, magna lectus vehicula augue, a lobortis dui orci et est.
                 </p>
               </div>
               <div className="col-lg-4 col-md-4 column zerif-rtl-skills ">
-                <ul className="skills" data-scrollreveal="enter right after 0s over 1s" data-sr-init="true" data-sr-complete="true">
+                <ul className="skills">
                   <li className="skill skill_1">
                     <div className="skill-count">
                       <div style={{ display: 'inline', width: '64px', height: '200px' }}>
@@ -175,7 +175,7 @@ const Home = () => (
               <h5><span className="section-footer-title">OUR HAPPY CLIENTS</span></h5>
             </div>
             <div className="client-list">
-              <div data-scrollreveal="enter right move 60px after 0.00s over 2.5s" data-sr-init="true" data-sr-complete="true">
+              <div className="client-list-item">
                 <span id="zerif_clients-widget-3">
                   <a target="_blank" rel="noopener noreferrer" href="https://google.com#">
                     <img src={unknown} alt="Client" />
@@ -216,7 +216,7 @@ const Home = () => (
               <h2 className="white-text">Testimonials</h2>
               <h6 className="white-text section-legend">See what our happy clients are saying about our solutions.</h6>
             </div>
-            <div className="row" data-scrollreveal="enter right after 0s over 1s" data-sr-init="true" data-sr-complete="true">
+            <div className="row testimonial-items">
               <div className="col-md-12"><div id="client-feedbacks" className="owl-carousel owl-theme  ">
                 <span id="zerif_testim-widget-1" className="feedback-box">
                   <div className="message">Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Curabitur nec sem vel sapien venenatis mattis non vitae augue. Nullam congue commodo lorem vitae facilisis. Suspendisse malesuada id turpis interdum dictum.</div>
@@ -269,10 +269,10 @@ const Home = () => (
         <section className="purchase-now" id="ribbon_right">
           <div className="container">
             <div className="row">
-              <div className="col-md-9" data-scrollreveal="enter left after 0s over 1s" data-sr-init="true" data-sr-complete="true">
+              <div className="col-md-9 hire-call-to-action-text">
                 <h3 className="white-text">What are you waiting for? Get in touch Now</h3>
               </div>
-              <div className="col-md-3" data-scrollreveal="enter right after 0s over 1s" data-sr-init="true" data-sr-complete="true">
+              <div className="col-md-3 hire-call-to-action-button-container">
                 <Hire color="red-btn" />
               </div>
             </div>
