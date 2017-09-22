@@ -29,12 +29,6 @@ export default class AdModal extends React.Component {
         primary
         onClick={this.handleClose}
       />,
-      <FlatButton
-        label="Submit"
-        primary
-        keyboardFocused
-        onClick={this.handleClose}
-      />,
     ];
     return (
       <span>

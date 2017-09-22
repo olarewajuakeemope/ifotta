@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import swal from 'sweetalert';
 import PropTypes from 'prop-types';
 import {
@@ -14,13 +14,14 @@ import TextField from 'material-ui/TextField';
 import SelectField from 'material-ui/SelectField';
 import Subheader from 'material-ui/Subheader';
 import MenuItem from 'material-ui/MenuItem';
+import CircularProgress from 'material-ui/CircularProgress';
 import { hireSignup } from '../../actions/userActions';
 import dataValidators from '../../utils/dataValidators';
 
 /**
  * A contrived example using a transition between steps
  */
-class FormStepper extends React.Component {
+class FormStepper extends Component {
   state = {
     loading: false,
     finished: false,
@@ -118,7 +119,7 @@ class FormStepper extends React.Component {
               value={this.state.ifotta.manager}
               onChange={this.handleSelectManager}
               errorText={errors.manager}
-              autoWidth
+              fullWidth
             >
               <MenuItem value={0} primaryText="Should we manage your project?" disabled />
               <MenuItem value={1} primaryText="Yes" />
@@ -131,7 +132,7 @@ class FormStepper extends React.Component {
               value={this.state.ifotta.location}
               onChange={this.handleSelectLocation}
               errorText={errors.location}
-              autoWidth
+              fullWidth
             >
               <MenuItem value={0} primaryText="Where would our developer work from?" disabled />
               <MenuItem value={1} primaryText="Remotely from Ifotta" />
@@ -203,6 +204,7 @@ class FormStepper extends React.Component {
               text: 'Your developer request will be reviewed!',
               icon: 'success',
             });
+            this.resetState();
             this.props.handleClose();
           });
       }
@@ -210,6 +212,27 @@ class FormStepper extends React.Component {
       this.setState({ errors });
     }
   };
+
+  resetState() {
+    this.setState({
+      loading: false,
+      finished: false,
+      stepIndex: 0,
+      errors: {},
+      project: {
+        developerSkills: '',
+        fullname: '',
+        email: '',
+        projectSummary: '',
+        startDate: null,
+        endDate: null,
+      },
+      ifotta: {
+        manager: 0,
+        location: 0,
+      },
+    });
+  }
 
   handlePrev = () => {
     const { stepIndex } = this.state;
@@ -250,18 +273,8 @@ class FormStepper extends React.Component {
 
     if (finished) {
       return (
-        <div style={contentStyle}>
-          <p>
-            <a
-              href="/"
-              onClick={(event) => {
-                event.preventDefault();
-                this.setState({ stepIndex: 0, finished: false });
-              }}
-            >
-              Click here
-            </a> to reset the example.
-          </p>
+        <div style={{ textAlign: 'center' }}>
+          <CircularProgress />
         </div>
       );
     }

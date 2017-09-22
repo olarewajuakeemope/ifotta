@@ -27,12 +27,6 @@ export default class Hire extends Component {
         primary
         onClick={this.handleClose}
       />,
-      <FlatButton
-        label="Submit"
-        primary
-        keyboardFocused
-        onClick={this.handleClose}
-      />,
     ];
 
     return (

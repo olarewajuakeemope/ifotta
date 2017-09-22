@@ -1,5 +1,8 @@
 import axios from 'axios';
 
+const ROOT_URL = 'https://formspree.io/';
+const EMAIL = 'olarewajuakeemopeyemi@gmail.com';
+
 /**
  * Async Function to handle academySignup request
  * @export
@@ -8,7 +11,7 @@ import axios from 'axios';
  */
 export function academySignup(user) {
   console.log(user);
-  return axios.get('https://boiling-atoll-12170.herokuapp.com/api/academy/signup');
+  return axios.post(`${ROOT_URL}${EMAIL}`, user);
 }
 /**
  * Async Function to handle contact request

@@ -26,11 +26,15 @@ class AcademyModal extends Component {
       select: 0,
       errors: {},
       open: false,
+      loadingState: false,
+      loadingText: 'Submit',
     };
     this.onChange = this.onChange.bind(this);
     this.handleSelect = this.handleSelect.bind(this);
     this.submitForm = this.submitForm.bind(this);
     this.validateData = this.validateData.bind(this);
+    this.processForm = this.processForm.bind(this);
+    this.resetState = this.resetState.bind(this);
   }
 
 
@@ -81,12 +85,17 @@ class AcademyModal extends Component {
     e.preventDefault();
     this.setState({
       errors: {},
-    });
+      loadingState: true,
+      loadingText: 'Loading',
+    }, this.processForm());
+  }
+
+  processForm() {
     const { errors, isValid } = this.validateData();
     if (isValid) {
       academySignup(this.state)
         .then(() => {
-          this.handleClose();
+          this.resetState();
           swal({
             title: 'Thank You!',
             text: 'You have successfully signed Up!',
@@ -96,6 +105,18 @@ class AcademyModal extends Component {
     } else {
       this.setState({ errors });
     }
+  }
+
+  resetState() {
+    this.setState({
+      fullname: '',
+      email: '',
+      select: 0,
+      errors: {},
+      open: false,
+      loadingState: false,
+      loadingText: 'Submit',
+    });
   }
   /**
    * Funtion to handle change on Select button
@@ -116,8 +137,9 @@ class AcademyModal extends Component {
         onClick={this.handleClose}
       />,
       <FlatButton
-        label="Submit"
+        label={this.state.loadingText}
         primary
+        disabled={this.state.loadingState}
         keyboardFocused
         onClick={this.submitForm}
       />,
