@@ -283,73 +283,7 @@ jQuery(document).ready(function(){
 
  ================================= */
 
-jQuery(function() {
-
-    jQuery(".skill1").knob({
-
-        'max':100,
-
-        'width': 64,
-
-        'readOnly':true,
-
-        'inputColor':' #FFFFFF ',
-
-        'bgColor':' #222222 ',
-
-        'fgColor':' #e96656 '
-
-    });
-
-    jQuery(".skill2").knob({
-
-        'max':100,
-
-        'width': 64,
-
-        'readOnly':true,
-
-        'inputColor':' #FFFFFF ',
-
-        'bgColor':' #222222 ',
-
-        'fgColor':' #34d293 '
-
-    });
-
-    jQuery(".skill3").knob({
-
-        'max': 100,
-
-        'width': 64,
-
-        'readOnly': true,
-
-        'inputColor':' #FFFFFF ',
-
-        'bgColor':' #222222 ',
-
-        'fgColor':' #3ab0e2 '
-
-    });
-
-    jQuery(".skill4").knob({
-
-        'max': 100,
-
-        'width': 64,
-
-        'readOnly': true,
-
-        'inputColor':' #FFFFFF ',
-
-        'bgColor':' #222222 ',
-
-        'fgColor':' #E7AC44 '
-
-    });
-
-});
+// Moved to Home/Index.jsx
 
 
 
