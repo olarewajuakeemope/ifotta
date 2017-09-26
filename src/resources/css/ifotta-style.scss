@@ -2,8 +2,12 @@ $medium-screen-size: 850px;
 $small-screen-size: 600px;
 
 body {
+  /******* GENERAL *******/
   .buttons {
     margin: 1em;
+  }
+  .ifotta-blue-text {
+    color: #1F88C1 !important;
   }
 
   /**** Grid Components ****/
@@ -43,10 +47,18 @@ body {
     padding: 5em;
   }
   .hire-dialog-title {
-    background-color: #428bca;
+    background-color: #1F88C1;
     text-align: center;
   }
-
+  .ifotta-blue-btn {
+    background: #1F88C1;
+  }
+  .ifotta-yellow-btn {
+    background: #FECA40;
+  }
+  .ifotta-yellow-btn:hover {
+    background: #F7C035;
+  }
   /******************/
   .logo {
     width: 20em;
@@ -74,7 +86,7 @@ body {
     height: 500px;
   }
   .white-link {
-    text-decoration: none;
-    color: white;
+    text-decoration: none !important;
+    color: white !important;
   }
 }

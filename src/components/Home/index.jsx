@@ -111,9 +111,9 @@ class Home extends Component {
                       <img width="500" height="32" src={logo} className="custom-logo" alt="Ifotta logo" itemProp="logo" />
                     </div>
                     <div className="buttons">
-                      <Hire color="yellow-btn" />
-                      <a href="https://ifotta.workable.com" target="_blank" rel="noopener noreferrer" className="btn btn-primary custom-button blue-btn">Apply as a Developer</a>
-                      <AcademyModal color="yellow-btn" />
+                      <Hire color="ifotta-blue-btn" />
+                      <a href="https://ifotta.workable.com" target="_blank" rel="noopener noreferrer" className="btn custom-button ifotta-yellow-btn white-link">Apply as a Developer</a>
+                      <AcademyModal color="ifotta-blue-btn" />
                     </div>
                     <div className="clear" />
                   </div>
@@ -123,35 +123,35 @@ class Home extends Component {
             <section style={{ backgroundColor: '#FFCA28' }} className="focus" id="focus">
               <div className="container">
                 <div className="section-header">
-                  <h2 className="dark-text">OUR SERVICES</h2><div className="section-legend">What makes ifotta standout among other outsourcing companies.</div>
+                  <h2 className="ifotta-blue-text">OUR SERVICES</h2>
                 </div>
                 <div className="row">
                   <span id="ctup-ads-widget-3" className="">
                     <div className="col-lg-3 col-sm-3 focus-box service-container">
                       <Link to="/about" className="service-icon">
                         <span className="sr-only">
-                      Hire Developers
+                      Hire A Developer
                         </span>
                         <i className="pixeden" style={{ background: `url(${hireLogo}) no-repeat center`, width: '100%', height: '100%' }} />
                       </Link>
-                      <h3 className="blue-border-bottom">
-                    HIRE DEVELOPERS
+                      <h3 className="blue-border-bottom ifotta-blue-text">
+                    HIRE A DEVELOPER
                       </h3>
-                      <p>Build a front page for your WooCommerce store in a matter of minutes. The neat and clean presentation will help your sales and make your store accessible to everyone.</p>
+                      <p>At Ifotta we have experienced genius level software developer that you can hire as part of your team. The developer will work with your team to fulfill your requirement from our offices or if you choose to hire them full time as a permanent staff.</p>
                     </div>
                   </span>
                   <span id="ctup-ads-widget-4" className="">
                     <div className="col-lg-3 col-sm-3 focus-box service-container">
                       <Link to="/about" className="service-icon">
                         <span className="sr-only">
-                      Become a Developer
+                      Software Development/Projects
                         </span>
                         <i className="pixeden" style={{ background: `url(${applyLogo}) no-repeat center`, width: '100%', height: '100%' }} />
                       </Link>
-                      <h3 className="white-border-bottom">
-                    BECOME A DEVELOPER
+                      <h3 className="white-border-bottom ifotta-blue-text">
+                    SOFTWARE DEVELOPMENT/PROJECTS
                       </h3>
-                      <p>Showcase your team, products, clients, about info, testimonials, latest posts from the blog, contact form, additional calls to action. Everything translation ready.</p>
+                      <p>Looking for a development team to build or update your software? At Ifotta we can provide software development services on various platforms and deliver a complete software/solution while you do what you do best which is running your business.</p>
                     </div>
                   </span>
                   <span id="ctup-ads-widget-5" className="">
@@ -160,21 +160,21 @@ class Home extends Component {
                         <span className="sr-only">Ifotta Academy</span>
                         <i className="pixeden" style={{ background: `url(${academyLogo}) no-repeat center`, width: '100%', height: '100%' }} />
                       </Link>
-                      <h3 className="blue-border-bottom">
+                      <h3 className="blue-border-bottom ifotta-blue-text">
                     IFOTTA ACADEMY
                       </h3>
-                      <p>Get new content blocks: pricing table, Google Maps, and more. Change the sections order, display each block exactly where you need it, customize the blocks with whatever colors you wish.</p>
+                      <p>We have a training academy that provide training in various ares of software development and coding. We have training programs that make you a professional from scratch or short classes that will allow you update your skills if you are a It professional.</p>
                     </div>
                   </span>
                 </div>
               </div>
             </section>
 
-            <section className="separator-one" id="ribbon_bottom" style={{ background: `linear-gradient( rgba(0, 255, 0, 0.45),rgba(0, 255, 0, 0.45) ), url(${waterfrontImage})`, backgroundPosition: 'center top', backgroundSize: 'cover', backgroundRepeat: 'repeat', backgroundAttachment: 'fixed' }}>
+            <section className="separator-one" id="ribbon_bottom" style={{ background: `linear-gradient( rgba(50, 150, 255, 0.45),rgba(50, 150, 255, 0.45) ), url(${waterfrontImage})`, backgroundPosition: 'center top', backgroundSize: 'cover', backgroundRepeat: 'repeat', backgroundAttachment: 'fixed' }}>
               <div className="color-overlay">
                 <h3 className="container text hire-call-to-action-text">Build your coding skills and get yourself ready for the labour in a matter of weeks.</h3>
                 <div className="hire-call-to-action-button-container">
-                  <AcademyModal color="green-btn" />
+                  <AcademyModal color="ifotta-blue-btn" />
                 </div>
               </div>
             </section>
@@ -383,37 +383,25 @@ class Home extends Component {
               <div className="col-md-3 copyright">
                 <ul className="social">
                   <li id="facebook">
-                    <a target="_blank" rel="noopener noreferrer" href="https://google.com">
+                    <a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/ifotta/">
                       <span className="sr-only">Facebook link</span>
                       <i className="fa fa-facebook" />
                     </a>
                   </li>
                   <li id="twitter">
-                    <a target="_blank" rel="noopener noreferrer" href="https://google.com">
+                    <a target="_blank" rel="noopener noreferrer" href="https://twitter.com/ifotta">
                       <span className="sr-only">Twitter link</span>
                       <i className="fa fa-twitter" />
                     </a>
                   </li>
                   <li id="linkedin">
-                    <a target="_blank" rel="noopener noreferrer" href="https://google.com">
+                    <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/company/17990346/">
                       <span className="sr-only">Linkedin link</span>
                       <i className="fa fa-linkedin" />
                     </a>
                   </li>
-                  <li id="behance">
-                    <a target="_blank" rel="noopener noreferrer" href="https://google.com">
-                      <span className="sr-only">Behance link</span>
-                      <i className="fa fa-behance" />
-                    </a>
-                  </li>
-                  <li id="dribbble">
-                    <a target="_blank" rel="noopener noreferrer" href="https://google.com">
-                      <span className="sr-only">Dribble link</span>
-                      <i className="fa fa-dribbble" />
-                    </a>
-                  </li>
                   <li id="instagram">
-                    <a target="_blank" rel="noopener noreferrer" href="https://google.com">
+                    <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/ifotta_dev/">
                       <span className="sr-only">Instagram link</span>
                       <i className="fa fa-instagram" />
                     </a>
@@ -421,7 +409,7 @@ class Home extends Component {
                 </ul>
                 <p id="zerif-copyright">©Ifotta</p>
                 <div className="zerif-copyright-box">
-              developed by <a className="zerif-copyright" href="https://google.com/" target="_blank" rel="noopener noreferrer"> Ifotta</a>
+              developed by <Link className="zerif-copyright" to="/"> Ifotta</Link>
                 </div>
               </div>
             </div>
