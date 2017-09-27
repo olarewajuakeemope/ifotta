@@ -137,7 +137,7 @@ class Home extends Component {
                       <h3 className="blue-border-bottom ifotta-blue-text">
                     HIRE A DEVELOPER
                       </h3>
-                      <p>At Ifotta we have experienced genius level software developer that you can hire as part of your team. The developer will work with your team to fulfill your requirement from our offices or if you choose to hire them full time as a permanent staff.</p>
+                      <p className="text-justify text-left">At Ifotta we have experienced genius level software developer that you can hire as part of your team. The developer will work with your team to fulfill your requirement from our offices or if you choose to hire them full time as a permanent staff.</p>
                     </div>
                   </span>
                   <span id="ctup-ads-widget-4" className="">
@@ -151,7 +151,7 @@ class Home extends Component {
                       <h3 className="white-border-bottom ifotta-blue-text">
                     SOFTWARE DEVELOPMENT/PROJECTS
                       </h3>
-                      <p>Looking for a development team to build or update your software? At Ifotta we can provide software development services on various platforms and deliver a complete software/solution while you do what you do best which is running your business.</p>
+                      <p className="text-justify text-left">Looking for a development team to build or update your software? At Ifotta we can provide software development services on various platforms and deliver a complete software/solution while you do what you do best which is running your business.</p>
                     </div>
                   </span>
                   <span id="ctup-ads-widget-5" className="">
@@ -163,7 +163,7 @@ class Home extends Component {
                       <h3 className="blue-border-bottom ifotta-blue-text">
                     IFOTTA ACADEMY
                       </h3>
-                      <p>We have a training academy that provide training in various ares of software development and coding. We have training programs that make you a professional from scratch or short classes that will allow you update your skills if you are a It professional.</p>
+                      <p className="text-justify text-left">We have a training academy that provide training in various ares of software development and coding. We have training programs that make you a professional from scratch or short classes that will allow you update your skills if you are a It professional.</p>
                     </div>
                   </span>
                 </div>
