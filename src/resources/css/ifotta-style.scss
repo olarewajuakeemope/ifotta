@@ -1,4 +1,5 @@
-$medium-screen-size: 850px;
+$large-screen-size: 1200px;
+$medium-screen-size: 990px;
 $small-screen-size: 600px;
 
 body {
@@ -6,13 +7,23 @@ body {
   .buttons {
     margin: 1em;
   }
-  .ifotta-blue-text {
-    color: #1F88C1 !important;
+  .ifotta-white-text {
+    color: white !important;
   }
-  .padding-sides-10em  {
-    padding-left: 10em;
-    padding-right: 10em;
+
+  /*********SERVICE STYLE********/
+  .services-margin-1  {
+    @media screen and (max-width: $large-screen-size) and (min-width: $medium-screen-size) {
+      margin-left: 8em;
+      margin-right: 8em;
+    }
   }
+   .service-content-text {
+     color: black !important;
+     background-color: white;
+     border-radius: .5em;
+     padding: 1.5em;
+    }
 
   /**** Grid Components ****/
   .banner-grid {
@@ -26,10 +37,6 @@ body {
     text-align: center;
     width: 100%;
     overflow-y: auto;
-  }
-  .service-grid {
-    padding: 5em 0 15em 0;
-    background-color: #428bca;
   }
   .service-small-grid-screen {
     display: none;

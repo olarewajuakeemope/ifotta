@@ -120,50 +120,50 @@ class Home extends Component {
                 </div>
               </div>
             </section>
-            <section style={{ backgroundColor: '#FFCA28' }} className="focus" id="focus">
+            <section style={{ backgroundColor: '#1F88C1' }} className="focus" id="focus">
               <div className="container">
                 <div className="section-header">
-                  <h2 className="ifotta-blue-text">OUR SERVICES</h2>
+                  <h2 className="ifotta-white-text">OUR SERVICES</h2>
                 </div>
                 <div className="row">
                   <span id="ctup-ads-widget-3" className="">
-                    <div className="col-lg-3 col-sm-3 focus-box service-container">
+                    <div className="col-lg-4 col-md-3 col-sm-12 focus-box service-container">
                       <Link to="/about" className="service-icon">
                         <span className="sr-only">
                       Hire A Developer
                         </span>
                         <i className="pixeden" style={{ background: `url(${hireLogo}) no-repeat center`, width: '100%', height: '100%' }} />
                       </Link>
-                      <h3 className="blue-border-bottom ifotta-blue-text">
+                      <h3 className="blue-border-bottom ifotta-white-text">
                     HIRE A DEVELOPER
                       </h3>
-                      <p className="text-justify text-left">At Ifotta we have experienced genius level software developer that you can hire as part of your team. The developer will work with your team to fulfill your requirement from our offices or if you choose to hire them full time as a permanent staff.</p>
+                      <p className="text-justify text-left service-content-text">At Ifotta we have experienced genius level software developer that you can hire as part of your team. The developer will work with your team to fulfill your requirement from our offices or if you choose to hire them full time as a permanent staff.</p>
                     </div>
                   </span>
                   <span id="ctup-ads-widget-4" className="">
-                    <div className="col-lg-6 col-sm-6 focus-box service-container">
+                    <div className="col-lg-4 col-md-6 col-sm-12 focus-box service-container">
                       <Link to="/about" className="service-icon">
                         <span className="sr-only">
                       Software Development/Projects
                         </span>
                         <i className="pixeden" style={{ background: `url(${applyLogo}) no-repeat center`, width: '100%', height: '100%' }} />
                       </Link>
-                      <h3 className="white-border-bottom ifotta-blue-text">
+                      <h3 className="ifotta-white-text">
                     SOFTWARE DEVELOPMENT/PROJECTS
                       </h3>
-                      <p className="text-justify text-left padding-sides-10em">Looking for a development team to build or update your software? At Ifotta we can provide software development services on various platforms and deliver a complete software/solution while you do what you do best which is running your business.</p>
+                      <p className="text-justify text-left services-margin-1 service-content-text">Looking for a development team to build or update your software? At Ifotta we can provide software development services on various platforms and deliver a complete software/solution while you do what you do best which is running your business.</p>
                     </div>
                   </span>
                   <span id="ctup-ads-widget-5" className="">
-                    <div className="col-lg-3 col-sm-3 focus-box service-container">
+                    <div className="col-lg-4 col-md-3 col-sm-12 focus-box service-container">
                       <Link to="/about" className="service-icon">
                         <span className="sr-only">Ifotta Academy</span>
                         <i className="pixeden" style={{ background: `url(${academyLogo}) no-repeat center`, width: '100%', height: '100%' }} />
                       </Link>
-                      <h3 className="blue-border-bottom ifotta-blue-text">
+                      <h3 className="blue-border-bottom ifotta-white-text">
                     IFOTTA ACADEMY
                       </h3>
-                      <p className="text-justify text-left">We have a training academy that provide training in various ares of software development and coding. We have training programs that make you a professional from scratch or short classes that will allow you update your skills if you are a It professional.</p>
+                      <p className="text-justify text-left service-content-text">We have a training academy that provide training in various ares of software development and coding. We have training programs that make you a professional from scratch or short classes that will allow you update your skills if you are a It professional.</p>
                     </div>
                   </span>
                 </div>
