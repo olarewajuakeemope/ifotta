@@ -15,7 +15,7 @@ import unknown5 from '../../resources/css/Unknown-5.png';
 import unknown6 from '../../resources/css/Unknown-6.png';
 import unknown7 from '../../resources/css/Unknown-7.png';
 
-import waterfrontImage from '../../resources/images/ifotta-waterfront.jpg';
+// import waterfrontImage from '../../resources/images/ifotta-waterfront.jpg';
 
 import testimonial1 from '../../resources/css/images/testimonial1.jpg';
 import testimonial2 from '../../resources/css/images/testimonial2.jpg';
@@ -141,7 +141,7 @@ class Home extends Component {
                     </div>
                   </span>
                   <span id="ctup-ads-widget-4" className="">
-                    <div className="col-lg-3 col-sm-3 focus-box service-container">
+                    <div className="col-lg-6 col-sm-6 focus-box service-container">
                       <Link to="/about" className="service-icon">
                         <span className="sr-only">
                       Software Development/Projects
@@ -151,7 +151,7 @@ class Home extends Component {
                       <h3 className="white-border-bottom ifotta-blue-text">
                     SOFTWARE DEVELOPMENT/PROJECTS
                       </h3>
-                      <p className="text-justify text-left">Looking for a development team to build or update your software? At Ifotta we can provide software development services on various platforms and deliver a complete software/solution while you do what you do best which is running your business.</p>
+                      <p className="text-justify text-left padding-sides-10em">Looking for a development team to build or update your software? At Ifotta we can provide software development services on various platforms and deliver a complete software/solution while you do what you do best which is running your business.</p>
                     </div>
                   </span>
                   <span id="ctup-ads-widget-5" className="">
@@ -170,7 +170,7 @@ class Home extends Component {
               </div>
             </section>
 
-            <section className="separator-one" id="ribbon_bottom" style={{ background: `linear-gradient( rgba(50, 150, 255, 0.45),rgba(50, 150, 255, 0.45) ), url(${waterfrontImage})`, backgroundPosition: 'center top', backgroundSize: 'cover', backgroundRepeat: 'repeat', backgroundAttachment: 'fixed' }}>
+            <section className="separator-one" id="ribbon_bottom" style={{ background: 'linear-gradient( rgba(50, 150, 255, 0.45),rgba(50, 150, 255, 0.45) )' }}>
               <div className="color-overlay">
                 <h3 className="container text hire-call-to-action-text">Build your coding skills and get yourself ready for the labour in a matter of weeks.</h3>
                 <div className="hire-call-to-action-button-container">
