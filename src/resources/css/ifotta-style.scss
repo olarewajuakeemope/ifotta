@@ -4,13 +4,190 @@ $small-screen-size: 600px;
 
 body {
   /******* GENERAL *******/
+  Link, a {
+    outline: none !important;
+  }
+  header, .btn, section {
+    font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  }
   .buttons {
     margin: 1em;
   }
   .ifotta-white-text {
     color: white !important;
   }
-
+  .ifotta-blue-text {
+    color: #1F88C1 !important;
+  }
+  .bg-white {
+    background-color: white;
+  }
+  /******* CLIENT FORM *******/
+  .form-signin {
+    max-width: 330px;
+    padding: 15px;
+    margin: 0 auto;
+  }
+  .form-signin .form-signin-heading,
+  .form-signin .checkbox {
+    margin-bottom: 10px;
+  }
+  .form-signin .checkbox {
+    font-weight: normal;
+  }
+  .form-signin .form-control {
+    position: relative;
+    height: auto;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    padding: 10px;
+    font-size: 16px;
+  }
+  .form-signin .form-control:focus {
+    z-index: 2;
+  }
+  .form-signin input[type="email"] {
+    margin-bottom: -1px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+  .form-signin input[type="password"] {
+    margin-bottom: 10px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+  }
+  /******* HEADER *******/
+  header .mega-menu-link {
+    font-weight: bold !important;
+    color: #1F88C1 !important;
+  }
+  header .mega-menu-link:hover {
+    color: #F7C035 !important;
+  }
+  /*********ACADEMY STYLE********/
+  .tab-pane {
+    padding-top: 30px;
+  }
+  #ifotta-academy-tab-container {
+    padding-bottom: 50px;
+    font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  }
+  #ifotta-academy-tab-container .pill-text {
+    color: black !important;
+    background: none;
+    border: none;
+  }
+  #ifotta-academy-tab-container li {
+    width: 200px !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    @media screen and (max-width: $small-screen-size) {
+      width: 100px !important;
+    }
+  }
+  section.masthead .site-heading {
+    padding: 200px 0; }
+  section.masthead .page-heading,
+  section.masthead .site-heading {
+    color: white;
+    text-align: left; }
+  section.masthead .page-heading h1,
+  section.masthead .site-heading h1 {
+  font-size: 50px;
+  margin-top: 0; }
+  section.masthead .page-heading .subheading,
+  section.masthead .site-heading .subheading, .ifotta-text {
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 1.1;
+  display: block;
+  margin: 10px 0 0;
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
+  @media only screen and (min-width: 768px) {
+  section.masthead .page-heading h1,
+  section.masthead .site-heading h1 {
+    font-size: 80px; } }
+  section.masthead .post-heading .subheading {
+  line-height: 1.1;
+  display: block; }
+  section.masthead .post-heading .subheading {
+  font-size: 24px;
+  font-weight: 600;
+  margin: 10px 0 30px;
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
+  @media only screen and (min-width: 768px) {
+  section.masthead .post-heading h1 {
+  font-size: 55px; }
+  section.masthead .post-heading .subheading {
+  font-size: 30px; } }
+  /* Tabs panel */
+  .tabbable-panel {
+    border: none;
+    padding: 10px;
+  }
+  
+  /* Default mode */
+  .tabbable-line > .nav-tabs {
+    border: none;
+    margin: 0px;
+  }
+  .tabbable-line > .nav-tabs {
+    @media screen and (min-width: $medium-screen-size) {
+      position: relative !important;
+      left: 20% !important;
+    }
+    @media screen and (min-width: $small-screen-size) and (max-width: $medium-screen-size) {
+      position: relative !important;
+      left: 10% !important;
+    }
+    @media screen and (max-width: $small-screen-size) {
+      position: relative !important;
+      left: 0 !important;
+    }
+  }
+  .tabbable-line > .nav-tabs > li {
+    margin-right: 2px;
+  }
+  .tabbable-line > .nav-tabs > li > a {
+    outline:none;
+    border: 0;
+    margin-right: 0;
+    color: #737373;
+    font-size: .6em;
+  }
+  .tabbable-line > .nav-tabs > li.open, .tabbable-line > .nav-tabs > li:hover {
+    border-bottom: 4px solid #FECA40;
+  }
+  .tabbable-line > .nav-tabs > li.open > a, .tabbable-line > .nav-tabs > li:hover > a {
+    outline:none;
+    border: 0;
+    background: none !important;
+    color: #FECA40;
+  }
+  .tabbable-line > .nav-tabs > li.open .dropdown-menu, .tabbable-line > .nav-tabs > li:hover .dropdown-menu {
+    margin-top: 0px;
+  }
+  .tabbable-line > .nav-tabs > li.active {
+    border-bottom: 4px solid #1F88C1;
+    position: relative;
+  }
+  .tabbable-line > .nav-tabs > li.active > a {
+    border: none !important;
+    outline:none;
+    border: 0;
+    color: #1F88C1 !important;
+    font-weight: bold;
+  }
+  .tabbable-line > .tab-content {
+    margin-top: -3px;
+    background-color: #fff;
+    border: 0;
+    border-top: 1px solid #eee;
+    padding: 15px 0;
+  }
+  .portlet .tabbable-line > .tab-content {
+    padding-bottom: 0;
+  }
   /*********SERVICE STYLE********/
   .services-margin-1  {
     @media screen and (max-width: $large-screen-size) and (min-width: $medium-screen-size) {
@@ -19,10 +196,11 @@ body {
     }
   }
    .service-content-text {
-     color: black !important;
      background-color: white;
      border-radius: .5em;
      padding: 1.5em;
+     font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+     line-height: 1.7em;
     }
 
   /**** Grid Components ****/

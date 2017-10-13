@@ -5,6 +5,8 @@ import About from './components/About';
 import ErrorPage from './components/Error';
 import Hire from './components/Hire';
 import Home from './components/Home';
+import Academy from './components/Academy';
+import Client from './components/Client';
 
 export default (
 
@@ -12,6 +14,8 @@ export default (
     <IndexRoute component={Home} />
     <Route path="/about" component={About} />
     <Route path="/hire" component={Hire} />
+    <Route path="/client" component={Client} />
+    <Route path="/academy" component={Academy} />
     <Route path="*" component={ErrorPage} />
   </Route>
 );

@@ -3,7 +3,7 @@ import { Link } from 'react-router';
 import $ from 'jquery';
 import ContactForm from './ContactForm';
 import Hire from '../Hire';
-import AcademyModal from '../AcademyModal';
+import Footer from '../Footer';
 import logo from '../../resources/images/logo.png';
 import hireLogo from '../../resources/images/developer-hire.png';
 import applyLogo from '../../resources/images/developer-apply.png';
@@ -17,13 +17,9 @@ import unknown7 from '../../resources/css/Unknown-7.png';
 
 // import waterfrontImage from '../../resources/images/ifotta-waterfront.jpg';
 
-import testimonial1 from '../../resources/css/images/testimonial1.jpg';
-import testimonial2 from '../../resources/css/images/testimonial2.jpg';
-import testimonial3 from '../../resources/css/images/testimonial3.jpg';
-
-import footer1 from '../../resources/css/map25-redish.png';
-import footer2 from '../../resources/css/envelope4-green.png';
-import footer3 from '../../resources/css/telephone65-blue.png';
+// import testimonial1 from '../../resources/css/images/testimonial1.jpg';
+// import testimonial2 from '../../resources/css/images/testimonial2.jpg';
+// import testimonial3 from '../../resources/css/images/testimonial3.jpg';
 
 require('jquery-knob');
 
@@ -103,7 +99,7 @@ class Home extends Component {
         </div>
         <div className="mobile-bg-fix-whole-site">
           <div id="content" className="site-content">
-            <section className="focus" id="focus">
+            <section className="focus">
               <div className="container" style={{ minHeight: '76px' }}>
                 <div className="section-header">
                   <div className="container">
@@ -113,7 +109,7 @@ class Home extends Component {
                     <div className="buttons">
                       <Hire color="ifotta-blue-btn" />
                       <a href="https://ifotta.workable.com" target="_blank" rel="noopener noreferrer" className="btn custom-button ifotta-yellow-btn white-link">Apply as a Developer</a>
-                      <AcademyModal color="ifotta-blue-btn" />
+                      <Link to="academy" className="btn custom-button ifotta-blue-btn white-link">Ifotta Academy</Link>
                     </div>
                     <div className="clear" />
                   </div>
@@ -128,7 +124,7 @@ class Home extends Component {
                 <div className="row">
                   <span id="ctup-ads-widget-3" className="">
                     <div className="col-lg-4 col-md-3 col-sm-12 focus-box service-container">
-                      <Link to="/about" className="service-icon">
+                      <Link to="/" className="service-icon">
                         <span className="sr-only">
                       Hire A Developer
                         </span>
@@ -137,44 +133,44 @@ class Home extends Component {
                       <h3 className="blue-border-bottom ifotta-white-text">
                     HIRE A DEVELOPER
                       </h3>
-                      <p className="text-justify text-left service-content-text">At Ifotta we have experienced genius level software developer that you can hire as part of your team. The developer will work with your team to fulfill your requirement from our offices or if you choose to hire them full time as a permanent staff.</p>
+                      <p className="text-left service-content-text text-justify">At Ifotta we have experienced genius level software developer that you can hire as part of your team. The developer will work with your team to fulfill your requirement from our offices or if you choose to hire them full time as a permanent staff.</p>
                     </div>
                   </span>
                   <span id="ctup-ads-widget-4" className="">
                     <div className="col-lg-4 col-md-6 col-sm-12 focus-box service-container">
-                      <Link to="/about" className="service-icon">
+                      <Link to="/" className="service-icon">
                         <span className="sr-only">
                       Software Development/Projects
                         </span>
                         <i className="pixeden" style={{ background: `url(${applyLogo}) no-repeat center`, width: '100%', height: '100%' }} />
                       </Link>
                       <h3 className="ifotta-white-text">
-                    SOFTWARE DEVELOPMENT/PROJECTS
+                    SOFTWARE DEVELOPMENT / PROJECTS
                       </h3>
-                      <p className="text-justify text-left services-margin-1 service-content-text">Looking for a development team to build or update your software? At Ifotta we can provide software development services on various platforms and deliver a complete software/solution while you do what you do best which is running your business.</p>
+                      <p className="text-left services-margin-1 service-content-text text-justify">Looking for a development team to build or update your software? At Ifotta we can provide software development services on various platforms and deliver a complete software/solution while you do what you do best which is running your business.</p>
                     </div>
                   </span>
                   <span id="ctup-ads-widget-5" className="">
                     <div className="col-lg-4 col-md-3 col-sm-12 focus-box service-container">
-                      <Link to="/about" className="service-icon">
+                      <Link to="/academy" className="service-icon">
                         <span className="sr-only">Ifotta Academy</span>
                         <i className="pixeden" style={{ background: `url(${academyLogo}) no-repeat center`, width: '100%', height: '100%' }} />
                       </Link>
                       <h3 className="blue-border-bottom ifotta-white-text">
                     IFOTTA ACADEMY
                       </h3>
-                      <p className="text-justify text-left service-content-text">We have a training academy that provide training in various ares of software development and coding. We have training programs that make you a professional from scratch or short classes that will allow you update your skills if you are a It professional.</p>
+                      <p className="text-left service-content-text text-justify">We have a training academy that provide training in various ares of software development and coding. We have training programs that make you a professional from scratch or short classes that will allow you update your skills if you are a It professional.</p>
                     </div>
                   </span>
                 </div>
               </div>
             </section>
 
-            <section className="separator-one" id="ribbon_bottom" style={{ background: 'linear-gradient( rgba(50, 150, 255, 0.45),rgba(50, 150, 255, 0.45) )' }}>
+            <section className="separator-one bg-white" id="ribbon_bottom">
               <div className="color-overlay">
-                <h3 className="container text hire-call-to-action-text">Build your coding skills and get yourself ready for the labour in a matter of weeks.</h3>
+                <h3 className="container text hire-call-to-action-text ifotta-blue-text">Build your coding skills and get yourself ready for the labour in a matter of weeks.</h3>
                 <div className="hire-call-to-action-button-container">
-                  <AcademyModal color="ifotta-blue-btn" />
+                  <Link to="academy" className="btn custom-button ifotta-blue-btn white-link">Ifotta Academy</Link>
                 </div>
               </div>
             </section>
@@ -282,62 +278,6 @@ class Home extends Component {
                 </div>
               </div>
             </section>
-            <section className="testimonial" id="testimonials">
-              <div className="container">
-                <div className="section-header">
-                  <h2 className="white-text">Testimonials</h2>
-                  <h6 className="white-text section-legend">See what our happy clients are saying about our solutions.</h6>
-                </div>
-                <div className="row testimonial-items">
-                  <div className="col-md-12"><div id="client-feedbacks" className="owl-carousel owl-theme  ">
-                    <span id="zerif_testim-widget-1" className="feedback-box">
-                      <div className="message">Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Curabitur nec sem vel sapien venenatis mattis non vitae augue. Nullam congue commodo lorem vitae facilisis. Suspendisse malesuada id turpis interdum dictum.</div>
-                      <div className="client">
-                        <div className="quote red-text">
-                          <i className="fa fa-quote-left" />
-                        </div>
-                        <div className="client-info">
-                          <a target="_blank" rel="noopener noreferrer" className="client-name" href="https://google.com">Dana Lorem</a>
-                        </div>
-                        <div className="client-image hidden-xs">
-                          <img src={testimonial1} alt="" />
-                        </div>
-                      </div>
-                    </span>
-                    <span id="zerif_testim-widget-3" className="feedback-box">
-                      <div className="message">Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Curabitur nec sem vel sapien venenatis mattis non vitae augue. Nullam congue commodo lorem vitae facilisis. Suspendisse malesuada id turpis interdum dictum.
-                      </div>
-                      <div className="client">
-                        <div className="quote red-text">
-                          <i className="fa fa-quote-left" />
-                        </div>
-                        <div className="client-info">
-                          <a target="_blank" rel="noopener noreferrer" className="client-name" href="https://google.com">Linda Guthrie</a>
-                        </div>
-                        <div className="client-image hidden-xs">
-                          <img src={testimonial2} alt="" />
-                        </div>
-                      </div>
-                    </span>
-                    <span id="zerif_testim-widget-4" className="feedback-box">
-                      <div className="message">Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Curabitur nec sem vel sapien venenatis mattis non vitae augue. Nullam congue commodo lorem vitae facilisis. Suspendisse malesuada id turpis interdum dictum.</div>
-                      <div className="client">
-                        <div className="quote red-text">
-                          <i className="fa fa-quote-left" />
-                        </div>
-                        <div className="client-info">
-                          <a target="_blank" rel="noopener noreferrer" className="client-name" href="https://google.com">Cynthia Henry</a>
-                        </div>
-                        <div className="client-image hidden-xs">
-                          <img src={testimonial3} alt="" />
-                        </div>
-                      </div>
-                    </span>
-                  </div>
-                  </div>
-                </div>
-              </div>
-            </section>
             <section className="purchase-now" id="ribbon_right">
               <div className="container">
                 <div className="row">
@@ -350,7 +290,7 @@ class Home extends Component {
                 </div>
               </div>
             </section>
-            <section className="contact-us" id="contact">
+            <section className="contact-us" id="contact" style={{ backgroundColor: 'rgba(31, 136, 193, 0.8)' }}>
               <div className="container">
                 <div className="section-header">
                   <h2 className="white-text">Get in touch </h2>
@@ -360,60 +300,7 @@ class Home extends Component {
               </div>
             </section>
           </div>
-          <footer id="footer" itemScope="itemscope" itemType="http://schema.org/WPFooter">
-            <div className="container">
-              <div className="col-md-3 company-details">
-                <div className="icon-top red-text">
-                  <img src={footer1} alt="" />
-                </div>
-                <div className="zerif-footer-address">270 Ozumba Mbadiwe Street Victoria Island Lagos Nigeria.</div>
-              </div>
-              <div className="col-md-3 company-details">
-                <div className="icon-top green-text">
-                  <img src={footer2} alt="" />
-                </div>
-                <div className="zerif-footer-email">support@ifotta.com</div>
-              </div>
-              <div className="col-md-3 company-details">
-                <div className="icon-top blue-text">
-                  <img src={footer3} alt="" />
-                </div>
-                <div className="zerif-footer-phone">0 332 548 987</div>
-              </div>
-              <div className="col-md-3 copyright">
-                <ul className="social">
-                  <li id="facebook">
-                    <a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/ifotta/">
-                      <span className="sr-only">Facebook link</span>
-                      <i className="fa fa-facebook" />
-                    </a>
-                  </li>
-                  <li id="twitter">
-                    <a target="_blank" rel="noopener noreferrer" href="https://twitter.com/ifotta">
-                      <span className="sr-only">Twitter link</span>
-                      <i className="fa fa-twitter" />
-                    </a>
-                  </li>
-                  <li id="linkedin">
-                    <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/company/17990346/">
-                      <span className="sr-only">Linkedin link</span>
-                      <i className="fa fa-linkedin" />
-                    </a>
-                  </li>
-                  <li id="instagram">
-                    <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/ifotta_dev/">
-                      <span className="sr-only">Instagram link</span>
-                      <i className="fa fa-instagram" />
-                    </a>
-                  </li>
-                </ul>
-                <p id="zerif-copyright">©Ifotta</p>
-                <div className="zerif-copyright-box">
-              developed by <Link className="zerif-copyright" to="/"> Ifotta</Link>
-                </div>
-              </div>
-            </div>
-          </footer>
+          <Footer />
         </div>
       </div>
     );
