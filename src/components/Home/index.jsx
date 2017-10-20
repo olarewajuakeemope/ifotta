@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router';
 import $ from 'jquery';
-import ContactForm from './ContactForm';
 import Hire from '../Hire';
 import Footer from '../Footer';
 import bgLaptop from '../../resources/img/bg-laptop.jpg';
@@ -33,7 +32,7 @@ class Home extends Component {
                 <br />
                 <Hire />
                 <br />
-                <p className="mt-2 mt-md-4"><a href="/academy.html"><small>or become a developer with Ifotta</small></a></p>
+                <p className="mt-2 mt-md-4"><Link to="academy"><small>or become a developer with Ifotta</small></Link></p>
               </div>
 
               <div className="col-12 align-self-end text-center pb-70">

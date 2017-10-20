@@ -8,6 +8,7 @@ import Home from './components/Home';
 import Academy from './components/Academy';
 import Client from './components/Client';
 import Services from './components/Services';
+import Contact from './components/Contact';
 
 export default (
 
@@ -18,6 +19,7 @@ export default (
     <Route path="/client" component={Client} />
     <Route path="/academy" component={Academy} />
     <Route path="/services" component={Services} />
+    <Route path="/contact" component={Contact} />
     <Route path="*" component={ErrorPage} />
   </Route>
 );

@@ -3,6 +3,7 @@ import Scrollchor from 'react-scrollchor';
 import AcademyModal from '../AcademyModal';
 import CourseCategories from './courseCategories';
 import Footer from '../Footer';
+import bgLaptop from '../../resources/img/bg-laptop.jpg';
 
 
 /**
@@ -34,6 +35,19 @@ class Academy extends Component {
           to=""
           id="pageScroll"
         />
+        <header className="header header-inverse bg-fixed" style={{ backgroundImage: `url(${bgLaptop})` }} data-overlay="8">
+          <div className="container text-center">
+
+            <div className="row">
+              <div className="col-12 col-lg-8 offset-lg-2">
+
+                <h1 style={{ fonstSize: '90px' }}>ifotta</h1>
+
+              </div>
+            </div>
+
+          </div>
+        </header>
         <section className="section bg-gray bb-11 pb-0">
           <div className="container">
             <header className="section-header">

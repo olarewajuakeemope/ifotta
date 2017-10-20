@@ -18,13 +18,13 @@ class CourseCategories extends Component {
     const { title } = this.props;
     return (
       <div className="tab-pane active" id="tab_default_1">
-        <div id="band" className="container text-left">
+        <div id="band" className="container text-center">
           <h3>{ title } Courses</h3>
           <p><em>Below is a complete list of all ifotta courses</em></p>
           <br />
           <div className="row">
-            <div className="col-sm-4">
-              <p className="text-left"><strong>Course</strong></p><br />
+            <div className="col-sm-4 text-left">
+              <p><strong>Course</strong></p><br />
               <div>
                 <p>Software Engineering Immersive (Full Stack)</p>
                 <p>Front End Developer (HTML/Javascript/CSS)</p>
@@ -62,7 +62,7 @@ Java, React</em></p>
               </div>
             </div>
             <div className="col-sm-4">
-              <p className="text-left"><strong>Duration</strong></p><br />
+              <p><strong>Duration</strong></p><br />
               <div>
                 <p>12 Weeks</p>
                 <p>8 Weeks</p>
@@ -74,7 +74,7 @@ Java, React</em></p>
               </div>
             </div>
             <div className="col-sm-4">
-              <p className="text-left"><strong>Price</strong></p><br />
+              <p><strong>Price</strong></p><br />
               <div>
                 <p>N400,000</p>
                 <p>N300,000</p>
