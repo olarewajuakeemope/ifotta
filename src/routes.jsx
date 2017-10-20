@@ -7,6 +7,7 @@ import Hire from './components/Hire';
 import Home from './components/Home';
 import Academy from './components/Academy';
 import Client from './components/Client';
+import Services from './components/Services';
 
 export default (
 
@@ -16,6 +17,7 @@ export default (
     <Route path="/hire" component={Hire} />
     <Route path="/client" component={Client} />
     <Route path="/academy" component={Academy} />
+    <Route path="/services" component={Services} />
     <Route path="*" component={ErrorPage} />
   </Route>
 );

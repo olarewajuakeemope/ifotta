@@ -32,15 +32,15 @@ class Header extends Component {
           <div className="topbar-left">
             <button className="topbar-toggler">&#9776;</button>
             <span className="topbar-brand fs-18 fw-400">
-              <a className="logo-default" href="/" style={{ color: '#1F88C1' }}><img width="100px" height="30px" src={logo} alt="logo" /></a>
-              <a className="logo-inverse text-white" href="/"><strong>ifotta</strong></a>
+              <Link className="logo-default" to="/" style={{ color: '#1F88C1' }}><img width="100px" height="30px" src={logo} alt="logo" /></Link>
+              <Link className="logo-inverse text-white" to="/"><strong>ifotta</strong></Link>
             </span>
           </div>
 
 
           <div className="topbar-right">
             <ul className="topbar-nav nav">
-              <li className="nav-item"><a className="nav-link" href="/#services-section" data-scrollto="services-section">Our Services</a></li>
+              <li className="nav-item"><Link className="nav-link" to="services">Our Services</Link></li>
               <li className="nav-item"><Link className="nav-link" to="about">About Us</Link></li>
               <li className="nav-item"><Link className="nav-link" to="client">Client</Link></li>
               <li className="nav-item"><Link className="nav-link" to="contact">Contact</Link></li>
