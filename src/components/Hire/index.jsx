@@ -20,6 +20,20 @@ export default class Hire extends Component {
     this.setState({ open: false });
   };
 
+  renderModalButton = () => {
+    const { children } = this.props;
+    if (children) {
+      return children;
+    } else {
+      return (
+        <span>
+        <a className={`btn ${this.props.color} btn-xl btn-round btn-primary fs-20 fw-500 w-350 shadow-3 hidden-sm-down`} href="#">Hire A Developer</a>
+        <a className={`btn ${this.props.color} btn-lg btn-round btn-primary w-250 shadow-3 hidden-md-up`} href="#">Hire A Developer</a>
+      </span>
+      );
+    }
+  }
+
   render() {
     const actions = [
       <FlatButton
@@ -31,9 +45,8 @@ export default class Hire extends Component {
 
     return (
       <span>
-        <span>
-          <a className={`btn ${this.props.color} btn-xl btn-round btn-primary fs-20 fw-500 w-350 shadow-3 hidden-sm-down`} href="#"  onClick={this.handleOpen}>Hire A Developer</a>
-          <a className={`btn ${this.props.color} btn-lg btn-round btn-primary w-250 shadow-3 hidden-md-up`} href="#"  onClick={this.handleOpen}>Hire A Developer</a>
+        <span  onClick={this.handleOpen}>
+          {this.renderModalButton()}
         </span>
         <Dialog
           title="Hire Developer Form"
@@ -55,4 +68,5 @@ export default class Hire extends Component {
 
 Hire.propTypes = {
   color: PropTypes.string.isRequired,
+  children: PropTypes.node.isRequired,
 };

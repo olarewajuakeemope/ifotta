@@ -103,7 +103,7 @@ achieve/bring that dream to reality.</p>
             <div className="row">
               <div className="col-12 offset-md-3 col-md-6">
                 <br />
-                <h3 className="fw-900 mb-20">Become A Developer with Ifatta Academy</h3>
+                <h3 className="fw-900 mb-20">Become A Developer with Ifotta Academy</h3>
                 <p className="lead text-muted">ifotta offers various software technology training courses to prep you for the job market.</p>
                 <br />
                 <Link className="btn btn-lg btn-round btn-success" to="academy">Apply Now</Link>

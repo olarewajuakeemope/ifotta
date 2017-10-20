@@ -32,7 +32,7 @@ class Header extends Component {
           <div className="topbar-left">
             <button className="topbar-toggler">&#9776;</button>
             <span className="topbar-brand fs-18 fw-400">
-              <Link className="logo-default" to="/" style={{ color: '#1F88C1' }}><img width="100px" height="30px" src={logo} alt="logo" /></Link>
+              <Link className="logo-default" to="/"><img width="100px" height="30px" src={logo} alt="logo" /></Link>
               <Link className="logo-inverse text-white" to="/"><strong>ifotta</strong></Link>
             </span>
           </div>

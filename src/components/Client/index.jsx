@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router';
 import Hire from '../Hire';
+import logo from '../../resources/img/logo.png';
 import bgGirl from '../../resources/img/bg-girl.jpg';
 
 /**
@@ -21,7 +23,11 @@ class Client extends Component {
 
       <div className="mh-fullscreen bg-img center-vh p-20" style={{ backgroundImage: `url(${bgGirl})` }}>
         <div className="card card-shadowed p-50 w-400 mb-0" style={{ maxWidth: '100%' }}>
-          <h5 className="text-uppercase text-center">Login</h5>
+          <div className="text-center">
+            <Link className="logo-default" to="/">
+              <img width="100px" height="30px" src={logo} alt="logo" />
+            </Link>
+          </div>
           <br /><br />
 
           <form>
@@ -57,7 +63,11 @@ class Client extends Component {
 
           <hr className="w-30" />
 
-          <p className="text-center text-muted fs-13 mt-20">Don't have an account? <a href="page-register.html">Sign up</a></p>
+          <p className="text-center text-muted fs-13 mt-20">Don't have an account?
+            <Hire>
+              <a href="#"> Sign up</a>
+            </Hire>
+            </p>
         </div>
       </div>
     );
