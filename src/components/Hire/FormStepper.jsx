@@ -201,7 +201,7 @@ class FormStepper extends Component {
           .then(() => {
             swal({
               title: 'Thank You!',
-              text: 'Your developer request will be reviewed!',
+              text: 'Our Project coordinator will be in touch with you shortly',
               icon: 'success',
             });
             this.resetState();

@@ -176,6 +176,15 @@ class dataValidators {
       this.errors.endDate = 'Project end date is required';
     }
 
+    if (data.startDate && data.endDate) {
+      const startDate = data.startDate.getTime();
+      const endDate = data.endDate.getTime();
+      if (startDate > endDate) {
+        this.errors.startDate = 'Start date has to be earlier than End Date below';
+      }
+    }
+
+
     const errors = this.errors;
     return {
       errors,
