@@ -4,108 +4,29 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="theme-color" content="#000000">
-    <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css" rel="stylesheet"> -->
-    <!--
-      manifest.json provides metadata used when your web app is added to the
-      homescreen on Android. See https://developers.google.com/web/fundamentals/engage-and-retain/web-app-manifest/
-    -->
+
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json">
     <link rel="shortcut icon" href="%PUBLIC_URL%/ifotta-favicon.ico">
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
-
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
 
     <title>Ifotta | Building Mordern Applications</title>
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
 
-    <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,700" rel="stylesheet">
-    <style id="zerif_style-inline-css" type="text/css">
-      body.home.page:not(.page-template-template-frontpage) {
-            background-image: none !important;
-          }
-      </style>
-	<style type="text/css" id="custom-background-css">
-    .custom-background {
-      /* background-image: url("%PUBLIC_URL%/images/ifotta-background.jpg");
-      background-position: center top;
-      background-size: cover;
-      background-repeat: repeat;
-      background-attachment: fixed; */
-      background-color: #1F88C1 !important;
-    }
-    nav {
-      background-color: white;
-    }
-    .btn {
-      text-transform: capitalize !important;
-    }
-    .service-icon:hover {
-      border-color: #F7C035 !important;
-    }
-    h3.white-border-bottom:before {
-      background: white !important;
-    }
-    h3.blue-border-bottom:before {
-      background: #428bca !important;
-    }
-    </style>
+    <!-- Styles -->
+    <link href="%PUBLIC_URL%/assets/css/core.min.css" rel="stylesheet">
+    <link href="%PUBLIC_URL%/assets/css/thesaas.min.css" rel="stylesheet">
+    <link href="%PUBLIC_URL%/assets/css/style.css" rel="stylesheet">
+  
   </head>
-  <body class="home blog logged-in admin-bar wp-custom-logo mega-menu-primary customize-support">
+  <body>
     <noscript>
       You need to enable JavaScript to run this app.
     </noscript>
     <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
-
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
-
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
   </body>
 
-  <script type="text/javascript" src="%PUBLIC_URL%/js/jquery.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
-  <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
-  <script type="text/javascript" src="%PUBLIC_URL%/js/bootstrap.min.js"></script>
-  <script type="text/javascript" src="%PUBLIC_URL%/js/jquery.knob.js"></script>
-  <script type="text/javascript" src="%PUBLIC_URL%/js/ifotta.js"></script>
-  <script>
-    window.scrollReveal = ScrollReveal();
-    scrollReveal.reveal('.service-container', {
-      origin: 'left',
-      delay: 150,
-      duration: 1000,
-    });
-    scrollReveal.reveal('.hire-call-to-action-text, .about-big-intro', {
-      origin: 'left',
-      duration: 1000,
-    });
-    scrollReveal.reveal('.hire-call-to-action-button-container, .skills, .testimonial-items', {
-      origin: 'right',
-      duration: 1000,
-    });
-    scrollReveal.reveal('.text_and_skills', {
-      origin: 'bottom',
-      duration: 1000,
-    });
-    scrollReveal.reveal('.client-list-item', {
-      origin: 'right',
-      distance: '60px',
-      duration: 2500,
-    });
-  </script>
+    <!-- Scripts -->
+    <script src="%PUBLIC_URL%/assets/js/core.min.js"></script>
+    <script src="%PUBLIC_URL%/assets/js/thesaas.min.js"></script>
+    <script src="%PUBLIC_URL%/assets/js/script.js"></script>
 
   
 </html>

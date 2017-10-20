@@ -31,7 +31,10 @@ export default class Hire extends Component {
 
     return (
       <span>
-        <span><button className={`btn btn-primary custom-button ${this.props.color}`} onClick={this.handleOpen}>Hire A Developer</button></span>
+        <span>
+          <a className={`btn ${this.props.color} btn-xl btn-round btn-primary fs-20 fw-500 w-350 shadow-3 hidden-sm-down`} href="#"  onClick={this.handleOpen}>Hire A Developer</a>
+          <a className={`btn ${this.props.color} btn-lg btn-round btn-primary w-250 shadow-3 hidden-md-up`} href="#"  onClick={this.handleOpen}>Hire A Developer</a>
+        </span>
         <Dialog
           title="Hire Developer Form"
           titleClassName="hire-dialog-title"

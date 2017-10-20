@@ -3,7 +3,7 @@ $medium-screen-size: 990px;
 $small-screen-size: 600px;
 
 body {
-  /******* GENERAL *******/
+  /******* GENERAL *******
   Link, a {
     outline: none !important;
   }
@@ -22,7 +22,7 @@ body {
   .bg-white {
     background-color: white;
   }
-  /******* CLIENT FORM *******/
+  /******* CLIENT FORM *******
   .form-signin {
     max-width: 330px;
     padding: 15px;
@@ -55,8 +55,8 @@ body {
     margin-bottom: 10px;
     border-top-left-radius: 0;
     border-top-right-radius: 0;
-  }
-  /******* HEADER *******/
+  } 
+  /******* HEADER *******
   header .mega-menu-link {
     font-weight: bold !important;
     color: #1F88C1 !important;
@@ -188,46 +188,6 @@ body {
   .portlet .tabbable-line > .tab-content {
     padding-bottom: 0;
   }
-  /*********SERVICE STYLE********/
-  .services-margin-1  {
-    @media screen and (max-width: $large-screen-size) and (min-width: $medium-screen-size) {
-      margin-left: 8em;
-      margin-right: 8em;
-    }
-  }
-   .service-content-text {
-     background-color: white;
-     border-radius: .5em;
-     padding: 1.5em;
-     font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-     line-height: 1.7em;
-    }
-
-  /**** Grid Components ****/
-  .banner-grid {
-    padding-top: 5em;
-    height: 450;
-  }
-  .footer-grid {
-    padding: 5em 0 10em 0;
-  }
-  .grid-list {
-    text-align: center;
-    width: 100%;
-    overflow-y: auto;
-  }
-  .service-small-grid-screen {
-    display: none;
-    @media screen and (max-width: $small-screen-size) {
-      display: block !important;
-    }
-  }
-  .service-large-grid-screen {
-    @media screen and (max-width: $small-screen-size) {
-      display: none !important;
-    }
-  }
-
   /**** Form Components ****/
   .dialog-form-body {
     text-align: left;
@@ -248,7 +208,7 @@ body {
   .ifotta-yellow-btn:hover {
     background: #F7C035;
   }
-  /******************/
+  /******************
   .logo {
     width: 20em;
   }
@@ -277,5 +237,5 @@ body {
   .white-link {
     text-decoration: none !important;
     color: white !important;
-  }
+  } ******/
 }

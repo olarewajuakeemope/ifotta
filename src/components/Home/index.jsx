@@ -4,304 +4,163 @@ import $ from 'jquery';
 import ContactForm from './ContactForm';
 import Hire from '../Hire';
 import Footer from '../Footer';
-import logo from '../../resources/images/logo.png';
-import hireLogo from '../../resources/images/developer-hire.png';
-import applyLogo from '../../resources/images/developer-apply.png';
-import academyLogo from '../../resources/images/developer-academy.png';
-import unknown from '../../resources/css/Unknown.png';
-import unknown3 from '../../resources/css/Unknown-3.png';
-import unknown4 from '../../resources/css/Unknown-4.png';
-import unknown5 from '../../resources/css/Unknown-5.png';
-import unknown6 from '../../resources/css/Unknown-6.png';
-import unknown7 from '../../resources/css/Unknown-7.png';
-
-// import waterfrontImage from '../../resources/images/ifotta-waterfront.jpg';
-
-// import testimonial1 from '../../resources/css/images/testimonial1.jpg';
-// import testimonial2 from '../../resources/css/images/testimonial2.jpg';
-// import testimonial3 from '../../resources/css/images/testimonial3.jpg';
-
-require('jquery-knob');
+import bgLaptop from '../../resources/img/bg-laptop.jpg';
 
 class Home extends Component {
-  componentDidMount() {
-    $(() => {
-      $('.skill1').knob({
 
-        max: 100,
-
-        width: 64,
-
-        readOnly: true,
-
-        inputColor: ' #FFFFFF ',
-
-        bgColor: ' #222222 ',
-
-        fgColor: ' #e96656 ',
-
-      });
-
-      $('.skill2').knob({
-
-        max: 100,
-
-        width: 64,
-
-        readOnly: true,
-
-        inputColor: ' #FFFFFF ',
-
-        bgColor: ' #222222 ',
-
-        fgColor: ' #34d293 ',
-
-      });
-
-      $('.skill3').knob({
-
-        max: 100,
-
-        width: 64,
-
-        readOnly: true,
-
-        inputColor: ' #FFFFFF ',
-
-        bgColor: ' #222222 ',
-
-        fgColor: ' #3ab0e2 ',
-
-      });
-
-      $('.skill4').knob({
-
-        max: 100,
-
-        width: 64,
-
-        readOnly: true,
-
-        inputColor: ' #FFFFFF ',
-
-        bgColor: ' #222222 ',
-
-        fgColor: ' #E7AC44 ',
-
-      });
-    });
+  constructor(props) {
+    super(props);
+    this.state = {};
   }
   render() {
     return (
-      <div id="mobilebgfix">
-        <div className="mobile-bg-fix-img-wrap">
-          <div className="mobile-bg-fix-img" />
-        </div>
-        <div className="mobile-bg-fix-whole-site">
-          <div id="content" className="site-content">
-            <section className="focus">
-              <div className="container" style={{ minHeight: '76px' }}>
-                <div className="section-header">
-                  <div className="container">
-                    <div>
-                      <img width="500" height="32" src={logo} className="custom-logo" alt="Ifotta logo" itemProp="logo" />
-                    </div>
-                    <div className="buttons">
-                      <Hire color="ifotta-blue-btn" />
-                      <a href="https://ifotta.workable.com" target="_blank" rel="noopener noreferrer" className="btn custom-button ifotta-yellow-btn white-link">Apply as a Developer</a>
-                      <Link to="academy" className="btn custom-button ifotta-blue-btn white-link">Ifotta Academy</Link>
-                    </div>
-                    <div className="clear" />
-                  </div>
-                </div>
-              </div>
-            </section>
-            <section style={{ backgroundColor: '#1F88C1' }} className="focus" id="focus">
-              <div className="container">
-                <div className="section-header">
-                  <h2 className="ifotta-white-text">OUR SERVICES</h2>
-                </div>
-                <div className="row">
-                  <span id="ctup-ads-widget-3" className="">
-                    <div className="col-lg-4 col-md-3 col-sm-12 focus-box service-container">
-                      <Link to="/" className="service-icon">
-                        <span className="sr-only">
-                      Hire A Developer
-                        </span>
-                        <i className="pixeden" style={{ background: `url(${hireLogo}) no-repeat center`, width: '100%', height: '100%' }} />
-                      </Link>
-                      <h3 className="blue-border-bottom ifotta-white-text">
-                    HIRE A DEVELOPER
-                      </h3>
-                      <p className="text-left service-content-text text-justify">At Ifotta we have experienced genius level software developer that you can hire as part of your team. The developer will work with your team to fulfill your requirement from our offices or if you choose to hire them full time as a permanent staff.</p>
-                    </div>
-                  </span>
-                  <span id="ctup-ads-widget-4" className="">
-                    <div className="col-lg-4 col-md-6 col-sm-12 focus-box service-container">
-                      <Link to="/" className="service-icon">
-                        <span className="sr-only">
-                      Software Development/Projects
-                        </span>
-                        <i className="pixeden" style={{ background: `url(${applyLogo}) no-repeat center`, width: '100%', height: '100%' }} />
-                      </Link>
-                      <h3 className="ifotta-white-text">
-                    SOFTWARE DEVELOPMENT / PROJECTS
-                      </h3>
-                      <p className="text-left services-margin-1 service-content-text text-justify">Looking for a development team to build or update your software? At Ifotta we can provide software development services on various platforms and deliver a complete software/solution while you do what you do best which is running your business.</p>
-                    </div>
-                  </span>
-                  <span id="ctup-ads-widget-5" className="">
-                    <div className="col-lg-4 col-md-3 col-sm-12 focus-box service-container">
-                      <Link to="/academy" className="service-icon">
-                        <span className="sr-only">Ifotta Academy</span>
-                        <i className="pixeden" style={{ background: `url(${academyLogo}) no-repeat center`, width: '100%', height: '100%' }} />
-                      </Link>
-                      <h3 className="blue-border-bottom ifotta-white-text">
-                    IFOTTA ACADEMY
-                      </h3>
-                      <p className="text-left service-content-text text-justify">We have a training academy that provide training in various ares of software development and coding. We have training programs that make you a professional from scratch or short classes that will allow you update your skills if you are a It professional.</p>
-                    </div>
-                  </span>
-                </div>
-              </div>
-            </section>
+      <div>
 
-            <section className="separator-one bg-white" id="ribbon_bottom">
-              <div className="color-overlay">
-                <h3 className="container text hire-call-to-action-text ifotta-blue-text">Build your coding skills and get yourself ready for the labour in a matter of weeks.</h3>
-                <div className="hire-call-to-action-button-container">
-                  <Link to="academy" className="btn custom-button ifotta-blue-btn white-link">Ifotta Academy</Link>
-                </div>
-              </div>
-            </section>
+        <header id="home-header" className="header fadeout header-inverse pb-0 h-fullscreen" style={{ backgroundImage: `url(${bgLaptop})` }}>
+          <div className="header-overlay opacity-90" style={{ backgroundColor: '#1F88C1' }} />
+          <canvas className="constellation" />
 
-            <section className="about-us" id="aboutus">
-              <div className="container">
-                <div className="section-header">
-                  <h2 className="white-text">About</h2><div className="white-text section-legend">Ifotta is an outsourcing developer company for Nigerian companies.</div>
-                </div>
-                <div className="row">
-                  <div className="col-lg-4 col-md-4 column zerif-rtl-big-title">
-                    <div className="big-intro about-big-intro">Everything ifotta app is responsive and mobile-friendly.</div>
-                  </div>
-                  <div className="col-lg-4 col-md-4 column zerif_about_us_center text_and_skills">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec massa enim. Aliquam viverra at est ullamcorper sollicitudin. Proin a leo sit amet nunc malesuada imperdiet pharetra ut eros.<br />
-                      <br />Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec massa enim. Aliquam viverra at est ullamcorper sollicitudin. Proin a leo sit amet nunc malesuada imperdiet pharetra ut eros. <br />
-                      <br />Mauris vel nunc at ipsum fermentum pellentesque quis ut massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Maecenas non adipiscing massa. Sed ut fringilla sapien. Cras sollicitudin, lectus sed tincidunt cursus, magna lectus vehicula augue, a lobortis dui orci et est.
-                    </p>
-                  </div>
-                  <div className="col-lg-4 col-md-4 column zerif-rtl-skills ">
-                    <ul className="skills">
-                      <li className="skill skill_1">
-                        <div className="skill-count">
-                          <div style={{ display: 'inline', width: '64px', height: '200px' }}>
-                            <canvas width="128" height="400" style={{ width: '64px', height: '200px' }} />
-                            <input type="text" id="your-skill-1" value="80" data-thickness=".2" className="skill1" tabIndex="-1" readOnly="readonly" style={{ width: '36px', height: '21px', position: 'absolute', verticalAlign: 'middle', marginTop: '21px', marginLeft: '-50px', border: '0px', background: 'none', fontStyle: 'normal', fontVariant: 'normal', fontWeight: 'bold', fontStretch: 'normal', fontSize: '12px', lineHeight: 'normal', fontFamily: 'Arial', textAlign: 'center', color: 'rgb(255, 255, 255)', padding: '0px', WebkitAppearance: 'none' }} />
-                          </div>
-                        </div>
-                        <div className="section-legend">
-                          <label htmlFor="your-skill-1">YOUR SKILL #1</label>
-                        </div>
-                      </li>
-                      <li className="skill skill_2">
-                        <div className="skill-count">
-                          <div style={{ display: 'inline', width: '64px', height: '200px' }}>
-                            <canvas width="128" height="400" style={{ width: '64px', height: '200px' }} />
-                            <input type="text" id="your-skill-2" value="91" data-thickness=".2" className="skill2" tabIndex="-1" readOnly="readonly" style={{ width: '36px', height: '21px', position: 'absolute', verticalAlign: 'middle', marginTop: '21px', marginLeft: '-50px', border: '0px', background: 'none', fontStyle: 'normal', fontVariant: 'normal', fontWeight: 'bold', fontStretch: 'normal', fontSize: '12px', lineHeight: 'normal', fontFamily: 'Arial', textAlign: 'center', color: 'rgb(255, 255, 255)', padding: '0px', WebkitAppearance: 'none' }} />
-                          </div>
-                        </div>
-                        <div className="section-legend">
-                          <label htmlFor="your-skill-2">YOUR SKILL #2</label>
-                        </div>
-                      </li>
-                      <li className="skill skill_3">
-                        <div className="skill-count">
-                          <div style={{ display: 'inline', width: '64px', height: '200px' }}>
-                            <canvas width="128" height="400" style={{ width: '64px', height: '200px' }} />
-                            <input type="text" id="your-skill-3" value="88" data-thickness=".2" className="skill3" tabIndex="-1" readOnly="readonly" style={{ width: '36px', height: '21px', position: 'absolute', verticalAlign: 'middle', marginTop: '21px', marginLeft: '-50px', border: '0px', background: 'none', fontStyle: 'normal', fontVariant: 'normal', fontWeight: 'bold', fontStretch: 'normal', fontSize: '12px', lineHeight: 'normal', fontFamily: 'Arial', textAlign: 'center', color: 'rgb(255, 255, 255)', padding: '0px', WebkitAppearance: 'none' }} />
-                          </div>
-                        </div>
-                        <div className="section-legend">
-                          <label htmlFor="your-skill-3">YOUR SKILL #3</label>
-                        </div>
-                      </li>
-                      <li className="skill skill_4">
-                        <div className="skill-count">
-                          <div style={{ display: 'inline', width: '64px', height: '200px' }}>
-                            <canvas width="128" height="400" style={{ width: '64px', height: '200px' }} />
-                            <input type="text" id="your-skill-4" value="95" data-thickness=".2" className="skill4" tabIndex="-1" readOnly="readonly" style={{ width: '36px', height: '21px', position: 'absolute', verticalAlign: 'middle', marginTop: '21px', marginLeft: '-50px', border: '0px', background: 'none', fontStyle: 'normal', fontVariant: 'normal', fontWeight: 'bold', fontStretch: 'normal', fontSize: '12px', lineHeight: 'normal', fontFamily: 'Arial', textAlign: 'center', color: 'rgb(255, 255, 255)', padding: '0px', WebkitAppearance: 'none' }} />
-                          </div>
-                        </div>
-                        <div className="section-legend">
-                          <label htmlFor="your-skill-4">YOUR SKILL #4</label>
-                        </div>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-                <div className="our-clients">
-                  <h5><span className="section-footer-title">OUR HAPPY CLIENTS</span></h5>
-                </div>
-                <div className="client-list">
-                  <div className="client-list-item">
-                    <span id="zerif_clients-widget-3">
-                      <a target="_blank" rel="noopener noreferrer" href="https://google.com#">
-                        <img src={unknown} alt="Client" />
-                      </a>
-                    </span>
-                    <span id="zerif_clients-widget-4">
-                      <a target="_blank" rel="noopener noreferrer" href="https://google.com#">
-                        <img src={unknown7} alt="Client" />
-                      </a>
-                    </span>
-                    <span id="zerif_clients-widget-5">
-                      <a target="_blank" rel="noopener noreferrer" href="https://google.com#">
-                        <img src={unknown3} alt="Client" />
-                      </a>
-                    </span>
-                    <span id="zerif_clients-widget-6">
-                      <a target="_blank" rel="noopener noreferrer" href="https://google.com#">
-                        <img src={unknown4} alt="Client" />
-                      </a>
-                    </span>
-                    <span id="zerif_clients-widget-7">
-                      <a target="_blank" rel="noopener noreferrer" href="https://google.com#">
-                        <img src={unknown5} alt="Client" />
-                      </a>
-                    </span>
-                    <span id="zerif_clients-widget-8">
-                      <a target="_blank" rel="noopener noreferrer" href="https://google.com#">
-                        <img src={unknown6} alt="Client" />
-                      </a>
-                    </span>
-                  </div>
-                </div>
+          <div className="container">
+            <div className="row h-full">
+              <div className="col-12 text-center align-self-center">
+                <h1 className="fs-50 fw-600 lh-15 hidden-sm-down">We provide Software <span className="text-primary" data-type="Development, Training, Job Opportunities" /></h1>
+                <h1 className="fs-35 fw-600 lh-15 hidden-md-up">We provide Software <br /><span className="text-primary" data-type="Development, Training, Job Opportunities" /></h1>
+                <br />
+                <p className="fs-20 hidden-sm-down"><strong>Affiliation </strong> – American Career Institute</p>
+                <p className="fs-16 hidden-md-up"><strong>Affiliation </strong> – American Career Institute</p>
+                <br />
+                <hr className="w-60 hidden-sm-down" />
+                <br />
+                <Hire />
+                <br />
+                <p className="mt-2 mt-md-4"><a href="/academy.html"><small>or become a developer with Ifotta</small></a></p>
               </div>
-            </section>
-            <section className="purchase-now" id="ribbon_right">
-              <div className="container">
-                <div className="row">
-                  <div className="col-md-9 hire-call-to-action-text">
-                    <h3 className="white-text">What are you waiting for? Get in touch Now</h3>
-                  </div>
-                  <div className="col-md-3 hire-call-to-action-button-container">
-                    <Hire color="red-btn" />
-                  </div>
-                </div>
+
+              <div className="col-12 align-self-end text-center pb-70">
+                <a className="scroll-down-2 scroll-down-inverse" href="#" data-scrollto="services-section"><span /></a>
               </div>
-            </section>
-            <section className="contact-us" id="contact" style={{ backgroundColor: 'rgba(31, 136, 193, 0.8)' }}>
-              <div className="container">
-                <div className="section-header">
-                  <h2 className="white-text">Get in touch </h2>
-                  <div className="white-text section-legend">Big and mobile-optimized contact form integrated. All fields are customizablee. </div>
-                </div>
-                <ContactForm />
-              </div>
-            </section>
+            </div>
           </div>
-          <Footer />
-        </div>
+        </header>
+
+        <main className="main-content">
+
+
+          <section className="section" id="services-section">
+            <div className="container">
+              <header className="section-header">
+                <small>Our Services</small>
+                <h2>Hire, Train, Or become a Developer</h2>
+                <hr />
+                <p className="lead">ifotta makes world-class developers faster and easier to reach. Thats not all, We also offer various software development training courses.</p>
+              </header>
+
+              <div className="row gap-y">
+
+                <div className="col-12 col-md-6 col-xl-4 feature-1">
+                  <p className="feature-icon text-success"><i className="icon-genius" /></p>
+                  <h5>Hire A Developer</h5>
+                  <p>Looking to design something as simple as a blog and/designing
+a corporate website, our team of developers will not only build
+your website, but will work with your team on/off site to build
+and design your site. With the appropriate programming
+language and pay attention to details to deliver the best,
+bearing in mind the needs of the company/individual and
+customers.</p>
+                </div>
+
+
+                <div className="col-12 col-md-6 col-xl-4 feature-1">
+                  <p className="feature-icon text-info"><i className="icon-mobile" /></p>
+                  <h5>Software Development/Projects</h5>
+                  <p>Looking for a development team to build or update your
+software? At Ifotta we provide software development
+services for different platforms. From concept of the desired
+software through to the final manifestation of the software,
+prototyping, modification, re-use, reengineering. We deliver
+a complete software solution.</p>
+                </div>
+
+
+                <div className="col-12 col-md-6 col-xl-4 feature-1">
+                  <p className="feature-icon text-danger"><i className="icon-tools" /></p>
+                  <h5>Ifotta Academy</h5>
+                  <p>Reinvent your career! Learn to code and change your life. Join our
+driven community of career changers and master the skills you need to
+become a software engineer. Whether it’s leveraging your background to
+make a bigger impact in your current industry or diving into a brand new
+territory, our wide variety of short and intense courses will help you
+achieve/bring that dream to reality.</p>
+                </div>
+
+              </div>
+
+            </div>
+          </section>
+
+
+          <section className="section bg-gray text-center">
+
+            <div className="row">
+              <div className="col-12 offset-md-3 col-md-6">
+                <br />
+                <h3 className="fw-900 mb-20">Become A Developer with Ifatta Academy</h3>
+                <p className="lead text-muted">ifotta offers various software technology training courses to prep you for the job market.</p>
+                <br />
+                <Link className="btn btn-lg btn-round btn-success" to="academy">Apply Now</Link>
+              </div>
+            </div>
+
+          </section>
+
+
+          <section className="section">
+            <div className="container">
+              <header className="section-header">
+                <small>DEVELOP WITH US</small>
+                <h2>What would you like to do</h2>
+                <hr />
+                <p className="lead">Hire a Developer? Apply as a Developer? Or train to become a Developer?.</p>
+              </header>
+
+
+              <div className="row gap-y">
+
+                <div className="col-12 col-md-4 col-lg-4">
+                  <div className="card card-bordered card-hover-shadow text-center">
+                    <a className="card-block" data-scrollto="home-header" href="#home-header">
+                      <p><i className="icon-genius fs-50 text-muted" /></p>
+                      <h4 className="card-title">Hire</h4>
+                    </a>
+                  </div>
+                </div>
+
+
+                <div className="col-12 col-md-4 col-lg-4">
+                  <div className="card card-bordered card-hover-shadow text-center">
+                    <a className="card-block" href="https://ifotta.workable.com">
+                      <p><i className="icon-mobile fs-50 text-muted" /></p>
+                      <h4 className="card-title">Apply</h4>
+                    </a>
+                  </div>
+                </div>
+
+
+                <div className="col-12 col-md-4 col-lg-4">
+                  <div className="card card-bordered card-hover-shadow text-center">
+                    <Link className="card-block" to="academy">
+                      <p><i className="icon-tools fs-50 text-muted" /></p>
+                      <h4 className="card-title">Train</h4>
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+
+        </main>
+        <Footer />
       </div>
     );
   }

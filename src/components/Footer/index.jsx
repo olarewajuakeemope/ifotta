@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router';
-import footer1 from '../../resources/css/map25-redish.png';
-import footer2 from '../../resources/css/envelope4-green.png';
-import footer3 from '../../resources/css/telephone65-blue.png';
+import logo from '../../resources/img/logo.png';
 
 /**
  * Replace with Footerropriate info on completion
@@ -21,56 +19,42 @@ class Footer extends Component {
   render() {
     return (
 
-      <footer id="footer" itemScope="itemscope" itemType="http://schema.org/WPFooter">
+      <footer className="site-footer">
         <div className="container">
-          <div className="col-md-3 company-details">
-            <div className="icon-top red-text">
-              <img src={footer1} alt="" />
+          <div className="row gap-y align-items-center">
+            <div className="col-12 col-lg-3">
+              <p className="text-center text-lg-left">
+                <a href="index.html"><img width="67px" height="20px" src={logo} alt="logo" /></a>
+              </p>
             </div>
-            <div className="zerif-footer-address">270 Ozumba Mbadiwe Street Victoria Island Lagos Nigeria.</div>
-          </div>
-          <div className="col-md-3 company-details">
-            <div className="icon-top green-text">
-              <img src={footer2} alt="" />
+
+            <div className="col-12 col-lg-6" style={{ visibility: 'hidden' }}>
+              <ul className="nav nav-primary nav-hero">
+                <li className="nav-item">
+                  <a className="nav-link" href="index.html">Home</a>
+                </li>
+                <li className="nav-item">
+                  <a className="nav-link" href="blog.html">Blog</a>
+                </li>
+                <li className="nav-item">
+                  <a className="nav-link" href="block-feature.html">Features</a>
+                </li>
+                <li className="nav-item hidden-sm-down">
+                  <a className="nav-link" href="page-pricing.html">Pricing</a>
+                </li>
+                <li className="nav-item hidden-sm-down">
+                  <a className="nav-link" href="page-contact.html">Contact</a>
+                </li>
+              </ul>
             </div>
-            <div className="zerif-footer-email">support@ifotta.com</div>
-          </div>
-          <div className="col-md-3 company-details">
-            <div className="icon-top blue-text">
-              <img src={footer3} alt="" />
-            </div>
-            <div className="zerif-footer-phone">08064227106</div>
-          </div>
-          <div className="col-md-3 copyright">
-            <ul className="social">
-              <li id="facebook">
-                <a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/ifotta/">
-                  <span className="sr-only">Facebook link</span>
-                  <i className="fa fa-facebook" />
-                </a>
-              </li>
-              <li id="twitter">
-                <a target="_blank" rel="noopener noreferrer" href="https://twitter.com/ifotta">
-                  <span className="sr-only">Twitter link</span>
-                  <i className="fa fa-twitter" />
-                </a>
-              </li>
-              <li id="linkedin">
-                <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/company/17990346/">
-                  <span className="sr-only">Linkedin link</span>
-                  <i className="fa fa-linkedin" />
-                </a>
-              </li>
-              <li id="instagram">
-                <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/ifotta_dev/">
-                  <span className="sr-only">Instagram link</span>
-                  <i className="fa fa-instagram" />
-                </a>
-              </li>
-            </ul>
-            <p id="zerif-copyright">©Ifotta</p>
-            <div className="zerif-copyright-box">
-              developed by <Link className="zerif-copyright" to="/"> Ifotta</Link>
+
+            <div className="col-12 col-lg-3">
+              <div className="social text-center text-lg-right">
+                <a className="social-facebook" href="https://www.facebook.com/ifotta/"><i className="fa fa-facebook" /></a>
+                <a className="social-twitter" href="https://twitter.com/ifotta"><i className="fa fa-twitter" /></a>
+                <a className="social-instagram" href="https://www.instagram.com/ifotta_dev/"><i className="fa fa-instagram" /></a>
+                <a className="social-dribbble" href="https://www.linkedin.com/company/17990346/"><i className="fa fa-linkedin" /></a>
+              </div>
             </div>
           </div>
         </div>
