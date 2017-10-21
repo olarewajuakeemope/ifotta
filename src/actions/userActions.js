@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const ROOT_URL = 'https://formspree.io/';
-const EMAIL = 'olarewajuakeemopeyemi@gmail.com';
+const EMAIL = 'info@ifotta.com';
 
 /**
  * Async Function to handle academySignup request
@@ -10,7 +10,6 @@ const EMAIL = 'olarewajuakeemopeyemi@gmail.com';
  * @returns {Object} dispatch
  */
 export function academySignup(user) {
-  console.log(user);
   return axios.post(`${ROOT_URL}${EMAIL}`, user);
 }
 /**

@@ -9,6 +9,7 @@ import Academy from './components/Academy';
 import Client from './components/Client';
 import Services from './components/Services';
 import Contact from './components/Contact';
+import Jobs from './components/Jobs';
 
 export default (
 
@@ -20,6 +21,7 @@ export default (
     <Route path="/academy" component={Academy} />
     <Route path="/services" component={Services} />
     <Route path="/contact" component={Contact} />
+    <Route path="/jobs" component={Jobs} />
     <Route path="*" component={ErrorPage} />
   </Route>
 );

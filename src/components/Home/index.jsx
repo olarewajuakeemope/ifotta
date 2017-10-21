@@ -22,22 +22,22 @@ class Home extends Component {
           <div className="container">
             <div className="row h-full">
               <div className="col-12 text-center align-self-center">
-                <h1 className="fs-50 fw-600 lh-15 hidden-sm-down">We provide Software <span className="text-primary" data-type="Development, Training, Job Opportunities" /></h1>
-                <h1 className="fs-35 fw-600 lh-15 hidden-md-up">We provide Software <br /><span className="text-primary" data-type="Development, Training, Job Opportunities" /></h1>
-                <br />
-                <p className="fs-20 hidden-sm-down"><strong>Affiliation </strong> – American Career Institute</p>
-                <p className="fs-16 hidden-md-up"><strong>Affiliation </strong> – American Career Institute</p>
+                <h1 style={{ fontSize: '50px' }}>ifotta</h1>
+                <h1 className="fs-50 fw-600 lh-15 hidden-sm-down">We provide Software <span className="text-primary" data-type="Development, Training, Developers, Application training" /></h1>
+                <h1 className="fs-35 fw-600 lh-15 hidden-md-up">We provide Software <br /><span className="text-primary" data-type="Development, Training, Developers, Application training" /></h1>
                 <br />
                 <hr className="w-60 hidden-sm-down" />
                 <br />
                 <Hire />
+                <Link className="btn btn-xl btn-round btn-outline btn-white w-300 hidden-sm-down" to="academy">Ifotta Academy</Link>
                 <br />
-                <p className="mt-2 mt-md-4"><Link to="academy"><small>or become a developer with Ifotta</small></Link></p>
+              </div>
+              <div className="col-12 align-self-end text-center">
+                <a className="scroll-down-1 scroll-down-inverse" href="#" data-scrollto="service-section"><span></span></a>
+              </div>
+              <div className="col-12 align-self-end text-center pb-70">
               </div>
 
-              <div className="col-12 align-self-end text-center pb-70">
-                <a className="scroll-down-2 scroll-down-inverse" href="#" data-scrollto="services-section"><span /></a>
-              </div>
             </div>
           </div>
         </header>
@@ -49,7 +49,7 @@ class Home extends Component {
             <div className="container">
               <header className="section-header">
                 <small>Our Services</small>
-                <h2>Hire, Train, Or become a Developer</h2>
+                <h2><Hire><a href="#services-section">Hire</a></Hire>, <Link to="academy">Train</Link> or become a Developer</h2>
                 <hr />
                 <p className="lead">ifotta makes world-class developers faster and easier to reach. Thats not all, We also offer various software development training courses.</p>
               </header>
@@ -62,10 +62,10 @@ class Home extends Component {
                   <p>Looking to design something as simple as a blog and/designing
 a corporate website, our team of developers will not only build
 your website, but will work with your team on/off site to build
-and design your site. With the appropriate programming
-language and pay attention to details to deliver the best,
-bearing in mind the needs of the company/individual and
-customers.</p>
+and design your site.</p>
+                  <p>
+                    <Link to="hire" style={{ color: '#4ED866' }}>Hire A Developer</Link>
+                  </p>
                 </div>
 
 
@@ -75,9 +75,10 @@ customers.</p>
                   <p>Looking for a development team to build or update your
 software? At Ifotta we provide software development
 services for different platforms. From concept of the desired
-software through to the final manifestation of the software,
-prototyping, modification, re-use, reengineering. We deliver
-a complete software solution.</p>
+software through to the final manifestation of the software.</p>
+                  <p>
+                    <Link to="jobs">Apply Now</Link>
+                  </p>
                 </div>
 
 
@@ -86,10 +87,11 @@ a complete software solution.</p>
                   <h5>Ifotta Academy</h5>
                   <p>Reinvent your career! Learn to code and change your life. Join our
 driven community of career changers and master the skills you need to
-become a software engineer. Whether it’s leveraging your background to
-make a bigger impact in your current industry or diving into a brand new
-territory, our wide variety of short and intense courses will help you
-achieve/bring that dream to reality.</p>
+become a software engineer. Add the right skills to your
+resume so you can pursue a fulfilling career.</p>
+                  <p>
+                    <Link to="academy" style={{ color: '#FD4C59' }}>Register Now</Link>
+                  </p>
                 </div>
 
               </div>
