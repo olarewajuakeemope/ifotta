@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Link, browserHistory } from 'react-router';
 import Hire from '../Hire';
 import logo from '../../resources/img/logo.png';
+import whiteLogo from '../../resources/img/ifotta-logo-white.png';
 
 /**
  * Replace with Headerropriate info on completion
@@ -33,7 +34,7 @@ class Header extends Component {
             <button className="topbar-toggler">&#9776;</button>
             <span className="topbar-brand fs-18 fw-400">
               <a className="logo-default" href="/"><img width="100px" height="30px" src={logo} alt="logo" /></a>
-              <a className="logo-inverse text-white" href="/"><strong>ifotta</strong></a>
+              <a className="logo-inverse text-white" href="/"><img width="100px" height="50px" src={whiteLogo} alt="logo" /></a>
             </span>
           </div>
 

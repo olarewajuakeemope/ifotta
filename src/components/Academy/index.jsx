@@ -4,6 +4,7 @@ import AcademyModal from '../AcademyModal';
 import CourseCategories from './courseCategories';
 import Footer from '../Footer';
 import bgLaptop from '../../resources/img/bg-laptop.jpg';
+import whiteLogo from '../../resources/img/ifotta-logo-white.png';
 
 
 /**
@@ -41,7 +42,7 @@ class Academy extends Component {
             <div className="row">
               <div className="col-12 col-lg-8 offset-lg-2">
 
-                <h1 style={{ fonstSize: '90px' }}>ifotta</h1>
+                <img width="300px" height="150px" src={whiteLogo} alt="logo" />
 
               </div>
             </div>

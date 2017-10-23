@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router';
-import $ from 'jquery';
 import Hire from '../Hire';
 import Footer from '../Footer';
 import bgLaptop from '../../resources/img/bg-laptop.jpg';
+import whiteLogo from '../../resources/img/ifotta-logo-white.png';
 
 class Home extends Component {
 
@@ -22,7 +22,7 @@ class Home extends Component {
           <div className="container">
             <div className="row h-full">
               <div className="col-12 text-center align-self-center">
-                <h1 style={{ fontSize: '90px' }}>ifotta</h1>
+                <img width="300px" height="150px" src={whiteLogo} alt="logo" />
                 <h1 className="fs-50 fw-600 lh-15 hidden-sm-down">We provide Software <span className="text-primary" data-type="Development, Training, Developers, Application Training" /></h1>
                 <h1 className="fs-35 fw-600 lh-15 hidden-md-up">We provide Software <br /><span className="text-primary" data-type="Development, Training, Developers, Application Training" /></h1>
                 <br />
