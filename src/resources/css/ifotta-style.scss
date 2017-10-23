@@ -188,6 +188,15 @@ body {
   .portlet .tabbable-line > .tab-content {
     padding-bottom: 0;
   }********/
+
+  .topbar .nav-submenu{
+    background-color: transparent;
+  }
+  
+  .topbar .nav-submenu .nav-link{
+    color: white;
+  }
+  
   /**** Form Components ****/
   .dialog-form-body {
     text-align: left;

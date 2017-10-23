@@ -22,9 +22,9 @@ class Home extends Component {
           <div className="container">
             <div className="row h-full">
               <div className="col-12 text-center align-self-center">
-                <h1 style={{ fontSize: '50px' }}>ifotta</h1>
-                <h1 className="fs-50 fw-600 lh-15 hidden-sm-down">We provide Software <span className="text-primary" data-type="Development, Training, Developers, Application training" /></h1>
-                <h1 className="fs-35 fw-600 lh-15 hidden-md-up">We provide Software <br /><span className="text-primary" data-type="Development, Training, Developers, Application training" /></h1>
+                <h1 style={{ fontSize: '90px' }}>ifotta</h1>
+                <h1 className="fs-50 fw-600 lh-15 hidden-sm-down">We provide Software <span className="text-primary" data-type="Development, Training, Developers, Application Training" /></h1>
+                <h1 className="fs-35 fw-600 lh-15 hidden-md-up">We provide Software <br /><span className="text-primary" data-type="Development, Training, Developers, Application Training" /></h1>
                 <br />
                 <hr className="w-60 hidden-sm-down" />
                 <br />

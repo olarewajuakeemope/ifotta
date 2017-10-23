@@ -42,7 +42,7 @@ class Header extends Component {
             <ul className="topbar-nav nav">
               <li className="nav-item"><a className="nav-link" href="/">Home</a></li>
               <li className="nav-item">
-                <Link className="nav-link" to="services">Our Services<i className="fa fa-caret-down" /></Link>
+                <Link className="nav-link" to="services">Our Services</Link>
                 <div className="nav-submenu">
                   <Hire><a className="nav-link" href="#">Hire A Developer</a></Hire>
                   <Link className="nav-link" to="services">Software Development</Link>
