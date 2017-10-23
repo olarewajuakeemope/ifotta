@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import CourseListPage from './courseListPage';
+import coursesListObject from './coursesListObject';
 
 /**
  * Replace with CourseCategoriesropriate info on completion
@@ -10,6 +12,7 @@ class CourseCategories extends Component {
     super(props);
     this.state = {};
   }
+
   /**
    * @returns {Object} Jsx
    * @memberOf CourseCategories
@@ -27,7 +30,7 @@ class CourseCategories extends Component {
               <p><strong>Course</strong></p><br />
               <div>
                 <p>Software Engineering Immersive (Full Stack)</p>
-                <p>Front End Developer (HTML/Javascript/CSS)</p>
+                <p><a href="#" onClick={ () => this.props.renderCoursePage('frontendCourses') }>Front End Developer (HTML/Javascript/CSS)</a></p>
 
                 <div>
                   <a href="#backend-course-id" data-toggle="collapse">

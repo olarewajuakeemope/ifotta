@@ -40,18 +40,14 @@ class About extends Component {
 for the Nigerian Youth.</h6>
                 <hr />
                 <p className="lead">To find, train, mentor, employ highly intelligent Nigerians and
-place them in the global software development market working
-remotely from our offices in Nigeria.
-Ifotta is an independent IT company that offers a wide variety of software
-solutions. From hiring a developer, to working on your numerous software
-projects to our rich curriculum of short and intense courses; from
-businesses to individuals be it Small, medium or large companies our
-software developers will create and build lasting solutions for your
-organization. We’re a from a variety of technical and creative backgrounds
-in the IT industry. Our collective decades of experience and wide variety
-of skills means your earning process/experience will truly be memorable.
-In order to achieve its vision, Ifotta opened its doors to the community in
-2017 and has since been enjoying great testimonials from its alumni.</p>
+                place them in the global software development market working
+                remotely from our offices in Nigeria.
+                Ifotta is an independent IT company that offers a wide variety of software
+                solutions. From hiring a developer, to working on your numerous software
+                projects to our rich curriculum of boot camp and intense courses. from
+                businesses to individuals be it Small, medium or large companies our
+                software developers will create and build lasting solutions for your
+                organization.</p>
               </header>
             </div>
           </section>

@@ -23,8 +23,7 @@ class Home extends Component {
             <div className="row h-full">
               <div className="col-12 text-center align-self-center">
                 <img width="300px" height="150px" src={whiteLogo} alt="logo" />
-                <h1 className="fs-50 fw-600 lh-15 hidden-sm-down">We provide Software <span className="text-primary" data-type="Development, Training, Developers, Application Training" /></h1>
-                <h1 className="fs-35 fw-600 lh-15 hidden-md-up">We provide Software <br /><span className="text-primary" data-type="Development, Training, Developers, Application Training" /></h1>
+                <p style={{ fontWeight: '1px', fontSize: '30px' }}>We provide Software Development, Training, Developers,<br /> And Application Training</p>
                 <br />
                 <hr className="w-60 hidden-sm-down" />
                 <br />
@@ -59,10 +58,10 @@ class Home extends Component {
                 <div className="col-12 col-md-6 col-xl-4 feature-1">
                   <p className="feature-icon text-success"><i className="icon-genius" /></p>
                   <h5>Hire A Developer</h5>
-                  <p>Looking to design something as simple as a blog and/designing
-a corporate website, our team of developers will not only build
-your website, but will work with your team on/off site to build
-and design your site.</p>
+                  <p>Looking to design something as simple as a corporate website?
+                  Our team of developers will not only build your website, but
+                  will work with your team on/off site to build and design your
+                  site.</p>
                   <p>
                     <Link to="hire" style={{ color: '#4ED866' }}>Hire A Developer</Link>
                   </p>
@@ -73,9 +72,9 @@ and design your site.</p>
                   <p className="feature-icon text-info"><i className="icon-mobile" /></p>
                   <h5>Software Development/Projects</h5>
                   <p>Looking for a development team to build or update your
-software? At Ifotta we provide software development
-services for different platforms. From concept of the desired
-software through to the final manifestation of the software.</p>
+                  software? At Ifotta we provide software development
+                  services for different platforms, either as outsource services
+                  or by providing developers.</p>
                   <p>
                     <Link to="jobs">Apply Now</Link>
                   </p>
@@ -85,10 +84,9 @@ software through to the final manifestation of the software.</p>
                 <div className="col-12 col-md-6 col-xl-4 feature-1">
                   <p className="feature-icon text-danger"><i className="icon-tools" /></p>
                   <h5>Ifotta Academy</h5>
-                  <p>Reinvent your career! Learn to code and change your life. Join our
-driven community of career changers and master the skills you need to
-become a software engineer. Add the right skills to your
-resume so you can pursue a fulfilling career.</p>
+                  <p>Reinvent your career! Learn to code and change your life. Enroll in our
+                  career changing boot camps and master the skills you need to become a
+                  software engineer.</p>
                   <p>
                     <Link to="academy" style={{ color: '#FD4C59' }}>Register Now</Link>
                   </p>

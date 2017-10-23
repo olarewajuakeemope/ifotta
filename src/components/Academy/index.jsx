@@ -2,9 +2,11 @@ import React, { Component } from 'react';
 import Scrollchor from 'react-scrollchor';
 import AcademyModal from '../AcademyModal';
 import CourseCategories from './courseCategories';
+import CourseListPage from './courseListPage';
+import coursesListObject from './coursesListObject';
 import Footer from '../Footer';
 import bgLaptop from '../../resources/img/bg-laptop.jpg';
-import whiteLogo from '../../resources/img/ifotta-logo-white.png';
+import iAWhiteLogo from '../../resources/img/IA-ifotta-white.png';
 
 
 /**
@@ -15,34 +17,55 @@ import whiteLogo from '../../resources/img/ifotta-logo-white.png';
 class Academy extends Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      currentCourse: null,
+    };
   }
 
   componentDidMount() {
     this.pageScroll.simulateClick();
   }
+
+  renderCoursePage = (currentCourse) => {
+    this.setState({
+      currentCourse: coursesListObject[currentCourse],
+    });
+  }
+
   /**
    * @returns {Object} Jsx
    * @memberOf Academy
    */
   render() {
+    const scrollToTop = (
+      <Scrollchor
+        ref={(ref) => {
+          this.pageScroll = ref;
+          return this.pageScroll;
+        }}
+        to=""
+        id="pageScroll"
+      />
+    );
+
+    if (this.state.currentCourse) {
+      return (
+        <div>
+          {scrollToTop}
+          <CourseListPage course={this.state.currentCourse} />
+        </div>
+      );
+    }
     return (
       <div>
-        <Scrollchor
-          ref={(ref) => {
-            this.pageScroll = ref;
-            return this.pageScroll;
-          }}
-          to=""
-          id="pageScroll"
-        />
+        {scrollToTop}
         <header className="header header-inverse bg-fixed" style={{ backgroundImage: `url(${bgLaptop})` }} data-overlay="8">
           <div className="container text-center">
 
             <div className="row">
               <div className="col-12 col-lg-8 offset-lg-2">
 
-                <img width="300px" height="150px" src={whiteLogo} alt="logo" />
+                <img width="300px" height="150px" src={iAWhiteLogo} alt="logo" />
 
               </div>
             </div>
@@ -78,13 +101,13 @@ class Academy extends Component {
 
             <div className="tab-content text-center" data-aos="fade-in">
               <div className="tab-pane fade show active" id="header-color">
-                <CourseCategories title="All" />
+                <CourseCategories renderCoursePage={this.renderCoursePage} title="All" />
               </div>
               <div className="tab-pane fade" id="header-gradient">
-                <CourseCategories title="Individual" />
+                <CourseCategories renderCoursePage={this.renderCoursePage} title="Individual" />
               </div>
               <div className="tab-pane fade" id="header-slider">
-                <CourseCategories title="Career" />
+                <CourseCategories renderCoursePage={this.renderCoursePage} title="Career" />
               </div>
             </div>
 

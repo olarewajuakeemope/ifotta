@@ -78,13 +78,10 @@ become a software engineer.</p>
                     <div>
                       <h1>Hire A Developer</h1>
                       <p>
-                    Looking to design something as simple as a blog and/designing
-a corporate website, our team of developers will not only build
-your website, but will work with your team on/off site to build
-and design your site. With the appropriate programming
-language and pay attention to details to deliver the best,
-bearing in mind the needs of the company/individual and
-customers
+                      Looking to design something as simple as a corporate website?
+                      Our team of developers will not only build your website, but
+                      will work with your team on/off site to build and design your
+                      site.
                       </p>
                       <div className="text-left mt-50">
                         <Hire>
@@ -98,12 +95,10 @@ customers
                     <div>
                       <h1>Software Development/Projects</h1>
                       <p>
-                    Looking for a development team to build or update your
-software? At Ifotta we provide software development
-services for different platforms. From concept of the desired
-software through to the final manifestation of the software,
-prototyping, modification, re-use, reengineering. We deliver
-a complete software solution.
+                      Looking for a development team to build or update your
+                      software? At Ifotta we provide software development
+                      services for different platforms, either as outsource services
+                      or by providing developers.
                       </p>
                       <div className="text-left mt-50">
                         <Link className="btn btn-lg btn-primary" to="jobs">Available Jobs</Link>
@@ -115,13 +110,9 @@ a complete software solution.
                     <div>
                       <h1>Ifotta Academy</h1>
                       <p>
-                    Reinvent your career! Learn to code and change your life. Join our
-driven community of career changers and master the skills you need to
-become a software engineer. Whether it’s leveraging your background to
-make a bigger impact in your current industry or diving into a brand new
-territory, our wide variety of short and intense courses will help you
-achieve/bring that dream to reality. Add the right technical skills to your
-resume so you can pursue a more fulfilling career. GO PRO!!!!
+                      Reinvent your career! Learn to code and change your life. Enroll in our
+                      career changing boot camps and master the skills you need to become a
+                      software engineer.
                       </p>
                       <div className="text-left mt-50">
                         <Link className="btn btn-lg btn-primary" to="academy">Ifotta Academy</Link>
