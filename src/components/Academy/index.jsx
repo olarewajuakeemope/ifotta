@@ -59,14 +59,13 @@ class Academy extends Component {
     return (
       <div>
         {scrollToTop}
-        <header className="header header-inverse bg-fixed" style={{ backgroundImage: `url(${bgLaptop})` }} data-overlay="8">
+        <header className="header header-inverse bg-fixed" style={{ backgroundColor: '#1F88C1' }}>
           <div className="container text-center">
 
             <div className="row">
               <div className="col-12 col-lg-8 offset-lg-2">
-
                 <img width="300px" height="150px" src={iAWhiteLogo} alt="logo" />
-
+                <h2>IFOTTA ACADEMY</h2>
               </div>
             </div>
 
@@ -74,13 +73,6 @@ class Academy extends Component {
         </header>
         <section className="section bg-gray bb-11 pb-0">
           <div className="container">
-            <header className="section-header">
-              <small>OUR COURSES</small>
-              <h2>Ifotta Academy</h2>
-              <hr />
-              <p className="lead">Learn Every Essential Coding Skills You Need For The Job Market</p>
-            </header>
-
             <div className="text-center">
               <ul className="nav nav-outline nav-round">
                 <li className="nav-item w-140">

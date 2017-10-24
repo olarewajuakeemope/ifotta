@@ -52,7 +52,7 @@ class Header extends Component {
               </li>
               <li className="nav-item"><Link className="nav-link" to="about">About Us</Link></li>
               <li className="nav-item"><Link className="nav-link" to="jobs">Career</Link></li>
-              <li className="nav-item"><Link className="nav-link" to="client">Client</Link></li>
+              <li className="nav-item"><Link className="nav-link" to="client">Clients</Link></li>
               <li className="nav-item"><Link className="nav-link" to="contact">Contact</Link></li>
             </ul>
           </div>

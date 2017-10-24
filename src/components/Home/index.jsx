@@ -19,24 +19,22 @@ class Home extends Component {
           <div className="header-overlay opacity-90" style={{ backgroundColor: '#1F88C1' }} />
           <canvas className="constellation" />
 
-          <div className="container">
+          <div className="container ifotta-margin-top-negative-6-25em">
             <div className="row h-full">
-              <div className="col-12 text-center align-self-center">
-                <img width="300px" height="150px" src={whiteLogo} alt="logo" />
-                <p style={{ fontWeight: '1px', fontSize: '30px' }}>We provide Software Development, Training, Developers,<br /> And Application Training</p>
+              <div className="col-12 text-left align-self-center">
+                <img className="ifotta-white-logo-large" src={whiteLogo} alt="logo" />
+                <p className="ifotta-homeheader-text">We provide Software Development, Training, Developers,
+                  <span className="ifotta-margin-top-negative--5em ifotta-block ifotta-left"> And Application Training</span>
+                </p>
                 <br />
-                <hr className="w-60 hidden-sm-down" />
                 <br />
-                <Hire />
-                <Link className="btn btn-xl btn-round btn-outline btn-white w-300 hidden-sm-down" to="academy">Ifotta Academy</Link>
+                <div className="ifotta-homeheader-button-wrapper">
+                  <Hire />
+                  <Link className="btn btn-xl btn-round ifotta-btn-yellow w-300 mr-12 hidden-sm-down" to="academy">Ifotta Academy</Link>
+                </div>
                 <br />
               </div>
-              <div className="col-12 align-self-end text-center">
-                <a className="scroll-down-1 scroll-down-inverse" href="#" data-scrollto="service-section"><span></span></a>
-              </div>
-              <div className="col-12 align-self-end text-center pb-70">
-              </div>
-
+              <div className="col-12 align-self-end text-center pb-70" />
             </div>
           </div>
         </header>

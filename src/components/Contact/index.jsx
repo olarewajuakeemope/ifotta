@@ -81,22 +81,34 @@ class Contact extends Component {
             icon: 'success',
           });
         });
+      this.resetState();
     } else {
       this.setState({ errors });
     }
+  }
+
+  resetState = () => {
+    this.setState({
+      fullname: '',
+      email: '',
+      subject: '',
+      message: '',
+      errors: {},
+    });
   }
 
   render() {
     const { errors } = this.state;
     return (
       <div>
-        <header className="header header-inverse bg-fixed" style={{ backgroundImage: `url(${bgLaptop})` }} data-overlay="8">
+        <header className="header header-inverse bg-fixed" style={{ backgroundColor: '#1F88C1' }}>
           <div className="container text-center">
 
             <div className="row">
               <div className="col-12 col-lg-8 offset-lg-2">
 
                 <img width="300px" height="150px" src={whiteLogo} alt="logo" />
+                <h1>CONTACT US</h1>
 
               </div>
             </div>
@@ -111,7 +123,6 @@ class Contact extends Component {
 
               <div className="row gap-y">
                 <div className="col-12 col-md-6">
-                  <h1>Contact Us</h1>
 
                   <form action="/" method="POST" data-form="mailer">
                     <div className="alert alert-success">We received your message and will contact you back soon.</div>
@@ -184,14 +195,20 @@ Lagos.</p>
                       <span className="d-inline-block w-20 text-lighter" title="Email">
                         <p className="social-linkedin" href="#"><i className="fa fa-envelope-o" /></p>
                       </span>
-                      <span className="fs-14">info@ifotta.com</span>
+                      <span className="fs-14">
+                        <a href="mailto:info@ifotta.com?Subject=Contact%20Us" target="_top">
+                          info@ifotta.com
+                        </a>
+                      </span>
                     </div>
 
                     <div>
                       <span className="d-inline-block w-20 text-lighter" title="Phone">
                         <p className="social-linkedin" href="#"><i className="fa fa-phone" /></p>
                       </span>
-                      <span className="fs-14">0806 422 7106</span>
+                      <span className="fs-14">
+                        <a href="tel:+234-806-422-7106">0806 422 7106</a>
+                      </span>
                     </div>
 
                   </div>

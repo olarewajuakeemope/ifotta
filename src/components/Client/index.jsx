@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router';
 import Hire from '../Hire';
+import PaymentGateway from './paymentGateway';
 import logo from '../../resources/img/logo.png';
 import bgGirl from '../../resources/img/bg-girl.jpg';
 
@@ -12,13 +13,24 @@ import bgGirl from '../../resources/img/bg-girl.jpg';
 class Client extends Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      makePayment: false,
+    };
+  }
+
+  renderPaymentPage = () => {
+    this.setState({
+      makePayment: true,
+    });
   }
   /**
    * @returns {Object} Jsx
    * @memberOf Client
    */
   render() {
+    if (this.state.makePayment) {
+      return <PaymentGateway />;
+    }
     return (
 
       <div className="mh-fullscreen bg-img center-vh p-20" style={{ backgroundImage: `url(${bgGirl})` }}>
@@ -60,14 +72,15 @@ class Client extends Component {
             <a className="btn btn-circular btn-sm btn-google mr-4" href="#"><i className="fa fa-google" /></a>
             <a className="btn btn-circular btn-sm btn-twitter" href="#"><i className="fa fa-twitter" /></a>
           </div>
-
           <hr className="w-30" />
-
           <p className="text-center text-muted fs-13 mt-20">Don't have an account?
             <Hire>
               <a href="#"> Sign up</a>
             </Hire>
-            </p>
+          </p>
+          <p className="text-center">
+            <a onClick={this.renderPaymentPage} href="#">Make Payment  <i className="fa fa-credit-card" /></a>
+          </p>
         </div>
       </div>
     );

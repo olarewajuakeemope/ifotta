@@ -21,13 +21,14 @@ class Services extends Component {
   render() {
     return (
       <div>
-        <header className="header header-inverse" style={{ backgroundImage: `url(${bgLaptop})`, backgroundColor: '#c2b2cd' }} data-overlay="8">
+        <header className="header header-inverse" style={{ backgroundColor: '#1F88C1' }}>
           <div className="container text-center">
 
             <div className="row">
               <div className="col-12 col-lg-8 offset-lg-2">
 
                 <img width="300px" height="150px" src={whiteLogo} alt="logo" />
+                <h2>OUR SERVICES</h2>
               </div>
             </div>
 
@@ -36,8 +37,6 @@ class Services extends Component {
         <section className="section bg-gray" id="section-features">
           <div className="container">
             <header className="section-header">
-              <small>WHAT WE DO</small>
-              <h2>Our Services</h2>
               <hr />
             </header>
 

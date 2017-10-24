@@ -3,191 +3,99 @@ $medium-screen-size: 990px;
 $small-screen-size: 600px;
 
 body {
-  /******* GENERAL *******
-  Link, a {
-    outline: none !important;
+  /******* GENERAL *******/
+
+  .ifotta-margin-top-negative-6-25em {
+    margin-top: -6.25em;
   }
-  header, .btn, section {
-    font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  .ifotta-margin-top-negative--5em {
+    margin-top: -.5em;
   }
-  .buttons {
-    margin: 1em;
+  .ifotta-block {
+    display: block;
   }
-  .ifotta-white-text {
-    color: white !important;
+  .ifotta-left {
+    text-align: left;
   }
-  .ifotta-blue-text {
-    color: #1F88C1 !important;
+
+  /******* HOME-HEADER *********/
+
+  .ifotta-white-logo-large {
+    width: 600px;
+    height: 300px;
   }
-  .bg-white {
-    background-color: white;
+  .ifotta-homeheader-text {
+    padding-left: 4em;
+    font-weight: 1px;
+    font-size: 25px;
   }
-  /******* CLIENT FORM *******
-  .form-signin {
-    max-width: 330px;
-    padding: 15px;
-    margin: 0 auto;
+  .ifotta-homeheader-button-wrapper {
+    margin-left: 6em;
+    margin-top: -3em;
   }
-  .form-signin .form-signin-heading,
-  .form-signin .checkbox {
-    margin-bottom: 10px;
+
+  ////////// IFOTTA YELLOW BUTTON ///////////
+  .ifotta-btn-yellow {
+    background-color: #FECB3F;
+    border-color: #FECB3F;
+    color: #fff;
   }
-  .form-signin .checkbox {
-    font-weight: normal;
-  }
-  .form-signin .form-control {
-    position: relative;
-    height: auto;
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box;
-    padding: 10px;
-    font-size: 16px;
-  }
-  .form-signin .form-control:focus {
-    z-index: 2;
-  }
-  .form-signin input[type="email"] {
-    margin-bottom: -1px;
-    border-bottom-right-radius: 0;
-    border-bottom-left-radius: 0;
-  }
-  .form-signin input[type="password"] {
-    margin-bottom: 10px;
-    border-top-left-radius: 0;
-    border-top-right-radius: 0;
-  } 
-  /******* HEADER *******
-  header .mega-menu-link {
-    font-weight: bold !important;
-    color: #1F88C1 !important;
-  }
-  header .mega-menu-link:hover {
-    color: #F7C035 !important;
-  }
-  /*********ACADEMY STYLE********
-  .tab-pane {
-    padding-top: 30px;
-  }
-  #ifotta-academy-tab-container {
-    padding-bottom: 50px;
-    font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  }
-  #ifotta-academy-tab-container .pill-text {
-    color: black !important;
-    background: none;
-    border: none;
-  }
-  #ifotta-academy-tab-container li {
-    width: 200px !important;
-    padding: 0 !important;
-    margin: 0 !important;
-    @media screen and (max-width: $small-screen-size) {
-      width: 100px !important;
-    }
-  }
-  section.masthead .site-heading {
-    padding: 200px 0; }
-  section.masthead .page-heading,
-  section.masthead .site-heading {
-    color: white;
-    text-align: left; }
-  section.masthead .page-heading h1,
-  section.masthead .site-heading h1 {
-  font-size: 50px;
-  margin-top: 0; }
-  section.masthead .page-heading .subheading,
-  section.masthead .site-heading .subheading, .ifotta-text {
-  font-size: 24px;
-  font-weight: 300;
-  line-height: 1.1;
-  display: block;
-  margin: 10px 0 0;
-  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
-  @media only screen and (min-width: 768px) {
-  section.masthead .page-heading h1,
-  section.masthead .site-heading h1 {
-    font-size: 80px; } }
-  section.masthead .post-heading .subheading {
-  line-height: 1.1;
-  display: block; }
-  section.masthead .post-heading .subheading {
-  font-size: 24px;
-  font-weight: 600;
-  margin: 10px 0 30px;
-  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
-  @media only screen and (min-width: 768px) {
-  section.masthead .post-heading h1 {
-  font-size: 55px; }
-  section.masthead .post-heading .subheading {
-  font-size: 30px; } }
-  /* Tabs panel 
-  .tabbable-panel {
-    border: none;
-    padding: 10px;
+
+  .ifotta-btn-yellow:hover {
+    background-color: #FECB3F;
+    border-color: #FECB3F;
+    color: #AAA;
   }
   
-  /* Default mode 
-  .tabbable-line > .nav-tabs {
-    border: none;
-    margin: 0px;
+  .ifotta-btn-yellow:hover {
+    -webkit-box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
   }
-  .tabbable-line > .nav-tabs {
-    @media screen and (min-width: $medium-screen-size) {
-      position: relative !important;
-      left: 20% !important;
-    }
-    @media screen and (min-width: $small-screen-size) and (max-width: $medium-screen-size) {
-      position: relative !important;
-      left: 10% !important;
-    }
-    @media screen and (max-width: $small-screen-size) {
-      position: relative !important;
-      left: 0 !important;
-    }
+  
+  .ifotta-btn-yellow:focus, .ifotta-btn-yellow.focus {
+    color: #fff;
   }
-  .tabbable-line > .nav-tabs > li {
-    margin-right: 2px;
+  
+  .ifotta-btn-yellow.disabled, .ifotta-btn-yellow:disabled {
+    background-color: #FECB3F;
+    border-color: #FECB3F;
+    opacity: 0.5;
   }
-  .tabbable-line > .nav-tabs > li > a {
-    outline:none;
-    border: 0;
-    margin-right: 0;
-    color: #737373;
-    font-size: .6em;
+  
+  .ifotta-btn-yellow:active, .ifotta-btn-yellow.active,
+  .show > .ifotta-btn-yellow.dropdown-toggle {
+    background-color: #FECB3F;
+    border-color: #FECB3F;
+    color: #fff;
   }
-  .tabbable-line > .nav-tabs > li.open, .tabbable-line > .nav-tabs > li:hover {
-    border-bottom: 4px solid #FECA40;
+  
+  .btn-outline.ifotta-btn-yellow {
+    color: #FECB3F;
+    background-color: transparent;
+    border-color: #FECB3F;
   }
-  .tabbable-line > .nav-tabs > li.open > a, .tabbable-line > .nav-tabs > li:hover > a {
-    outline:none;
-    border: 0;
-    background: none !important;
-    color: #FECA40;
+
+  .btn-outline.ifotta-btn-yellow {
+    color: #fff;
+    background-color: #FECB3F;
+    border-color: #FECB3F;
   }
-  .tabbable-line > .nav-tabs > li.open .dropdown-menu, .tabbable-line > .nav-tabs > li:hover .dropdown-menu {
-    margin-top: 0px;
+
+  .btn-outline.ifotta-btn-yellow:hover {
+    color: #AAA;
+    background-color: #FECB3F;
+    border-color: #FECB3F;
   }
-  .tabbable-line > .nav-tabs > li.active {
-    border-bottom: 4px solid #1F88C1;
-    position: relative;
+  
+  .btn-outline.ifotta-btn-yellow:active, .btn-outline.ifotta-btn-yellow.active,
+  .show > .btn-outline.ifotta-btn-yellow.dropdown-toggle {
+    background-color: #FECB3F;
+    border-color: #FECB3F;
   }
-  .tabbable-line > .nav-tabs > li.active > a {
-    border: none !important;
-    outline:none;
-    border: 0;
-    color: #1F88C1 !important;
-    font-weight: bold;
-  }
-  .tabbable-line > .tab-content {
-    margin-top: -3px;
-    background-color: #fff;
-    border: 0;
-    border-top: 1px solid #eee;
-    padding: 15px 0;
-  }
-  .portlet .tabbable-line > .tab-content {
-    padding-bottom: 0;
-  }********/
+
+  //////////// IFOTTA YELLOW BUTTON ENDS //////////
+
+  /******* NAVBAR *******/
 
   .topbar .nav-submenu{
     background-color: transparent;
@@ -217,34 +125,4 @@ body {
   .ifotta-yellow-btn:hover {
     background: #F7C035;
   }
-  /******************
-  .logo {
-    width: 20em;
-  }
-  .root {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-   }
-  .service-details {
-    padding: 8em;
-    height: 500px;
-    @media screen and (max-width: $medium-screen-size) {
-      padding: 4em;
-    }
-    @media screen and (max-width: $small-screen-size) {
-      padding: 2em;
-    }
-  }
-  .service-images {
-    width: 100%;
-    height: 100%;
-  }
-  .service-item {
-    height: 500px;
-  }
-  .white-link {
-    text-decoration: none !important;
-    color: white !important;
-  } ******/
 }

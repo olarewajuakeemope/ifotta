@@ -19,13 +19,13 @@ class CourseListPage extends Component {
     const { course } = this.props;
     return (
       <div>
-        <header className="header header-inverse" style={{ backgroundColor: '#c2b2cd' }}>
+        <header className="header header-inverse" style={{ backgroundColor: '#1F88C1' }}>
           <div className="container text-center">
 
             <div className="row">
               <div className="col-12 col-lg-8 offset-lg-2">
-
                 <img width="300px" height="150px" src={whiteLogo} alt="logo" />
+                <h2>IFOTTA COURSES</h2>
               </div>
             </div>
 
@@ -35,7 +35,6 @@ class CourseListPage extends Component {
           <section className="section">
             <div className="container">
               <header className="section-header">
-                <small>IFOTTA COURSES</small>
                 <h2>{ course.title }</h2>
                 <h6>Syllabus for Ifotta {course.title} Courses.</h6>
                 <hr />

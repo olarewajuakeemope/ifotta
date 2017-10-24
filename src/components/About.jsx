@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Footer from './Footer';
 import whiteLogo from '../resources/img/ifotta-logo-white.png';
 
 /**
@@ -18,13 +19,13 @@ class About extends Component {
   render() {
     return (
       <div>
-        <header className="header header-inverse" style={{ backgroundColor: '#c2b2cd' }}>
+        <header className="header header-inverse" style={{ backgroundColor: '#1F88C1' }}>
           <div className="container text-center">
 
             <div className="row">
               <div className="col-12 col-lg-8 offset-lg-2">
-
                 <img width="300px" height="150px" src={whiteLogo} alt="logo" />
+                <h2>ABOUT US</h2>
               </div>
             </div>
 
@@ -34,14 +35,20 @@ class About extends Component {
           <section className="section">
             <div className="container">
               <header className="section-header">
-                <small>WHO WE ARE</small>
-                <h2>About Us</h2>
-                <h6>To increase employment and achieve a higher standard of living
-for the Nigerian Youth.</h6>
+                <h6>OUR VISSION</h6>
+                <p className="lead">To increase employment and achieve a higher standard of living
+for the Nigerian Youth.</p>
                 <hr />
-                <p className="lead">To find, train, mentor, employ highly intelligent Nigerians and
+                <h6>OUR MISSION</h6>
+                <p className="lead">
+                To find, train, mentor, employ highly intelligent Nigerians and
                 place them in the global software development market working
                 remotely from our offices in Nigeria.
+                </p>
+                <br />
+                <br />
+                <h6>WHAT WE DO</h6>
+                <p className="lead">
                 Ifotta is an independent IT company that offers a wide variety of software
                 solutions. From hiring a developer, to working on your numerous software
                 projects to our rich curriculum of boot camp and intense courses. from
@@ -52,6 +59,7 @@ for the Nigerian Youth.</h6>
             </div>
           </section>
         </main>
+        <Footer />
       </div>
     );
   }
