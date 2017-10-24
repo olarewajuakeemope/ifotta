@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Footer from './Footer';
 import whiteLogo from '../resources/img/ifotta-logo-white.png';
+import bgLaptop from '../resources/img/bg-laptop.jpg';
 
 /**
  * Replace with Aboutropriate info on completion
@@ -19,7 +20,8 @@ class About extends Component {
   render() {
     return (
       <div>
-        <header className="header header-inverse" style={{ backgroundColor: '#1F88C1' }}>
+        <header className="header header-inverse" style={{ backgroundImage: `url(${bgLaptop})` }}>
+          <div className="header-overlay opacity-90" style={{ backgroundColor: '#1F88C1' }} />
           <div className="container text-center">
 
             <div className="row">

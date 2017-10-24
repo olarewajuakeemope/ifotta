@@ -101,7 +101,8 @@ class Contact extends Component {
     const { errors } = this.state;
     return (
       <div>
-        <header className="header header-inverse bg-fixed" style={{ backgroundColor: '#1F88C1' }}>
+        <header className="header header-inverse bg-fixed" style={{ backgroundImage: `url(${bgLaptop})` }}>
+          <div className="header-overlay opacity-90" style={{ backgroundColor: '#1F88C1' }} />
           <div className="container text-center">
 
             <div className="row">

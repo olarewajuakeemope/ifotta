@@ -21,7 +21,8 @@ class Services extends Component {
   render() {
     return (
       <div>
-        <header className="header header-inverse" style={{ backgroundColor: '#1F88C1' }}>
+        <header className="header header-inverse" style={{ backgroundImage: `url(${bgLaptop})` }}>
+          <div className="header-overlay opacity-90" style={{ backgroundColor: '#1F88C1' }} />
           <div className="container text-center">
 
             <div className="row">
