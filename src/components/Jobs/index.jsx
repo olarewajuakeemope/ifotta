@@ -30,7 +30,7 @@ class Jobs extends Component {
               </header>
 
               <br />
-              <p className="text-center"><Link className="btn btn-primary" to="/">Retrun home</Link></p>
+              <p className="text-center"><Link className="btn btn-primary" to="/">Return home</Link></p>
 
             </div>
           </section>

@@ -4,6 +4,7 @@ import Hire from '../Hire';
 import PaymentGateway from './paymentGateway';
 import logo from '../../resources/img/logo.png';
 import bgGirl from '../../resources/img/bg-girl.jpg';
+import bgLaptop from '../../resources/img/bg-laptop.jpg';
 
 /**
  * Replace with Clientropriate info on completion
@@ -33,8 +34,9 @@ class Client extends Component {
     }
     return (
 
-      <div className="mh-fullscreen bg-img center-vh p-20" style={{ backgroundImage: `url(${bgGirl})` }}>
-        <div className="card card-shadowed p-50 w-400 mb-0" style={{ maxWidth: '100%' }}>
+      <div className="mh-fullscreen bg-img center-vh p-20" style={{ backgroundImage: `url(${bgLaptop})` }}>
+        <div className="header-overlay opacity-90" style={{ backgroundColor: '#1F88C1' }} />
+        <div className="card card-shadowed p-50 w-400 mb-0" style={{ marginTop: '5em', maxWidth: '100%' }}>
           <div className="text-center">
             <Link className="logo-default" to="/">
               <img width="100px" height="30px" src={logo} alt="logo" />

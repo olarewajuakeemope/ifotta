@@ -37,7 +37,7 @@ class About extends Component {
           <section className="section">
             <div className="container">
               <header className="section-header">
-                <h6>OUR VISSION</h6>
+                <h6>OUR VISION</h6>
                 <p className="lead">To increase employment and achieve a higher standard of living
 for the Nigerian Youth.</p>
                 <hr />
