@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Footer from '../Footer';
 import whiteLogo from '../../resources/img/ifotta-logo-white.png';
 import bgLaptop from '../../resources/img/bg-laptop.jpg';
 
@@ -11,6 +12,34 @@ class CourseListPage extends Component {
   constructor(props) {
     super(props);
     this.state = {};
+  }
+
+  renderSyllabusTopics = (topicsArray) => {
+    return topicsArray.map((topic, topicIndex) => {
+      const topicIndexKey = topicIndex + 9.9;
+      return (
+        <p key={`${topicIndexKey}${topic}`}>{topic}</p>
+      );
+    });
+  }
+
+  renderSyllabus = () => {
+    const { courses } = this.props.course;
+    return courses.map((item, index) => {
+      const indexKey = index + 9;
+      return (
+        <div className="card" key={`${indexKey}${item.title}`}>
+          <h5 className="card-title">
+            <a data-toggle="collapse" data-parent="#accordion-1" href={`#collapse-1-${indexKey}`}>{item.title}</a>
+          </h5>
+          <div id={`collapse-1-${indexKey}`} className="collapse in">
+            <div className="card-block">
+              {this.renderSyllabusTopics(item.topics)}
+            </div>
+          </div>
+        </div>
+      );
+    });
   }
   /**
    * @returns {Object} Jsx
@@ -34,15 +63,27 @@ class CourseListPage extends Component {
           </div>
         </header>
         <main className="main-content">
-          <section className="section">
+          <header className="section-header">
+            <br />
+            <h2>{ course.title }</h2>
+            <h6>Syllabus for Ifotta {course.title} Courses.</h6>
+            <hr />
+          </header>
+          <section className="section bg-gray">
             <div className="container">
-              <header className="section-header">
-                <h2>{ course.title }</h2>
-                <h6>Syllabus for Ifotta {course.title} Courses.</h6>
-                <hr />
-              </header>
+              <div className="container">
+                <div className="accordion" id="accordion-1">
+                  {this.renderSyllabus()}
+                </div>
+                <p>
+                  <a href="#" onClick={ () => this.props.renderCoursePage(false) }>
+                    Back to Course List
+                  </a>
+                </p>
+              </div>
             </div>
           </section>
+          <Footer />
         </main>
       </div>
     );

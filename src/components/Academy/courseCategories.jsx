@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-import CourseListPage from './courseListPage';
-import coursesListObject from './coursesListObject';
 
 /**
  * Replace with CourseCategoriesropriate info on completion
@@ -29,39 +27,13 @@ class CourseCategories extends Component {
             <div className="col-sm-4 text-left">
               <p><strong>Course</strong></p><br />
               <div>
-                <p>Software Engineering Immersive (Full Stack)</p>
-                <p><a href="#" onClick={ () => this.props.renderCoursePage('frontendCourses') }>Front End Developer (HTML/Javascript/CSS)</a></p>
-
-                <div>
-                  <a href="#backend-course-id" data-toggle="collapse">
-                    <p>Back End Developer/UI & UX</p>
-                  </a>
-                  <div id="backend-course-id" className="collapse">
-                    <p><em>PHP/Java/Javascript/Ruby/.Net/Python</em></p>
-                  </div>
-                </div>
-                <p>Mobile Application iOS</p>
-                <p>Mobile Application Android</p>
-                <div>
-                  <a href="#demo" data-toggle="collapse">
-                    <p>Business Application Software</p>
-                  </a>
-                  <div id="demo" className="collapse">
-                    <p><em>PowerPoint for power
-users/presenter, Microsoft Excel – Advanced Analysis,
-Microsoft Visio, Sage ERP software, Peach Tree, SAP,
-Corel Draw, Multimedia e.g. Adobe Premier Pro</em></p>
-                  </div>
-                </div>
-                <div>
-                  <a href="#short-course-id" data-toggle="collapse">
-                    <p>Short Courses</p>
-                  </a>
-                  <div id="short-course-id" className="collapse">
-                    <p><em>Intro to python, Ruby, Ruby on Rails,
-Java, React</em></p>
-                  </div>
-                </div>
+                <p><a href="#" onClick={ () => this.props.renderCoursePage('sei') }>Software Engineering Immersive (Full Stack)</a></p>
+                <p><a href="#" onClick={ () => this.props.renderCoursePage('frontendCourses') }>Front End Developer</a></p>
+                <p><a href="#" onClick={ () => this.props.renderCoursePage('backendCourses') }>Back End Developer</a></p>
+                <p><a href="#" onClick={ () => this.props.renderCoursePage('mobileAppsIos') }>Mobile Application iOS</a></p>
+                <p><a href="#" onClick={ () => this.props.renderCoursePage('mobileAppsAndroid') }>Mobile Application Android</a></p>
+                <p><a href="#" onClick={ () => this.props.renderCoursePage('bas') }>Business Application Software</a></p>
+                <p><a href="#" onClick={ () => this.props.renderCoursePage('shortCourses') }>Short Courses</a></p>
               </div>
             </div>
             <div className="col-sm-4">

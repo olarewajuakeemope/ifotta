@@ -52,7 +52,10 @@ class Academy extends Component {
       return (
         <div>
           {scrollToTop}
-          <CourseListPage course={this.state.currentCourse} />
+          <CourseListPage
+            renderCoursePage={this.renderCoursePage}
+            course={this.state.currentCourse}
+          />
         </div>
       );
     }
