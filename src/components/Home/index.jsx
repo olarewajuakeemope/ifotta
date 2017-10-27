@@ -61,7 +61,9 @@ class Home extends Component {
                   will work with your team on/off site to build and design your
                   site.</p>
                   <p>
-                    <Link to="hire" style={{ color: '#4ED866' }}>Hire A Developer</Link>
+                    <Hire>
+                      <a href="#" style={{ color: '#4ED866' }}>Hire A Developer</a>
+                    </Hire>
                   </p>
                 </div>
 
