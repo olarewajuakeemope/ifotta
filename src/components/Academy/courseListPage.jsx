@@ -75,6 +75,8 @@ class CourseListPage extends Component {
                 <div className="accordion" id="accordion-1">
                   {this.renderSyllabus()}
                 </div>
+                <br />
+                <br />
                 <p>
                   <a href="#" onClick={ () => this.props.renderCoursePage(false) }>
                     Back to Course List
