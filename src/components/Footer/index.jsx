@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router';
 import logo from '../../resources/img/logo.png';
 
 /**
@@ -23,7 +24,7 @@ class Footer extends Component {
           <div className="row gap-y align-items-center">
             <div className="col-12 col-lg-3">
               <p className="text-center text-lg-left">
-                <a href="/"><img width="67px" height="20px" src={logo} alt="logo" /></a>
+                <Link to="/"><img width="67px" height="20px" src={logo} alt="logo" /></Link>
               </p>
             </div>
 
