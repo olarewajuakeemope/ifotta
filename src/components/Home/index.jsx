@@ -21,14 +21,14 @@ class Home extends Component {
 
           <div className="container ifotta-margin-top-negative-6-25em">
             <div className="row h-full">
-              <div className="col-12 text-left align-self-center">
-                <img className="ifotta-white-logo-large" src={whiteLogo} alt="logo" />
-                <p className="ifotta-homeheader-text">We provide Software Development, Training, Developers,
+              <div className="col-12 text-center align-self-center">
+                <img className="ifotta-white-logo-large ifotta-block ifotta-left" src={whiteLogo} alt="logo" />
+                <p className="ifotta-homeheader-text ifotta-left">We provide Software Development, Training, Developers,
                   <span className="ifotta-margin-top-negative--5em ifotta-block ifotta-left"> And Application Training</span>
                 </p>
                 <br />
                 <br />
-                <div className="ifotta-homeheader-button-wrapper">
+                <div className="ifotta-homeheader-button-wrapper ifotta-left">
                   <Hire />
                   <Link className="btn btn-xl btn-round ifotta-btn-yellow w-300 mr-12 hidden-sm-down" to="academy">Ifotta Academy</Link>
                 </div>
