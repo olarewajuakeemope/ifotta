@@ -31,6 +31,7 @@ class Home extends Component {
                 <div className="ifotta-homeheader-button-wrapper ifotta-left">
                   <Hire />
                   <Link className="btn btn-xl btn-round ifotta-btn-yellow w-300 mr-12 hidden-sm-down" to="academy">Ifotta Academy</Link>
+                  <Link className="btn btn-lg btn-round ifotta-btn-yellow w-250 mr-12 hidden-md-up" to="academy">Ifotta Academy</Link>
                 </div>
                 <br />
               </div>
