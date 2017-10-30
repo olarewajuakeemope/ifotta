@@ -77,7 +77,7 @@ class Academy extends Component {
         </header>
         <section className="section bg-gray bb-11 pb-0">
           <div className="container">
-            <div className="text-center">
+            <div className="text-center ifotta-no-display-moblie">
               <ul className="nav nav-outline nav-round">
                 <li className="nav-item w-140">
                   <a className="nav-link active" data-toggle="tab" href="#header-color">All</a>

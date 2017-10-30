@@ -36,7 +36,7 @@ class CourseCategories extends Component {
                 <p><a href="#" onClick={ () => this.props.renderCoursePage('shortCourses') }>Short Courses</a></p>
               </div>
             </div>
-            <div className="col-sm-4">
+            <div className="col-sm-4 ifotta-no-display-moblie">
               <p><strong>Duration</strong></p><br />
               <div>
                 <p>12 Weeks</p>
@@ -48,7 +48,7 @@ class CourseCategories extends Component {
                 <p>4 Weeks</p>
               </div>
             </div>
-            <div className="col-sm-4">
+            <div className="col-sm-4 ifotta-no-display-moblie">
               <p><strong>Price</strong></p><br />
               <div>
                 <p>N400,000</p>

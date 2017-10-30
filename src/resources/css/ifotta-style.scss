@@ -22,6 +22,11 @@ body {
       text-align: left;
     }
   }
+  .ifotta-no-display-moblie {
+    @media only screen and (max-width: $x-small-screen-size) {
+      display: none;
+    }
+  }
 
   /******* HOME-HEADER *********/
 
