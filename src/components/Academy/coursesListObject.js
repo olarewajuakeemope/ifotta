@@ -1,6 +1,8 @@
 const coursesListObject = {
   sei: {
     title: 'SOFTWARE ENGINEERING IMMERSIVE',
+    price: 'N400,000',
+    duration: '12 Weeks',
     courses: [
       {
         title: 'Html',
@@ -27,6 +29,8 @@ const coursesListObject = {
   },
   frontendCourses: {
     title: 'FRONTEND COURSES',
+    price: 'N300,000',
+    duration: '8 Weeks',
     courses: [
       {
         title: 'UI & UX',
@@ -77,6 +81,8 @@ const coursesListObject = {
   },
   backendCourses: {
     title: 'BACKEND COURSES',
+    price: 'N300,000',
+    duration: '8 Weeks',
     courses: [
       {
         title: 'PHP',
@@ -151,6 +157,8 @@ const coursesListObject = {
   },
   mobileAppsIos: {
     title: 'MOBILE APPLICATION IOS',
+    price: 'N300,000',
+    duration: '6 Weeks',
     courses: [
       {
         title: 'Html',
@@ -177,6 +185,8 @@ const coursesListObject = {
   },
   mobileAppsAndroid: {
     title: 'MOBILE APPLICATION ANDROID',
+    price: 'N300,000',
+    duration: '6 Weeks',
     courses: [
       {
         title: 'Html',
@@ -203,6 +213,8 @@ const coursesListObject = {
   },
   bas: {
     title: 'BUSINESS APPLICATION SOFTWARE',
+    price: '3 Days',
+    duration: 'N150,000',
     courses: [
       {
         title: 'Adobe Premiere Pro',
@@ -288,6 +300,8 @@ const coursesListObject = {
   },
   shortCourses: {
     title: 'SHORT COURSES',
+    price: 'N200,000',
+    duration: '4 Weeks',
     courses: [
       {
         title: 'Python',

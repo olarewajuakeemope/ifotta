@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import coursesListObject from './coursesListObject';
 
 /**
  * Replace with CourseCategoriesropriate info on completion
@@ -11,6 +12,29 @@ class CourseCategories extends Component {
     this.state = {};
   }
 
+  renderTableRows = () => {
+    const coursesRowArray = [];
+    for (const course in coursesListObject) {
+      if ({}.hasOwnProperty.call(coursesListObject, course)) {
+        const { title, duration, price } = coursesListObject[course];
+        coursesRowArray.push(
+          <tr>
+            <td>
+              <a href="#" onClick={() => this.props.renderCoursePage(course)}><p>{title}</p></a>
+            </td>
+            <td>
+              <p>{duration}</p>
+            </td>
+            <td>
+              <p>{price}</p>
+            </td>
+          </tr>,
+        );
+      }
+    }
+    return coursesRowArray;
+  }
+
   /**
    * @returns {Object} Jsx
    * @memberOf CourseCategories
@@ -19,46 +43,32 @@ class CourseCategories extends Component {
     const { title } = this.props;
     return (
       <div className="tab-pane active" id="tab_default_1">
-        <div id="band" className="container text-center">
+        <div className="container text-center">
           <h3>{ title } Courses</h3>
           <p><em>Below is a complete list of all ifotta courses</em></p>
           <br />
           <div className="row">
-            <div className="col-sm-4 text-left">
-              <p><strong>Course</strong></p><br />
-              <div>
-                <p><a href="#" onClick={ () => this.props.renderCoursePage('sei') }>Software Engineering Immersive (Full Stack)</a></p>
-                <p><a href="#" onClick={ () => this.props.renderCoursePage('frontendCourses') }>Front End Developer</a></p>
-                <p><a href="#" onClick={ () => this.props.renderCoursePage('backendCourses') }>Back End Developer</a></p>
-                <p><a href="#" onClick={ () => this.props.renderCoursePage('mobileAppsIos') }>Mobile Application iOS</a></p>
-                <p><a href="#" onClick={ () => this.props.renderCoursePage('mobileAppsAndroid') }>Mobile Application Android</a></p>
-                <p><a href="#" onClick={ () => this.props.renderCoursePage('bas') }>Business Application Software</a></p>
-                <p><a href="#" onClick={ () => this.props.renderCoursePage('shortCourses') }>Short Courses</a></p>
-              </div>
-            </div>
-            <div className="col-sm-4 ifotta-no-display-moblie">
-              <p><strong>Duration</strong></p><br />
-              <div>
-                <p>12 Weeks</p>
-                <p>8 Weeks</p>
-                <p>8 Weeks</p>
-                <p>6 Weeks</p>
-                <p>6 Weeks</p>
-                <p>3 Days</p>
-                <p>4 Weeks</p>
-              </div>
-            </div>
-            <div className="col-sm-4 ifotta-no-display-moblie">
-              <p><strong>Price</strong></p><br />
-              <div>
-                <p>N400,000</p>
-                <p>N300,000</p>
-                <p>N300,000</p>
-                <p>N300,000</p>
-                <p>N300,000</p>
-                <p>N150,000</p>
-                <p>N200,000</p>
-              </div>
+            <div className="col-12 col-lg-12">
+              <table className="table">
+                <tbody valign="middle">
+                  <tr>
+                    <td>
+                      <h4 className="price">Course</h4>
+                    </td>
+
+                    <td>
+                      <h4 className="price">Duration</h4>
+                    </td>
+
+                    <td>
+                      <h4 className="price">Price</h4>
+                    </td>
+                  </tr>
+                  {
+                    this.renderTableRows()
+                  }
+                </tbody>
+              </table>
             </div>
           </div>
         </div>
