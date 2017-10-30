@@ -13,25 +13,37 @@ class CourseCategories extends Component {
   }
 
   renderTableRows = () => {
-    const coursesRowArray = [];
-    for (const course in coursesListObject) {
-      if ({}.hasOwnProperty.call(coursesListObject, course)) {
-        const { title, duration, price } = coursesListObject[course];
-        coursesRowArray.push(
-          <tr>
-            <td>
-              <a href="#" onClick={() => this.props.renderCoursePage(course)}><p>{title}</p></a>
-            </td>
-            <td>
-              <p>{duration}</p>
-            </td>
-            <td>
-              <p>{price}</p>
-            </td>
-          </tr>,
-        );
-      }
+    const sectionTitle = this.props.title;
+
+    let titleCourseKeys = [];
+    if (sectionTitle === 'All') {
+      titleCourseKeys = Object.keys(coursesListObject);
+    } else if (sectionTitle === 'Individual') {
+      titleCourseKeys = ['sei', 'frontendCourses', 'backendCourses'];
+    } else {
+      titleCourseKeys = ['mobileAppsIos', 'mobileAppsAndroid', 'shortCourses', 'bas'];
     }
+
+    const coursesRowArray = titleCourseKeys.map((course, index) => {
+      const { title, duration, price } = coursesListObject[course];
+      const indexKey = index + 9;
+      return (
+        <tr key={`${indexKey}${title}`}>
+          <td>
+            <a href="#" onClick={() => this.props.renderCoursePage(course)}>
+              <p>{title}</p>
+            </a>
+          </td>
+          <td>
+            <p>{duration}</p>
+          </td>
+          <td>
+            <p>{price}</p>
+          </td>
+        </tr>
+      );
+    });
+
     return coursesRowArray;
   }
 
