@@ -78,9 +78,16 @@ class CourseListPage extends Component {
                 <br />
                 <br />
                 <p>
-                  <a href="#" onClick={ () => this.props.renderCoursePage(false) }>
-                    Back to Course List
-                  </a>
+                  <nav class="flexbox mt-30">
+                    <a
+                      href="#"
+                      onClick={ () => this.props.renderCoursePage(false) }
+                      className="btn btn-white"
+                    >
+                      <i className="ti-arrow-left fs-9 mr-4"></i> 
+                      Back to Course List
+                    </a>
+                  </nav>
                 </p>
               </div>
             </div>
