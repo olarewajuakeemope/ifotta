@@ -75,41 +75,119 @@ class Academy extends Component {
 
           </div>
         </header>
-        <section className="section bg-gray bb-11 pb-0">
-          <div className="container">
-            <div className="text-center ifotta-no-display-moblie">
-              <ul className="nav nav-outline nav-round">
-                <li className="nav-item w-140">
-                  <a className="nav-link active" data-toggle="tab" href="#header-color">All</a>
-                </li>
-                <li className="nav-item w-140 hidden-sm-down">
-                  <a className="nav-link" data-toggle="tab" href="#header-gradient">Individual</a>
-                </li>
-                <li className="nav-item w-140">
-                  <a className="nav-link" data-toggle="tab" href="#header-slider">Career</a>
-                </li>
-              </ul>
-            </div>
+        <section className="section bg-grey pb-0 bb-1">
+        <div className="container">
+          <header className="section-header">
+            <small>See It In Action</small>
+            <h2>Screenshots</h2>
+            <hr />
+            <p className="lead">We waited until we could do it right. Then we did! Instead of creating a carbon copy.</p>
+          </header>
 
-
-            <br /><br />
-
-
-            <div className="tab-content text-center" data-aos="fade-in">
-              <div className="tab-pane fade show active" id="header-color">
-                <CourseCategories renderCoursePage={this.renderCoursePage} title="All" />
-              </div>
-              <div className="tab-pane fade" id="header-gradient">
-                <CourseCategories renderCoursePage={this.renderCoursePage} title="Individual" />
-              </div>
-              <div className="tab-pane fade" id="header-slider">
-                <CourseCategories renderCoursePage={this.renderCoursePage} title="Career" />
-              </div>
-            </div>
-
-
+          <div className="text-center">
+            <ul className="nav nav-outline nav-round">
+              <li className="nav-item w-140">
+                <a className="nav-link active" data-toggle="tab" href="#home-basic">Login</a>
+              </li>
+              <li className="nav-item w-140 hidden-sm-down">
+                <a className="nav-link" data-toggle="tab" href="#profile-basic">Dashboard</a>
+              </li>
+              <li className="nav-item w-140 hidden-sm-down">
+                <a className="nav-link" data-toggle="tab" href="#messages-basic">Members</a>
+              </li>
+              <li className="nav-item w-140">
+                <a className="nav-link" data-toggle="tab" href="#settings-basic">Calendar</a>
+              </li>
+            </ul>
           </div>
-        </section>
+
+
+          <br /><br />
+
+          <div className="col-xs">
+            <div className="tab-content text-center">
+              <div className="tab-pane fade show active" id="home-basic">
+              <table className="table">
+                <tbody valign="middle">
+                  <tr>
+                    <td>
+                      <h4 className="price">Course</h4>
+                    </td>
+
+                    <td>
+                      <h4 className="price">Duration</h4>
+                    </td>
+
+                    <td>
+                      <h4 className="price">Price</h4>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              </div>
+              <div className="tab-pane fade" id="profile-basic">
+              <table className="table">
+                <tbody valign="middle">
+                  <tr>
+                    <td>
+                      <h4 className="price">Course</h4>
+                    </td>
+
+                    <td>
+                      <h4 className="price">Duration</h4>
+                    </td>
+
+                    <td>
+                      <h4 className="price">Price</h4>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              </div>
+              <div className="tab-pane fade" id="messages-basic">
+              <table className="table">
+                <tbody valign="middle">
+                  <tr>
+                    <td>
+                      <h4 className="price">Course</h4>
+                    </td>
+
+                    <td>
+                      <h4 className="price">Duration</h4>
+                    </td>
+
+                    <td>
+                      <h4 className="price">Price</h4>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              </div>
+              <div className="tab-pane fade" id="settings-basic">
+              <table className="table">
+                <tbody valign="middle">
+                  <tr>
+                    <td>
+                      <h4 className="price">Course</h4>
+                    </td>
+
+                    <td>
+                      <h4 className="price">Duration</h4>
+                    </td>
+
+                    <td>
+                      <h4 className="price">Price</h4>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              </div>
+            </div>
+          </div>
+
+          
+        </div>
+      </section>
         <Footer />
       </div>
     );
