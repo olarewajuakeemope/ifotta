@@ -82,7 +82,7 @@ class Academy extends Component {
                 <li className="nav-item w-140">
                   <a className="nav-link active" data-toggle="tab" href="#home-basic">All</a>
                 </li>
-                <li className="nav-item w-140">
+                <li className="nav-item w-140 hidden-sm-down">
                   <a className="nav-link" data-toggle="tab" href="#profile-basic">Individual</a>
                 </li>
                 <li className="nav-item w-140">
