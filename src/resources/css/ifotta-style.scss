@@ -22,8 +22,13 @@ body {
       text-align: left;
     }
   }
-  .ifotta-no-display-moblie {
+  .ifotta-no-display-mobile {
     @media only screen and (max-width: $x-small-screen-size) {
+      display: none;
+    }
+  }
+  .ifotta-display-mobile {
+    @media only screen and (min-width: $x-small-screen-size) {
       display: none;
     }
   }

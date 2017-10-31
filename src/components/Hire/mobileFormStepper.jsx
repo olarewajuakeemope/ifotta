@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import swal from 'sweetalert';
-import PropTypes from 'prop-types';
 import {
   Step,
   Stepper,
@@ -17,11 +16,14 @@ import MenuItem from 'material-ui/MenuItem';
 import CircularProgress from 'material-ui/CircularProgress';
 import { hireSignup } from '../../actions/userActions';
 import dataValidators from '../../utils/dataValidators';
+import bgLaptop from '../../resources/img/bg-laptop.jpg';
+import whiteLogo from '../../resources/img/ifotta-logo-white.png';
+import Footer from '../Footer';
 
 /**
  * A contrived example using a transition between steps
  */
-class FormStepper extends Component {
+class MobileFormStepper extends Component {
   state = {
     loading: false,
     finished: false,
@@ -205,7 +207,6 @@ class FormStepper extends Component {
               icon: 'success',
             });
             this.resetState();
-            this.props.handleClose();
           })
           .catch((error) => {
             const { message } = error;
@@ -314,28 +315,42 @@ class FormStepper extends Component {
     const { loading, stepIndex } = this.state;
 
     return (
-      <div style={{ width: '100%', maxWidth: 700, margin: 'auto' }}>
-        <Stepper activeStep={stepIndex}>
-          <Step>
-            <StepLabel>Your Project Details</StepLabel>
-          </Step>
-          <Step>
-            <StepLabel>Developer Details</StepLabel>
-          </Step>
-          <Step>
-            <StepLabel>Collaboration Details</StepLabel>
-          </Step>
-        </Stepper>
-        <ExpandTransition loading={loading} open>
-          {this.renderContent()}
-        </ExpandTransition>
+      <div>
+        <header className="header header-inverse" style={{ backgroundImage: `url(${bgLaptop})` }}>
+          <div className="header-overlay opacity-90" style={{ backgroundColor: '#1F88C1' }} />
+          <div className="container text-center">
+
+            <div className="row">
+              <div className="col-12 col-lg-8 offset-lg-2">
+
+                <img width="300px" height="150px" src={whiteLogo} alt="logo" />
+                <h2>HIRE DEVELOPER FORM</h2>
+              </div>
+            </div>
+
+          </div>
+        </header>
+        <div style={{ width: '100%', maxWidth: 700, margin: 'auto' }}>
+          <Stepper activeStep={stepIndex}>
+            <Step>
+              <StepLabel>Your Project Details</StepLabel>
+            </Step>
+            <Step>
+              <StepLabel>Developer Details</StepLabel>
+            </Step>
+            <Step>
+              <StepLabel>Collaboration Details</StepLabel>
+            </Step>
+          </Stepper>
+          <ExpandTransition loading={loading} open>
+            {this.renderContent()}
+          </ExpandTransition>
+        </div>
+        <Footer />
       </div>
+
     );
   }
 }
 
-FormStepper.propTypes = {
-  handleClose: PropTypes.func.isRequired,
-};
-
-export default FormStepper;
+export default MobileFormStepper;
