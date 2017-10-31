@@ -6,7 +6,7 @@ import CourseListPage from './courseListPage';
 import coursesListObject from './coursesListObject';
 import Footer from '../Footer';
 import bgLaptop from '../../resources/img/bg-laptop.jpg';
-import iAWhiteLogo from '../../resources/img/IA-ifotta-white.png';
+import iAWhiteLogo from '../../resources/img/ifotta-academy.png';
 
 
 /**
@@ -68,7 +68,7 @@ class Academy extends Component {
 
             <div className="row">
               <div className="col-12 col-lg-8 offset-lg-2">
-                <img width="300px" height="150px" src={iAWhiteLogo} alt="logo" />
+                <img width="100px" height="75px" src={iAWhiteLogo} alt="logo" />
                 <h2>IFOTTA ACADEMY</h2>
               </div>
             </div>
