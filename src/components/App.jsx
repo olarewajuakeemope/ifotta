@@ -36,7 +36,7 @@ class App extends Component {
     return (
       <div>
         <Header />
-        {modalComponent}
+        {/* {modalComponent} */}
         {this.props.children}
       </div>
     );

@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router';
 import Hire from '../Hire';
+import AcademyModal from '../AcademyModal';
 import Footer from '../Footer';
 import bgLaptop from '../../resources/img/bg-laptop.jpg';
 import whiteLogo from '../../resources/img/ifotta-logo-white.png';
 
 class Home extends Component {
-
   constructor(props) {
     super(props);
     this.state = {};
@@ -23,8 +23,8 @@ class Home extends Component {
             <div className="row h-full">
               <div className="col-12 text-center align-self-center">
                 <img className="ifotta-white-logo-large ifotta-block ifotta-left" src={whiteLogo} alt="logo" />
-                <p className="ifotta-homeheader-text ifotta-left">We provide Software Development, Training, Developers,
-                  <span className="ifotta-margin-top-negative--5em ifotta-block ifotta-left"> And Application Training</span>
+                <p className="ifotta-homeheader-text ifotta-left">We Develop Software & Train Developers...
+                  <span className="ifotta-margin-top-negative--5em ifotta-block ifotta-left" />
                 </p>
                 <br />
                 <br />
@@ -49,7 +49,7 @@ class Home extends Component {
                 <small>Our Services</small>
                 <h2><Hire><a href="#services-section">Hire</a></Hire>, <Link to="academy">Train</Link> or become a Developer</h2>
                 <hr />
-                <p className="lead">ifotta makes world-class developers faster and easier to reach. Thats not all, We also offer various software development training courses.</p>
+                <p className="lead">ifotta makes world-class developers faster and easier to reach. We also offer various software development and Business Application classes.</p>
               </header>
 
               <div className="row gap-y">
@@ -63,7 +63,8 @@ class Home extends Component {
                   site.</p>
                   <p>
                     <Hire>
-                      <a href="#" style={{ color: '#4ED866' }}>Hire A Developer</a>
+                      <a className="ifotta-no-display-mobile" href="#hire" style={{ color: '#4ED866' }}>Hire A Developer</a>
+                      <Link className="ifotta-display-mobile" to="hireForm" style={{ color: '#4ED866' }}>Hire A Developer</Link>
                     </Hire>
                   </p>
                 </div>
@@ -77,7 +78,12 @@ class Home extends Component {
                   services for different platforms, either as outsource services
                   or by providing developers.</p>
                   <p>
-                    <Link to="jobs">Apply Now</Link>
+                    <span className="ifotta-no-display-mobile">
+                      <Hire title="Software Development/Projects Form">
+                        <a href="#hire">Get Started</a>
+                      </Hire>
+                    </span>
+                    <Link className="ifotta-display-mobile" to="hireForm/SOFTWARE+DEVELOPMENT+FORM">Get Started</Link>
                   </p>
                 </div>
 
@@ -107,7 +113,7 @@ class Home extends Component {
                 <h3 className="fw-900 mb-20">Become A Developer with Ifotta Academy</h3>
                 <p className="lead text-muted">ifotta offers various software technology training courses to prep you for the job market.</p>
                 <br />
-                <Link className="btn btn-lg btn-round btn-success" to="academy">Apply Now</Link>
+                <Link className="btn btn-lg btn-round btn-success" to="academy">Get Started</Link>
               </div>
             </div>
 
@@ -127,11 +133,19 @@ class Home extends Component {
               <div className="row gap-y">
 
                 <div className="col-12 col-md-4 col-lg-4">
-                  <div className="card card-bordered card-hover-shadow text-center">
-                    <a className="card-block" data-scrollto="home-header" href="#home-header">
+                  <div className="card ifotta-no-display-mobile card-bordered card-hover-shadow text-center">
+                    <Hire>
+                      <a className="card-block" data-scrollto="home-header" href="#home-header">
+                        <p><i className="icon-genius fs-50 text-muted" /></p>
+                        <h4 className="card-title">Hire</h4>
+                      </a>
+                    </Hire>
+                  </div>
+                  <div className="card ifotta-display-mobile card-bordered card-hover-shadow text-center">
+                    <Link className="card-block" data-scrollto="home-header" to="hireForm">
                       <p><i className="icon-genius fs-50 text-muted" /></p>
                       <h4 className="card-title">Hire</h4>
-                    </a>
+                    </Link>
                   </div>
                 </div>
 
@@ -147,8 +161,16 @@ class Home extends Component {
 
 
                 <div className="col-12 col-md-4 col-lg-4">
-                  <div className="card card-bordered card-hover-shadow text-center">
-                    <Link className="card-block" to="academy">
+                  <div className="card card-bordered card-hover-shadow text-center ifotta-no-display-mobile">
+                    <AcademyModal>
+                      <a className="card-block" href="#academy">
+                        <p><i className="icon-tools fs-50 text-muted" /></p>
+                        <h4 className="card-title">Train</h4>
+                      </a>
+                    </AcademyModal>
+                  </div>
+                  <div className="card card-bordered card-hover-shadow text-center ifotta-display-mobile">
+                    <Link className="card-block ifotta-display-mobile" to="academyForm">
                       <p><i className="icon-tools fs-50 text-muted" /></p>
                       <h4 className="card-title">Train</h4>
                     </Link>

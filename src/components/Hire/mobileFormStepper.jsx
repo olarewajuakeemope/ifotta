@@ -313,6 +313,7 @@ class MobileFormStepper extends Component {
 
   render() {
     const { loading, stepIndex } = this.state;
+    const title = this.props.params.title ? this.props.params.title : 'HIRE DEVELOPER FORM';
 
     return (
       <div>
@@ -324,7 +325,7 @@ class MobileFormStepper extends Component {
               <div className="col-12 col-lg-8 offset-lg-2">
 
                 <img width="300px" height="150px" src={whiteLogo} alt="logo" />
-                <h2>HIRE DEVELOPER FORM</h2>
+                <h2>{title.replace(/\+/g, ' ')}</h2>
               </div>
             </div>
 
@@ -333,13 +334,13 @@ class MobileFormStepper extends Component {
         <div style={{ width: '100%', maxWidth: 700, margin: 'auto' }}>
           <Stepper activeStep={stepIndex}>
             <Step>
-              <StepLabel>Your Project Details</StepLabel>
+              <StepLabel>Your Project</StepLabel>
             </Step>
             <Step>
-              <StepLabel>Developer Details</StepLabel>
+              <StepLabel>Developer</StepLabel>
             </Step>
             <Step>
-              <StepLabel>Collaboration Details</StepLabel>
+              <StepLabel>Collaboration</StepLabel>
             </Step>
           </Stepper>
           <ExpandTransition loading={loading} open>

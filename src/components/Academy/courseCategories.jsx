@@ -19,26 +19,33 @@ class CourseCategories extends Component {
     if (sectionTitle === 'All') {
       titleCourseKeys = Object.keys(coursesListObject);
     } else if (sectionTitle === 'Individual') {
-      titleCourseKeys = ['sei', 'frontendCourses', 'backendCourses'];
+      titleCourseKeys = [
+        'shortCourses',
+        'bas',
+      ];
     } else {
-      titleCourseKeys = ['mobileAppsIos', 'mobileAppsAndroid', 'shortCourses', 'bas'];
+      titleCourseKeys = [
+        'mobileAppsIos',
+        'mobileAppsAndroid',
+        'sei',
+        'frontendCourses',
+        'backendCourses',
+      ];
     }
 
     const coursesRowArray = titleCourseKeys.map((course, index) => {
-      const { title, duration, price } = coursesListObject[course];
+      const { title, duration } = coursesListObject[course];
       const indexKey = index + 9;
+      const currentCourseKey = titleCourseKeys[index];
       return (
         <tr key={`${indexKey}${title}`}>
           <td>
-            <a href="#" onClick={() => this.props.renderCoursePage(course)}>
+            <a href="#academy" onClick={() => this.props.renderCoursePage(currentCourseKey, course)}>
               <p>{title}</p>
             </a>
           </td>
           <td>
             <p>{duration}</p>
-          </td>
-          <td>
-            <p>{price}</p>
           </td>
         </tr>
       );
@@ -62,7 +69,7 @@ class CourseCategories extends Component {
           <div className="row">
             <div className="col-12 col-lg-12">
               <table className="table">
-                <tbody valign="middle">
+                <tbody>
                   <tr>
                     <td>
                       <h4 className="price">Course</h4>
@@ -70,10 +77,6 @@ class CourseCategories extends Component {
 
                     <td>
                       <h4 className="price">Duration</h4>
-                    </td>
-
-                    <td>
-                      <h4 className="price">Price</h4>
                     </td>
                   </tr>
                   {

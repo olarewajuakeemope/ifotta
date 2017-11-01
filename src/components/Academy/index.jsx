@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import Scrollchor from 'react-scrollchor';
-import AcademyModal from '../AcademyModal';
 import CourseCategories from './courseCategories';
 import CourseListPage from './courseListPage';
 import coursesListObject from './coursesListObject';
@@ -19,6 +18,7 @@ class Academy extends Component {
     super(props);
     this.state = {
       currentCourse: null,
+      currentCourseKey: '',
     };
   }
 
@@ -26,9 +26,10 @@ class Academy extends Component {
     this.pageScroll.simulateClick();
   }
 
-  renderCoursePage = (currentCourse) => {
+  renderCoursePage = (currentCourseKey, currentCourse) => {
     this.setState({
       currentCourse: coursesListObject[currentCourse],
+      currentCourseKey,
     });
   }
 
@@ -55,6 +56,7 @@ class Academy extends Component {
           <CourseListPage
             renderCoursePage={this.renderCoursePage}
             course={this.state.currentCourse}
+            currentCourseKey={this.state.currentCourseKey}
           />
         </div>
       );

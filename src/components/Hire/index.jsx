@@ -29,8 +29,8 @@ export default class Hire extends Component {
     return (
       <span>
         <span className="ifotta-no-display-mobile">
-          <a className={`btn ${this.props.color} btn-xl btn-round btn-white w-300 mr-12 hidden-sm-down`} href="#">Hire A Developer</a>
-          <a className={`btn ${this.props.color} btn-lg btn-round btn-white w-250 hidden-md-up`} href="#">Hire A Developer</a>
+          <a className={`btn ${this.props.color} btn-xl btn-round btn-white w-300 mr-12 hidden-sm-down`} href="#hire">Hire A Developer</a>
+          <a className={`btn ${this.props.color} btn-lg btn-round btn-white w-250 hidden-md-up`} href="#hire">Hire A Developer</a>
         </span>
         <span className="ifotta-display-mobile">
           <Link className={`btn ${this.props.color} btn-xl btn-round btn-white w-300 mr-12 hidden-sm-down`} to="hireForm">Hire A Developer</Link>
@@ -56,7 +56,7 @@ export default class Hire extends Component {
           {this.renderModalButton()}
         </span>
         <Dialog
-          title="Hire Developer Form"
+          title={this.props.title}
           titleClassName="hire-dialog-title"
           titleStyle={{ color: 'white' }}
           className="dialog-form-body"
@@ -73,7 +73,14 @@ export default class Hire extends Component {
   }
 }
 
+Hire.defaultProps = {
+  title: 'Hire A Developer Form',
+  color: '',
+  children: false,
+};
+
 Hire.propTypes = {
-  color: PropTypes.string.isRequired,
-  children: PropTypes.node.isRequired,
+  color: PropTypes.string,
+  children: PropTypes.node,
+  title: PropTypes.string,
 };

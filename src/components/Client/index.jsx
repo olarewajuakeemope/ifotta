@@ -3,7 +3,6 @@ import { Link } from 'react-router';
 import Hire from '../Hire';
 import PaymentGateway from './paymentGateway';
 import logo from '../../resources/img/logo.png';
-import bgGirl from '../../resources/img/bg-girl.jpg';
 import bgLaptop from '../../resources/img/bg-laptop.jpg';
 
 /**
@@ -60,28 +59,21 @@ class Client extends Component {
                 <span className="custom-control-description">Remember me</span>
               </label>
 
-              <a className="text-muted hover-primary fs-13" href="#">Forgot password?</a>
+              <a className="text-muted hover-primary fs-13" href="#password">Forgot password?</a>
             </div>
 
             <div className="form-group">
               <button className="btn btn-bold btn-block btn-primary" type="submit">Login</button>
             </div>
           </form>
-
-          <div className="divider">Or Sign In With</div>
-          <div className="text-center">
-            <a className="btn btn-circular btn-sm btn-facebook mr-4" href="#"><i className="fa fa-facebook" /></a>
-            <a className="btn btn-circular btn-sm btn-google mr-4" href="#"><i className="fa fa-google" /></a>
-            <a className="btn btn-circular btn-sm btn-twitter" href="#"><i className="fa fa-twitter" /></a>
-          </div>
           <hr className="w-30" />
           <p className="text-center text-muted fs-13 mt-20">Don't have an account?
             <Hire>
-              <a href="#"> Sign up</a>
+              <a href="#signup"> Sign up</a>
             </Hire>
           </p>
           <p className="text-center">
-            <a onClick={this.renderPaymentPage} href="#">Make Payment  <i className="fa fa-credit-card" /></a>
+            <a onClick={this.renderPaymentPage} href="#payment">Make Payment  <i className="fa fa-credit-card" /></a>
           </p>
         </div>
       </div>

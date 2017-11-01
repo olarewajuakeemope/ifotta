@@ -83,10 +83,13 @@ become a software engineer.</p>
                       will work with your team on/off site to build and design your
                       site.
                       </p>
-                      <div className="text-left mt-50">
+                      <div className="text-left mt-50 ifotta-no-display-mobile">
                         <Hire>
-                          <a className="btn btn-lg btn-primary" href="#">Hire A Developer</a>
+                          <a className="btn btn-lg btn-primary" href="#hire">Hire A Developer</a>
                         </Hire>
+                      </div>
+                      <div className="text-left mt-50 ifotta-display-mobile">
+                        <Link className="btn btn-lg btn-primary" to="hireForm">Hire A Developer</Link>
                       </div>
                     </div>
                   </div>
@@ -101,7 +104,7 @@ become a software engineer.</p>
                       or by providing developers.
                       </p>
                       <div className="text-left mt-50">
-                        <Link className="btn btn-lg btn-primary" to="jobs">Available Jobs</Link>
+                        <Link className="btn btn-lg btn-primary" to="hireForm/SOFTWARE+DEVELOPMENT+FORM">Software Development Form</Link>
                       </div>
                     </div>
                   </div>

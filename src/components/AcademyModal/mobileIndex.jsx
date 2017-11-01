@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import swal from 'sweetalert';
-import Dialog from 'material-ui/Dialog';
 import FlatButton from 'material-ui/FlatButton';
 import TextField from 'material-ui/TextField';
 import SelectField from 'material-ui/SelectField';
@@ -9,6 +8,9 @@ import MenuItem from 'material-ui/MenuItem';
 import coursesListObject from '../Academy/coursesListObject';
 import { academySignup } from '../../actions/userActions';
 import dataValidators from '../../utils/dataValidators';
+import bgLaptop from '../../resources/img/bg-laptop.jpg';
+import whiteLogo from '../../resources/img/ifotta-logo-white.png';
+import Footer from '../Footer';
 
 /**
  * Dialog content can be scrollable.
@@ -26,7 +28,6 @@ class AcademyModal extends Component {
       email: '',
       select: 0,
       errors: {},
-      open: false,
       loadingState: false,
       loadingText: 'Submit',
     };
@@ -50,14 +51,6 @@ class AcademyModal extends Component {
       [e.target.name]: e.target.value,
     });
   }
-
-  handleOpen = () => {
-    this.setState({ open: true });
-  };
-
-  handleClose = () => {
-    this.setState({ open: false });
-  };
   /**
    * Validates useer's data before making
    * post request
@@ -146,10 +139,10 @@ class AcademyModal extends Component {
   };
 
   renderSelectContent = () => {
-    const courseTitle = this.props.title;
+    const courseTitle = this.props.params.title;
 
     let titleCourseKeys = [];
-    if (courseTitle === 'All') {
+    if (!courseTitle) {
       titleCourseKeys = Object.keys(coursesListObject);
     } else {
       titleCourseKeys = [
@@ -173,101 +166,91 @@ class AcademyModal extends Component {
     return coursesRowArray;
   }
 
-  renderModalButton = () => {
-    const { children } = this.props;
-    if (children) {
-      return children;
-    }
-    return (
-      <span>
-        <button className={`btn btn-success custom-button ${this.props.color}`}>Register</button>
-      </span>
-
-    );
-  }
-
   render() {
     const { errors } = this.state;
-    const actions = [
-      <FlatButton
-        label="Cancel"
-        primary
-        onClick={this.handleClose}
-      />,
-      <FlatButton
-        label={this.state.loadingText}
-        primary
-        disabled={this.state.loadingState}
-        keyboardFocused
-        onClick={this.submitForm}
-      />,
-    ];
 
     return (
-      <span>
-        <span onClick={this.handleOpen}>
-          {this.renderModalButton()}
-        </span>
-        <Dialog
-          title="Ifotta Academy Form"
-          titleClassName="hire-dialog-title"
-          titleStyle={{ color: 'white' }}
-          className="dialog-form-body"
-          actions={actions}
-          modal={false}
-          open={this.state.open}
-          onRequestClose={this.handleClose}
-          autoScrollBodyContent
-        >
-          Registration Form
+      <div>
+        <header className="header header-inverse" style={{ backgroundImage: `url(${bgLaptop})` }}>
+          <div className="header-overlay opacity-90" style={{ backgroundColor: '#1F88C1' }} />
+          <div className="container text-center">
+
+            <div className="row">
+              <div className="col-12 col-lg-8 offset-lg-2">
+
+                <img width="300px" height="150px" src={whiteLogo} alt="logo" />
+                <h2>Ifotta Academy Form</h2>
+              </div>
+            </div>
+
+          </div>
+        </header>
+
+        <br />
+        <div className="container">
+          <div className="row pl-4">
+            <div>
+              <TextField
+                hintText="Your name"
+                floatingLabelText="Enter your name"
+                name="fullname"
+                id="fullname"
+                errorText={errors.fullname}
+                value={this.state.fullname}
+                onChange={this.onChange}
+              /><br />
+              <TextField
+                hintText="Your email"
+                floatingLabelText="Enter your email"
+                name="email"
+                id="email"
+                errorText={errors.email}
+                value={this.state.email}
+                onChange={this.onChange}
+              /><br />
+              <SelectField
+                floatingLabelText="Select a training session"
+                floatingLabelStyle={{ fontSize: 15 }}
+                id="select"
+                errorText={errors.select}
+                value={this.state.select}
+                onChange={this.handleSelect}
+                autoWidth
+              >
+                <MenuItem value={0} primaryText="Select a training session" disabled />
+                {this.renderSelectContent()}
+              </SelectField>
+              <br />
+              <br />
+              <br />
+            </div>
+
+          </div>
+          <div className="row pl-4">
+            <FlatButton
+              label={this.state.loadingText}
+              primary
+              disabled={this.state.loadingState}
+              keyboardFocused
+              onClick={this.submitForm}
+            />
+          </div>
           <br />
-          <TextField
-            hintText="Your name"
-            floatingLabelText="Enter your name"
-            name="fullname"
-            id="fullname"
-            errorText={errors.fullname}
-            value={this.state.fullname}
-            onChange={this.onChange}
-          /><br />
-          <TextField
-            hintText="Your email"
-            floatingLabelText="Enter your email"
-            name="email"
-            id="email"
-            errorText={errors.email}
-            value={this.state.email}
-            onChange={this.onChange}
-          /><br />
-          <SelectField
-            floatingLabelText="Select a training session"
-            floatingLabelStyle={{ fontSize: 15 }}
-            id="select"
-            errorText={errors.select}
-            value={this.state.select}
-            onChange={this.handleSelect}
-            autoWidth
-          >
-            <MenuItem value={0} primaryText="Select a training session" disabled />
-            {this.renderSelectContent()}
-          </SelectField>
           <br />
-        </Dialog>
-      </span>
+          <br />
+          <Footer />
+        </div>
+      </div>
     );
   }
 }
 
 AcademyModal.propTypes = {
-  color: PropTypes.string,
-  children: PropTypes.node,
-  title: PropTypes.string,
+  params: PropTypes.Object,
 };
 
 AcademyModal.defaultProps = {
-  title: 'All',
-  color: '',
-  children: false,
+  params: false,
 };
 
 export default AcademyModal;

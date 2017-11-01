@@ -128,7 +128,7 @@ class FormStepper extends Component {
             <br />
 
             <SelectField
-              floatingLabelText="Where would our developer work from?"
+              floatingLabelText="Where would the developer work from?"
               value={this.state.ifotta.location}
               onChange={this.handleSelectLocation}
               errorText={errors.location}

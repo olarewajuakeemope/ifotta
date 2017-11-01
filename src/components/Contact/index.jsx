@@ -186,7 +186,6 @@ class Contact extends Component {
                 <div className="col-12 col-md-5 offset-md-1">
                   <div className="bg-grey h-full p-20">
                     <p><strong>Give us a call or stop by our door anytime, we try to answer all enquiries within 24 hours on business days.</strong></p>
-                    <p><em>We are open from 9am — 5pm week days.</em></p>
 
                     <hr className="w-80" />
                     <p className="lead">Water Front Plaza. 270, Ozumba Mbadiwe Street,<br />Victoria Island,

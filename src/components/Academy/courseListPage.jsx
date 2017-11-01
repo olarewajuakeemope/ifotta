@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router';
+import AcademyModal from '../AcademyModal';
 import Footer from '../Footer';
 import whiteLogo from '../../resources/img/ifotta-logo-white.png';
 import bgLaptop from '../../resources/img/bg-laptop.jpg';
@@ -46,7 +48,7 @@ class CourseListPage extends Component {
    * @memberOf CourseListPage
    */
   render() {
-    const { course } = this.props;
+    const { course, currentCourseKey } = this.props;
     return (
       <div>
         <header className="header header-inverse" style={{ backgroundImage: `url(${bgLaptop})` }}>
@@ -72,23 +74,30 @@ class CourseListPage extends Component {
           <section className="section bg-gray">
             <div className="container">
               <div className="container">
+                <nav className="flexbox mt-30">
+                  <p>
+                    <a
+                      href="#backbutton"
+                      onClick={() => this.props.renderCoursePage('', false)}
+                      className="btn btn-white"
+                    >
+                      <i className="ti-arrow-left fs-9 mr-4" />
+                      Back to Course List
+                    </a>
+                  </p>
+                </nav>
                 <div className="accordion" id="accordion-1">
+
                   {this.renderSyllabus()}
                 </div>
                 <br />
                 <br />
-                <p>
-                  <nav class="flexbox mt-30">
-                    <a
-                      href="#"
-                      onClick={ () => this.props.renderCoursePage(false) }
-                      className="btn btn-white"
-                    >
-                      <i className="ti-arrow-left fs-9 mr-4"></i> 
-                      Back to Course List
-                    </a>
-                  </nav>
-                </p>
+                <div className="text-left ifotta-no-display-mobile">
+                  <AcademyModal title={currentCourseKey} />
+                </div>
+                <div className="text-left ifotta-display-mobile">
+                  <Link className="btn btn-success custom-button" to={`academyForm/${currentCourseKey}`}>Register</Link>
+                </div>
               </div>
             </div>
           </section>

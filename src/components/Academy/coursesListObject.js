@@ -5,30 +5,15 @@ const coursesListObject = {
     duration: '12 Weeks',
     courses: [
       {
-        title: 'Html',
+        title: '',
         topics: [
-          'What is HTML?',
-          'Why do We need HTML',
-        ],
-      },
-      {
-        title: 'Javasript',
-        topics: [
-          'What is Jacascript?',
-          'Why do We need Javascript',
-        ],
-      },
-      {
-        title: 'CSS',
-        topics: [
-          'What is CSS?',
-          'Why do We need CSS',
+          '',
         ],
       },
     ],
   },
   frontendCourses: {
-    title: 'FRONTEND COURSES',
+    title: 'FRONTEND DEVELOPER',
     price: 'N300,000',
     duration: '8 Weeks',
     courses: [
@@ -80,7 +65,7 @@ const coursesListObject = {
     ],
   },
   backendCourses: {
-    title: 'BACKEND COURSES',
+    title: 'BACKEND DEVELOPER',
     price: 'N300,000',
     duration: '8 Weeks',
     courses: [
@@ -161,24 +146,9 @@ const coursesListObject = {
     duration: '6 Weeks',
     courses: [
       {
-        title: 'Html',
+        title: '',
         topics: [
-          'What is HTML?',
-          'Why do We need HTML',
-        ],
-      },
-      {
-        title: 'Javasript',
-        topics: [
-          'What is Jacascript?',
-          'Why do We need Javascript',
-        ],
-      },
-      {
-        title: 'CSS',
-        topics: [
-          'What is CSS?',
-          'Why do We need CSS',
+          '',
         ],
       },
     ],
@@ -189,24 +159,9 @@ const coursesListObject = {
     duration: '6 Weeks',
     courses: [
       {
-        title: 'Html',
+        title: '',
         topics: [
-          'What is HTML?',
-          'Why do We need HTML',
-        ],
-      },
-      {
-        title: 'Javasript',
-        topics: [
-          'What is Jacascript?',
-          'Why do We need Javascript',
-        ],
-      },
-      {
-        title: 'CSS',
-        topics: [
-          'What is CSS?',
-          'Why do We need CSS',
+          '',
         ],
       },
     ],
