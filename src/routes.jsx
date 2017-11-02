@@ -25,7 +25,7 @@ export default (
     <Route path="/academy" component={Academy} />
     <Route path="/services" component={Services} />
     <Route path="/contact" component={Contact} />
-    <Route path="/jobs" component={Jobs} />
+    <Route path="/jobs(/:formTitle)" component={Jobs} />
     <Route path="*" component={ErrorPage} />
   </Route>
 );

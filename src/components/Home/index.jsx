@@ -152,10 +152,10 @@ class Home extends Component {
 
                 <div className="col-12 col-md-4 col-lg-4">
                   <div className="card card-bordered card-hover-shadow text-center">
-                    <a className="card-block" href="https://ifotta.workable.com">
+                    <Link className="card-block" to="jobs/DEVELOPER">
                       <p><i className="icon-mobile fs-50 text-muted" /></p>
                       <h4 className="card-title">Apply</h4>
-                    </a>
+                    </Link>
                   </div>
                 </div>
 

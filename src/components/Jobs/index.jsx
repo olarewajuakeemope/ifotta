@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router';
+import JobsForm from './jobsForm';
 import Footer from '../Footer';
 
 /**
@@ -17,6 +18,12 @@ class Jobs extends Component {
    * @memberOf Jobs
    */
   render() {
+    if (this.props.params.formTitle) {
+      const { formTitle } = this.props.params;
+      return (
+        <JobsForm title={formTitle} />
+      );
+    }
     return (
       <div>
         <main className="main-content">
