@@ -225,7 +225,27 @@ class JobsForm extends Component {
               <div className="row gap-y">
                 <div className="col-12 col-md-6">
 
+                  <h3>Please Fill The {title} APPLICATION FORM below</h3>
+
                   <form action="/" method="POST" data-form="mailer">
+
+                    <div className="form-group">
+                      <div
+                        style={{width: '10em', height: '10em', border: '1px solid #CCCCCC', cursor: 'pointer' }}
+                        onClick={this.openPicsPicker}
+                      >
+                        {renderDropZone()}
+                      </div>
+                      { errors.photo && <p className="error text-danger">{errors.photo}</p> }
+                      { picsObj.error && <p className="error text-danger">{picsObj.error}</p> }
+                    </div>
+
+                    <div className="form-group">
+                      <button className="btn btn-default" onClick={this.openCVPicker} type="button">Upload Resume</button>
+                      <span>  {resumeObj.filename}</span>
+                      { errors.resume && <p className="error text-danger">{errors.resume}</p> }
+                      { resumeObj.error && <p className="error text-danger">{resumeObj.error}</p> }
+                    </div>
 
                     <div className="form-group">
                       <input
@@ -249,24 +269,6 @@ class JobsForm extends Component {
                         value={email}
                       />
                       { errors.email && <p className="error text-danger">{errors.email}</p> }
-                    </div>
-
-                    <div className="form-group">
-                      <div
-                        style={{width: '10em', height: '10em', border: '1px solid #CCCCCC', cursor: 'pointer' }}
-                        onClick={this.openPicsPicker}
-                      >
-                        {renderDropZone()}
-                      </div>
-                      { errors.photo && <p className="error text-danger">{errors.photo}</p> }
-                      { picsObj.error && <p className="error text-danger">{picsObj.error}</p> }
-                    </div>
-
-                    <div className="form-group">
-                      <button className="btn btn-default" onClick={this.openCVPicker} type="button">Upload Resume</button>
-                      <span>  {resumeObj.filename}</span>
-                      { errors.resume && <p className="error text-danger">{errors.resume}</p> }
-                      { resumeObj.error && <p className="error text-danger">{resumeObj.error}</p> }
                     </div>
                     <button className="btn btn-lg btn-primary btn-block" onClick={this.submitForm} type="button">Submit</button>
                   </form>
