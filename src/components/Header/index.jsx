@@ -74,10 +74,10 @@ class Header extends Component {
                 <a className="nav-link" href="#client">Clients</a>
                 <div className="nav-submenu">
                   <a className="nav-link" target="_blank" rel="noopener noreferrer" href="https://bitrix24.com">Login</a>
-                  <span>
+                  {/* <span>
                     <Link className="nav-link ifotta-no-display-mobile" to="client">Make Payment</Link>
                     <a className="nav-link ifotta-display-mobile" href="/client">Make Payment</a>
-                  </span>
+                  </span> */}
                 </div>
               </li>
               <li className="nav-item">

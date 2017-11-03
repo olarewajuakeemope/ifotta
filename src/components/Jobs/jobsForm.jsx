@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import swal from 'sweetalert';
 import { client } from 'filestack-react';
+import PropTypes from 'prop-types';
 import bgLaptop from '../../resources/img/bg-laptop.jpg';
 import Footer from '../Footer';
 import { contact } from '../../actions/userActions';
@@ -23,6 +24,8 @@ class JobsForm extends Component {
       email: '',
       phone: '',
       address: '',
+      loading: false,
+      submitText: 'Submit',
       resumeObj: {
         url: '',
         filename: '',
@@ -139,6 +142,20 @@ class JobsForm extends Component {
     return { errors, isValid };
   }
 
+  isFormProcessing = (state) => {
+    if (state) {
+      this.setState({
+        loading: true,
+        submitText: 'Processing...',
+      });
+    } else {
+      this.setState({
+        loading: false,
+        submitText: 'Submit',
+      });
+    }
+  }
+
   /**
    * Submit the form
    * @method submitForm
@@ -153,6 +170,7 @@ class JobsForm extends Component {
     });
     const { errors, isValid } = this.validateData();
     if (isValid) {
+      this.isFormProcessing(true);
       contact(this.state)
         .then(() => {
           swal({
@@ -160,6 +178,7 @@ class JobsForm extends Component {
             text: 'We will review your application and get back to you',
             icon: 'success',
           });
+          this.resetState();
         })
         .catch((error) => {
           const { message } = error;
@@ -168,8 +187,8 @@ class JobsForm extends Component {
             text: message,
             icon: 'error',
           });
+          this.isFormProcessing(false);
         });
-      this.resetState();
     } else {
       this.setState({ errors });
     }
@@ -181,6 +200,8 @@ class JobsForm extends Component {
       email: '',
       phone: '',
       address: '',
+      loading: false,
+      submitText: 'Submit',
       resumeObj: {
         url: '',
         filename: '',
@@ -202,7 +223,18 @@ class JobsForm extends Component {
 
   render() {
     const { title } = this.props;
-    const { errors, email, phone, address, fullname, resumeObj, picsObj, renderDropZone } = this.state;
+    const {
+      errors,
+      email,
+      phone,
+      address,
+      fullname,
+      resumeObj,
+      picsObj,
+      renderDropZone,
+      loading,
+      submitText,
+    } = this.state;
     return (
       <div>
         <header className="header header-inverse bg-fixed" style={{ backgroundImage: `url(${bgLaptop})` }}>
@@ -300,7 +332,14 @@ class JobsForm extends Component {
                       { errors.address && <p className="error text-danger">{errors.address}</p> }
                     </div>
 
-                    <button className="btn btn-lg btn-primary btn-block" onClick={this.submitForm} type="button">Submit</button>
+                    <button
+                      className="btn btn-lg btn-primary btn-block"
+                      onClick={this.submitForm}
+                      type="button"
+                      disabled={loading}
+                    >
+                      {submitText}
+                    </button>
                   </form>
 
                 </div>
@@ -315,5 +354,9 @@ class JobsForm extends Component {
     );
   }
 }
+
+JobsForm.propTypes = {
+  title: PropTypes.string.isRequired,
+};
 
 export default JobsForm;
