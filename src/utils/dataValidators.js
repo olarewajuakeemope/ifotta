@@ -47,14 +47,26 @@ class dataValidators {
       this.errors.fullname = 'Your name can only be letters';
     }
 
+    if (data.fullname === undefined || Validator.isEmpty(data.fullname)) {
+      this.errors.fullname = 'Fullname is required';
+    }
+
+    if (/^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im.test(data.phone) === false) {
+      this.errors.phone = 'Please enter a valid phone number';
+    }
+
+    if (data.phone === undefined || Validator.isEmpty(data.phone)) {
+      this.errors.phone = 'Phone number is required';
+    }
+
     if (data.email === undefined || Validator.isEmpty(data.email)) {
       this.errors.email = 'Email is required';
     } else if (!Validator.isEmail(data.email)) {
       this.errors.email = 'Email must be valid';
     }
 
-    if (data.fullname === undefined || Validator.isEmpty(data.fullname)) {
-      this.errors.fullname = 'Fullname is required';
+    if (data.address === undefined || Validator.isEmpty(data.address)) {
+      this.errors.address = 'Address is required';
     }
 
     if (Validator.isEmpty(data.picsObj.filename)) {

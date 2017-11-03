@@ -21,6 +21,8 @@ class JobsForm extends Component {
     this.state = {
       fullname: '',
       email: '',
+      phone: '',
+      address: '',
       resumeObj: {
         url: '',
         filename: '',
@@ -177,6 +179,8 @@ class JobsForm extends Component {
     this.setState({
       fullname: '',
       email: '',
+      phone: '',
+      address: '',
       resumeObj: {
         url: '',
         filename: '',
@@ -198,7 +202,7 @@ class JobsForm extends Component {
 
   render() {
     const { title } = this.props;
-    const { errors, email, fullname, resumeObj, picsObj, renderDropZone } = this.state;
+    const { errors, email, phone, address, fullname, resumeObj, picsObj, renderDropZone } = this.state;
     return (
       <div>
         <header className="header header-inverse bg-fixed" style={{ backgroundImage: `url(${bgLaptop})` }}>
@@ -223,9 +227,10 @@ class JobsForm extends Component {
             <div className="container">
 
               <div className="row gap-y">
+                <div className="col-12 col-md-12">
+                  <h3>PLEASE FILL THE {title} APPLICATION FORM BELOW</h3>
+                </div>
                 <div className="col-12 col-md-6">
-
-                  <h3>Please Fill The {title} APPLICATION FORM below</h3>
 
                   <form action="/" method="POST" data-form="mailer">
 
@@ -270,6 +275,31 @@ class JobsForm extends Component {
                       />
                       { errors.email && <p className="error text-danger">{errors.email}</p> }
                     </div>
+
+                    <div className="form-group">
+                      <input
+                        className="form-control form-control-lg"
+                        type="text"
+                        name="phone"
+                        placeholder="Your Phone Number"
+                        onChange={this.onChange}
+                        value={phone}
+                      />
+                      { errors.phone && <p className="error text-danger">{errors.phone}</p> }
+                    </div>
+
+                    <div className="form-group">
+                      <input
+                        className="form-control form-control-lg"
+                        type="text"
+                        name="address"
+                        placeholder="Your Home Address"
+                        onChange={this.onChange}
+                        value={address}
+                      />
+                      { errors.address && <p className="error text-danger">{errors.address}</p> }
+                    </div>
+
                     <button className="btn btn-lg btn-primary btn-block" onClick={this.submitForm} type="button">Submit</button>
                   </form>
 
