@@ -53,16 +53,16 @@ class dataValidators {
       this.errors.email = 'Email must be valid';
     }
 
-    if (data.subject === undefined || Validator.isEmpty(data.subject)) {
-      this.errors.subject = 'Subject is required';
-    }
-
-    if (data.message === undefined || Validator.isEmpty(data.message)) {
-      this.errors.message = 'Message is required';
-    }
-
     if (data.fullname === undefined || Validator.isEmpty(data.fullname)) {
       this.errors.fullname = 'Fullname is required';
+    }
+
+    if (Validator.isEmpty(data.picsObj.filename)) {
+      this.errors.photo = 'Please upload your picture';
+    }
+
+    if (Validator.isEmpty(data.resumeObj.filename)) {
+      this.errors.resume = 'Please upload your CV';
     }
 
     const errors = this.errors;

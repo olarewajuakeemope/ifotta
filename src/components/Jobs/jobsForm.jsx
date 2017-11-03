@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import swal from 'sweetalert';
+import { client } from 'filestack-react';
 import bgLaptop from '../../resources/img/bg-laptop.jpg';
 import Footer from '../Footer';
 import { contact } from '../../actions/userActions';
@@ -20,15 +21,28 @@ class JobsForm extends Component {
     this.state = {
       fullname: '',
       email: '',
-      subject: '',
-      message: '',
+      resumeObj: {
+        url: '',
+        filename: '',
+        error: false,
+      },
+      picsObj: {
+        url: '',
+        filename: '',
+        error: false,
+      },
       errors: {},
+      renderDropZone: () => (
+        <p>
+          Click Here To Upload Your Picture.
+        </p>
+      ),
     };
+    this.filestack = client.init('AUfz0DAtlRXaYz33tEZosz');
     this.onChange = this.onChange.bind(this);
     this.submitForm = this.submitForm.bind(this);
     this.validateData = this.validateData.bind(this);
   }
-
 
   /**
    * Bind the value of the inputs to state
@@ -43,6 +57,70 @@ class JobsForm extends Component {
       [e.target.name]: e.target.value,
     });
   }
+
+  openPicsPicker = () => {
+    this.filestack.pick({
+      accept: 'image/*',
+      maxSize: 5 * 1024 * 1024,
+      fromSources: [
+        'local_file_system',
+        'imagesearch',
+        'facebook',
+        'instagram',
+        'dropbox',
+      ],
+    }).then((response) => {
+      const { filename, url } = response.filesUploaded[0];
+      this.setState({
+        picsObj: {
+          url,
+          filename,
+          error: false,
+        },
+        renderDropZone: () => (
+          <img
+            src={url}
+            style={{ width: '100%', height: '100%' }}
+            alt="Your Uploaded Profile Pic"
+          />
+        ),
+      });
+    })
+      .catch((error) => {
+        this.setState({
+          picsObj: { error },
+        });
+      });
+  }
+
+  openCVPicker = () => {
+    this.filestack.pick({
+      accept: ['.pdf', '.docx', '.doc'],
+      maxSize: 5 * 1024 * 1024,
+      fromSources: [
+        'local_file_system',
+        'imagesearch',
+        'facebook',
+        'instagram',
+        'dropbox',
+      ],
+    }).then((response) => {
+      const { filename, url } = response.filesUploaded[0];
+      this.setState({
+        resumeObj: {
+          url,
+          filename,
+          error: false,
+        },
+      });
+    })
+      .catch((error) => {
+        this.setState({
+          resumeObj: { error },
+        });
+      });
+  }
+
   /**
    * Validates useer's data before making
    * post request
@@ -76,9 +154,17 @@ class JobsForm extends Component {
       contact(this.state)
         .then(() => {
           swal({
-            title: 'Thank You!',
-            text: 'Your message has been delivered!',
+            title: 'Your Application has been recieved',
+            text: 'We will review your application and get back to you',
             icon: 'success',
+          });
+        })
+        .catch((error) => {
+          const { message } = error;
+          swal({
+            title: 'Oops Something Went Wrong!',
+            text: message,
+            icon: 'error',
           });
         });
       this.resetState();
@@ -91,15 +177,28 @@ class JobsForm extends Component {
     this.setState({
       fullname: '',
       email: '',
-      subject: '',
-      message: '',
+      resumeObj: {
+        url: '',
+        filename: '',
+        error: false,
+      },
+      picsObj: {
+        url: '',
+        filename: '',
+        error: false,
+      },
       errors: {},
+      renderDropZone: () => (
+        <p>
+          Click Here To Upload Your Picture.
+        </p>
+      ),
     });
   }
 
   render() {
     const { title } = this.props;
-    const { errors } = this.state;
+    const { errors, email, fullname, resumeObj, picsObj, renderDropZone } = this.state;
     return (
       <div>
         <header className="header header-inverse bg-fixed" style={{ backgroundImage: `url(${bgLaptop})` }}>
@@ -135,7 +234,7 @@ class JobsForm extends Component {
                         name="fullname"
                         placeholder="Full Name"
                         onChange={this.onChange}
-                        value={this.state.fullname}
+                        value={fullname}
                       />
                       { errors.fullname && <p className="error text-danger">{errors.fullname}</p> }
                     </div>
@@ -147,36 +246,28 @@ class JobsForm extends Component {
                         name="email"
                         placeholder="Your Email Address"
                         onChange={this.onChange}
-                        value={this.state.email}
+                        value={email}
                       />
                       { errors.email && <p className="error text-danger">{errors.email}</p> }
                     </div>
 
                     <div className="form-group">
-                      <input
-                        className="form-control form-control-lg"
-                        type="subject"
-                        name="subject"
-                        placeholder="Subject"
-                        onChange={this.onChange}
-                        value={this.state.subject}
-                      />
-                      { errors.subject && <p className="error text-danger">{errors.subject}</p> }
+                      <div
+                        style={{width: '10em', height: '10em', border: '1px solid #CCCCCC', cursor: 'pointer' }}
+                        onClick={this.openPicsPicker}
+                      >
+                        {renderDropZone()}
+                      </div>
+                      { errors.photo && <p className="error text-danger">{errors.photo}</p> }
+                      { picsObj.error && <p className="error text-danger">{picsObj.error}</p> }
                     </div>
 
                     <div className="form-group">
-                      <textarea
-                        className="form-control form-control-lg"
-                        name="message"
-                        rows="4"
-                        placeholder="Your Message"
-                        value={this.state.message}
-                        onChange={this.onChange}
-                      />
-                      { errors.message && <p className="error text-danger">{errors.message}</p> }
+                      <button className="btn btn-default" onClick={this.openCVPicker} type="button">Upload Resume</button>
+                      <span>  {resumeObj.filename}</span>
+                      { errors.resume && <p className="error text-danger">{errors.resume}</p> }
+                      { resumeObj.error && <p className="error text-danger">{resumeObj.error}</p> }
                     </div>
-
-
                     <button className="btn btn-lg btn-primary btn-block" onClick={this.submitForm} type="button">Submit</button>
                   </form>
 
