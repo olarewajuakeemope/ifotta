@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router';
 import JobsForm from './jobsForm';
+import JobsObject from './jobsObject';
+import bgLaptop from '../../resources/img/bg-laptop.jpg';
 import Footer from '../Footer';
 
 /**
@@ -12,6 +14,27 @@ class Jobs extends Component {
   constructor(props) {
     super(props);
     this.state = {};
+  }
+
+  renderJobs = () => {
+    return JobsObject.map((job, index) => {
+      const indexKey = index + 9;
+      const { title } = job;
+      return (
+        <div className="card" key={`${indexKey}${title}`}>
+          <h5 className="card-title">
+            <a data-toggle="collapse" data-parent="#accordion-1" href={`#collapse-1-${indexKey}`}>{title}</a>
+          </h5>
+          <div id={`collapse-1-${indexKey}`} className="collapse in">
+            <div className="card-block">
+              <Link className="btn btn-primary custom-button" to={`jobs/${title}`}>
+                Apply Now
+              </Link>
+            </div>
+          </div>
+        </div>
+      );
+    });
   }
   /**
    * @returns {Object} Jsx
@@ -26,24 +49,31 @@ class Jobs extends Component {
     }
     return (
       <div>
-        <main className="main-content">
-          <section className="section py-100">
-            <div className="container">
-              <header className="section-header">
-                <small>Oops</small>
-                <h2>No Content Found!</h2>
-                <hr />
-                <p className="lead">Seems you're yet to provide content for this page.</p>
-              </header>
+        <header className="header header-inverse bg-fixed" style={{ backgroundImage: `url(${bgLaptop})` }}>
+          <div className="header-overlay opacity-90" style={{ backgroundColor: '#1F88C1' }} />
+          <div className="container text-center">
 
-              <br />
-              <p className="text-center"><Link className="btn btn-primary" to="/">Return home</Link></p>
-
+            <div className="row">
+              <div className="col-12 col-lg-8 offset-lg-2">
+                <h2>AVAILABLE JOBS</h2>
+              </div>
             </div>
-          </section>
 
-
-        </main>
+          </div>
+        </header>
+        <section className="section bg-grey pb-0 bb-1">
+          <div className="container">
+            <div className="col-xs">
+              <div className="text-left">
+                <div className="accordion" id="accordion-1">
+                  {this.renderJobs()}
+                </div>
+                <br />
+                <br />
+              </div>
+            </div>
+          </div>
+        </section>
         <Footer />
       </div>
     );

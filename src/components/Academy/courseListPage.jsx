@@ -96,7 +96,7 @@ class CourseListPage extends Component {
                   <AcademyModal title={currentCourseKey} />
                 </div>
                 <div className="text-left ifotta-display-mobile">
-                  <Link className="btn btn-success custom-button" to={`academyForm/${currentCourseKey}`}>Register</Link>
+                  <Link className="btn btn-primary custom-button" to={`academyForm/${currentCourseKey}`}>Register</Link>
                 </div>
               </div>
             </div>

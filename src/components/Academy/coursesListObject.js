@@ -168,8 +168,8 @@ const coursesListObject = {
   },
   bas: {
     title: 'BUSINESS APPLICATION SOFTWARE',
-    price: '3 Days',
-    duration: 'N150,000',
+    price: 'N150,000',
+    duration: '3 Days',
     courses: [
       {
         title: 'Adobe Premiere Pro',

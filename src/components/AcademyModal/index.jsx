@@ -180,7 +180,7 @@ class AcademyModal extends Component {
     }
     return (
       <span>
-        <button className={`btn btn-success custom-button ${this.props.color}`}>Register</button>
+        <button className={`btn btn-primary custom-button ${this.props.color}`}>Register</button>
       </span>
 
     );

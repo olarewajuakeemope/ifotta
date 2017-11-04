@@ -5,6 +5,9 @@ import AcademyModal from '../AcademyModal';
 import Footer from '../Footer';
 import bgLaptop from '../../resources/img/bg-laptop.jpg';
 import whiteLogo from '../../resources/img/ifotta-logo-white.png';
+import hireLogo from '../../resources/img/ifottadeveloper.png';
+import iALogo from '../../resources/img/ifotta-academy.png';
+import softwareLogo from '../../resources/img/ifottasoftware.png';
 
 class Home extends Component {
   constructor(props) {
@@ -55,12 +58,9 @@ class Home extends Component {
               <div className="row gap-y">
 
                 <div className="col-12 col-md-6 col-xl-4 feature-1">
-                  <p className="feature-icon text-success"><i className="icon-genius" /></p>
+                  <p className="feature-icon text-success"><img width="30px" height="60px" src={hireLogo} alt="logo" /></p>
                   <h5>Hire A Developer</h5>
-                  <p>Looking to design something as simple as a corporate website?
-                  Our team of developers will not only build your website, but
-                  will work with your team on/off site to build and design your
-                  site.</p>
+                  <p>From web applications to mobile apps, our developers will create excellent software with the bleeding edge features and software development practices that will make your software intuitive and easily adapted into you and your user processes</p>
                   <p>
                     <Hire>
                       <a className="ifotta-no-display-mobile" href="#hire" style={{ color: '#4ED866' }}>Hire A Developer</a>
@@ -71,12 +71,21 @@ class Home extends Component {
 
 
                 <div className="col-12 col-md-6 col-xl-4 feature-1">
-                  <p className="feature-icon text-info"><i className="icon-mobile" /></p>
+                  <p className="feature-icon text-danger"><img width="60px" height="60px" src={iALogo} alt="logo" /></p>
+                  <h5>Ifotta Academy</h5>
+                  <p>Reinvent your career! Learn to code and change your life. Enroll in our
+                  career changing boot camps and master the skills you need to become a
+                  software engineer.</p>
+                  <p>
+                    <Link to="academy" style={{ color: '#FD4C59' }}>Register Now</Link>
+                  </p>
+                </div>
+
+
+                <div className="col-12 col-md-6 col-xl-4 feature-1">
+                  <p className="feature-icon text-info"><img width="60px" height="50px" src={softwareLogo} alt="logo" /></p>
                   <h5>Software Development/Projects</h5>
-                  <p>Looking for a development team to build or update your
-                  software? At Ifotta we provide software development
-                  services for different platforms, either as outsource services
-                  or by providing developers.</p>
+                  <p>Whether you need a single developer to work on a project or be part of a project team or you’re looking to outsource your whole software development effort. We are ready to help you build the quality product you desire.</p>
                   <p>
                     <span className="ifotta-no-display-mobile">
                       <Hire title="Software Development/Projects Form">
@@ -84,18 +93,6 @@ class Home extends Component {
                       </Hire>
                     </span>
                     <Link className="ifotta-display-mobile" to="hireForm/SOFTWARE+DEVELOPMENT+FORM">Get Started</Link>
-                  </p>
-                </div>
-
-
-                <div className="col-12 col-md-6 col-xl-4 feature-1">
-                  <p className="feature-icon text-danger"><i className="icon-tools" /></p>
-                  <h5>Ifotta Academy</h5>
-                  <p>Reinvent your career! Learn to code and change your life. Enroll in our
-                  career changing boot camps and master the skills you need to become a
-                  software engineer.</p>
-                  <p>
-                    <Link to="academy" style={{ color: '#FD4C59' }}>Register Now</Link>
                   </p>
                 </div>
 
