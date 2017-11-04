@@ -20,6 +20,7 @@ class JobsForm extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      jobTitle: '',
       fullname: '',
       email: '',
       phone: '',
@@ -166,6 +167,7 @@ class JobsForm extends Component {
   submitForm(e) {
     e.preventDefault();
     this.setState({
+      jobTitle: this.props.title,
       errors: {},
     });
     const { errors, isValid } = this.validateData();
@@ -196,6 +198,7 @@ class JobsForm extends Component {
 
   resetState = () => {
     this.setState({
+      jobTitle: '',
       fullname: '',
       email: '',
       phone: '',
