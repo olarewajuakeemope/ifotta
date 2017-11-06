@@ -5,9 +5,36 @@ const coursesListObject = {
     duration: '12 Weeks',
     courses: [
       {
-        title: '',
+        title: 'Overview',
         topics: [
-          '',
+          'A brief tour into the course',
+        ],
+      },
+      {
+        title: 'The Power of Learning Ruby and JavaScript',
+        topics: [
+          'Lessons on the pros of learning Ruby and Javascript',
+        ],
+      },
+      {
+        title: 'Curriculum Overview',
+        topics: [
+          'Full Stack Web Development',
+          'Technical Concentrations',
+          'Product Management',
+          'Computer Science',
+        ],
+      },
+      {
+        title: 'The Full Stack Journey: An In-Depth Look',
+        topics: [
+          'A brief tour into the world of being a Full Stack Developer',
+        ],
+      },
+      {
+        title: 'What Makes a Software Engineer?',
+        topics: [
+          'The pros and cons of being an Engineer',
         ],
       },
     ],
@@ -146,9 +173,45 @@ const coursesListObject = {
     duration: '6 Weeks',
     courses: [
       {
-        title: '',
+        title: 'Swift',
         topics: [
-          '',
+          'A look into the Swift concept',
+        ],
+      },
+      {
+        title: 'Object Oriented Programming',
+        topics: [
+          'What is OOP?',
+        ],
+      },
+      {
+        title: 'Interface Design and Implementation',
+        topics: [
+          'How to design IOS User Interface',
+        ],
+      },
+      {
+        title: 'Data Stores/Core Data',
+        topics: [
+          'Storage in IOS?',
+        ],
+      },
+      {
+        title: 'Advanced Views',
+        topics: [
+          'How to build Advanced Views',
+        ],
+      },
+      {
+        title: 'APIs/Multi­-Threading',
+        topics: [
+          'MultiThreading in IOS',
+        ],
+      },
+      {
+        title: 'Projects',
+        topics: [
+          'Test your skills with the Final Project',
         ],
       },
     ],
