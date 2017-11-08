@@ -19,8 +19,7 @@ export function academySignup(user) {
  * @returns {Object} dispatch
  */
 export function contact(user) {
-  console.log(user);
-  return axios.get('https://boiling-atoll-12170.herokuapp.com/api/contact');
+  return axios.post(`${ROOT_URL}${EMAIL}`, user);
 }
 /**
  * Async Function to handle contact request
@@ -29,6 +28,5 @@ export function contact(user) {
  * @returns {Object} dispatch
  */
 export function hireSignup(user) {
-  console.log(user);
-  return axios.get('https://boiling-atoll-12170.herokuapp.com/api/hire/signup');
+  return axios.post(`${ROOT_URL}${EMAIL}`, user);
 }

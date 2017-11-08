@@ -19,7 +19,7 @@ class Jobs extends Component {
   renderJobs = () => {
     return JobsObject.map((job, index) => {
       const indexKey = index + 9;
-      const { title } = job;
+      const { title, description, requirements } = job;
       return (
         <div className="card" key={`${indexKey}${title}`}>
           <h5 className="card-title">
@@ -27,6 +27,24 @@ class Jobs extends Component {
           </h5>
           <div id={`collapse-1-${indexKey}`} className="collapse in">
             <div className="card-block">
+              <h3>Description</h3>
+              {
+                description.map((detail, i) => {
+                  const iKey = i + 19;
+                  return (
+                    <p key={`${iKey}${detail}`}>{detail}</p>
+                  );
+                })
+              }
+              <h3>Requirements</h3>
+              {
+                requirements.map((requirement, idx) => {
+                  const idxKey = idx + 29;
+                  return (
+                    <p key={`${idxKey}${requirement}`}>{requirement}</p>
+                  );
+                })
+              }
               <Link className="btn btn-primary custom-button" to={`jobs/${title}`}>
                 Apply Now
               </Link>
