@@ -2,11 +2,14 @@ import React, { Component } from 'react';
 import swal from 'sweetalert';
 import { client } from 'filestack-react';
 import PropTypes from 'prop-types';
+import dotenv from 'dotenv';
 import bgLaptop from '../../resources/img/bg-laptop.jpg';
 import Footer from '../Footer';
 import { contact } from '../../actions/userActions';
 import dataValidators from '../../utils/dataValidators';
 import whiteLogo from '../../resources/img/ifotta-logo-white.png';
+
+dotenv.config();
 
 /**
  * Dialog content can be scrollable.
@@ -44,7 +47,7 @@ class JobsForm extends Component {
         </p>
       ),
     };
-    this.filestack = client.init('AUfz0DAtlRXaYz33tEZosz');
+    this.filestack = client.init(process.env.REACT_APP_FILESTACK_KEY);
     this.onChange = this.onChange.bind(this);
     this.submitForm = this.submitForm.bind(this);
     this.validateData = this.validateData.bind(this);
